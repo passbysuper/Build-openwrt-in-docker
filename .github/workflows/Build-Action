@@ -1,0 +1,71 @@
+name: Build ImmortalWRT Docker
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download Docker image
+      run: |
+        tag=$(curl -s https://api.github.com/repos/superpassby/pre-immortalwrt-build-docker/releases/latest | jq -r '.tag_name')
+        echo "下载的 tag: $tag"
+        curl -s https://api.github.com/repos/superpassby/pre-immortalwrt-build-docker/releases/latest \
+         | jq -r '.assets[].browser_download_url' \
+         | xargs -n 1 wget
+
+    - name: Extract Docker image
+      run: |
+        7z x pre-immortalwrt-build-docker.tar.gz.7z.001 -o./
+        rm pre-immortalwrt-build-docker.tar.gz.7z.*
+        sudo docker load < pre-immortalwrt-build-docker.tar.gz
+        rm pre-immortalwrt-build-docker.tar.gz
+
+    - name: Run Docker container
+      run: |
+        sudo docker run -d --name pre-immortalwrt-build-docker pre-immortalwrt-build-docker tail -f /dev/null
+
+    - name: Execute commands inside Docker container
+      run: |
+        sudo docker exec -u user -w /home/user/openwrt pre-immortalwrt-build-docker bash -c "
+          echo '+++++++++++++++++++++++++++'
+          echo '当前目录为：'
+          pwd
+          echo '目录下文件：'
+          ls
+          echo '+++++++++++++++++++++++++++'
+          
+          git pull
+          
+          git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+          
+          ./scripts/feeds update -a && ./scripts/feeds install -a
+          
+          make defconfig
+          make download -j8
+          make -j$(nproc) || make -j1 V=s
+        "
+
+    - name: Move compiled files to host machine
+      run: |
+        sudo docker exec pre-immortalwrt-build-docker bash -c "
+          find /home/user/openwrt/bin/targets -type f \
+          \( -name '*immortalwrt*' -o \
+          -name '*config*' \)" \
+        | while read file; do \
+          sudo docker cp pre-immortalwrt-build-docker:$file /openwrt/$(basename $file); \
+        done
+
+    - name: Upload compiled files to GitHub Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: /openwrt/*
+        tag: ${{ github.ref }}
