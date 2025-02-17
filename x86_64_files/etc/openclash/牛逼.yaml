@@ -1,0 +1,2863 @@
+---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+- name: "\U0001F1F8\U0001F1EC 新加坡1"
+  server: linsg1.jueduibupao.top
+  port: 46005
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: linsg1.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡2"
+  server: linsg2.jueduibupao.top
+  port: 40070
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: linsg2.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  server: tw2.jueduibupao.top
+  port: 30052
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: tw2.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  server: tw22.jueduibupao.top
+  port: 30104
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: tw22.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本1"
+  server: linjp1.jueduibupao.top
+  port: 47241
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: linjp1.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本2"
+  server: linjp2.jueduibupao.top
+  port: 45584
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: linjp2.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国-家宽"
+  server: 6bkr1.6bnw.top
+  port: 50750
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: 6bkr1.6bnw.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  server: lvs.jueduibupao.top
+  port: 50001
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: lvs.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: 迈阿密
+  server: ny.jueduibupao.top
+  port: 50001
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: ny.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 凤凰城"
+  server: azcus1.jueduibupao.top
+  port: 20101
+  type: hysteria2
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  sni: azcus1.jueduibupao.top
+  skip-cert-verify: true
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  server: hzhz1.sssyun.xyz
+  port: 29527
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  server: hzhz2.sssyun.xyz
+  port: 40010
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  server: hzhz3.sssyun.xyz
+  port: 54511
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  server: hzhz1.sssyun.xyz
+  port: 19527
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  server: hzhz2.sssyun.xyz
+  port: 40023
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  server: hzhz3.sssyun.xyz
+  port: 54512
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  server: hzhz1.sssyun.xyz
+  port: 39301
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  server: hzhz2.sssyun.xyz
+  port: 40011
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  server: hzhz3.sssyun.xyz
+  port: 54513
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  server: hzhz1.sssyun.xyz
+  port: 39204
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  server: hzhz2.sssyun.xyz
+  port: 40013
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  server: hzhz3.sssyun.xyz
+  port: 54514
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡04"
+  server: hzhz1.sssyun.xyz
+  port: 39505
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡05"
+  server: hzhz2.sssyun.xyz
+  port: 44014
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 新加坡06"
+  server: hzhz3.sssyun.xyz
+  port: 54515
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国春川01"
+  server: hzhz1.sssyun.xyz
+  port: 39202
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国春川02"
+  server: hzhz2.sssyun.xyz
+  port: 40015
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国春川03"
+  server: hzhz3.sssyun.xyz
+  port: 40016
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  server: hzhz1.sssyun.xyz
+  port: 39206
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  server: hzhz2.sssyun.xyz
+  port: 40016
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  server: hzhz3.sssyun.xyz
+  port: 40017
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  server: hzhz1.sssyun.xyz
+  port: 32207
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  server: hzhz2.sssyun.xyz
+  port: 40017
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  server: hzhz3.sssyun.xyz
+  port: 40018
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  server: hzhz1.sssyun.xyz
+  port: 39201
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  server: hzhz2.sssyun.xyz
+  port: 40018
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  server: hzhz3.sssyun.xyz
+  port: 40019
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本01"
+  server: hzhz1.sssyun.xyz
+  port: 19529
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本02"
+  server: hzhz2.sssyun.xyz
+  port: 40019
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本03"
+  server: hzhz3.sssyun.xyz
+  port: 41020
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本04"
+  server: hzhz1.sssyun.xyz
+  port: 49207
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNjE5OWQyNDYxZjM1MjA0OTg=:NTVlNzE1ZjgtMDQyNS00YTE4LThlYTAtNmZkMTI1MjE=
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本05"
+  server: hzhz2.sssyun.xyz
+  port: 40020
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNjE5OWQyNDYxZjM1MjA0OTg=:NTVlNzE1ZjgtMDQyNS00YTE4LThlYTAtNmZkMTI1MjE=
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日本06"
+  server: hzhz3.sssyun.xyz
+  port: 41021
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNjE5OWQyNDYxZjM1MjA0OTg=:NTVlNzE1ZjgtMDQyNS00YTE4LThlYTAtNmZkMTI1MjE=
+  udp: true
+- name: "\U0001F1E8\U0001F1E6 加拿大01"
+  server: hzhz1.sssyun.xyz
+  port: 39209
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1E6 加拿大02"
+  server: hzhz2.sssyun.xyz
+  port: 40021
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1E8\U0001F1E6 加拿大03"
+  server: hzhz3.sssyun.xyz
+  port: 41022
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  server: hzhz1.sssyun.xyz
+  port: 12980
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  server: hzhz2.sssyun.xyz
+  port: 12981
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  server: hzhz3.sssyun.xyz
+  port: 12982
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  server: hzhz1.sssyun.xyz
+  port: 12983
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  server: hzhz2.sssyun.xyz
+  port: 12984
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  server: hzhz3.sssyun.xyz
+  port: 13984
+  type: ss
+  cipher: 2022-blake3-aes-128-gcm
+  password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  server: hzhz1.sssyun.xyz
+  port: 39203
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  server: hzhz2.sssyun.xyz
+  port: 40022
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  udp: true
+- name: 迈阿密01-下载&防失联-0.1x
+  server: mugen11.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/cctv?ed=2048"
+    headers:
+      Host: buyvmus.6bnw.top
+  udp: true
+- name: 迈阿密02-下载&防失联-0.1x
+  server: mugen22.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/cctv?ed=2048"
+    headers:
+      Host: buyvmus.6bnw.top
+  udp: true
+- name: 迈阿密03-下载&防失联-0.1x
+  server: mugen33.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/cctv?ed=2048"
+    headers:
+      Host: buyvmus.6bnw.top
+  udp: true
+- name: 迈阿密04-下载&防失联-0.1x
+  server: mugen44.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/cctv?ed=2048"
+    headers:
+      Host: buyvmus.6bnw.top
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  server: mugen11.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: buyvmus2.6bnw.top
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  server: mugen22.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: buyvmus2.6bnw.top
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  server: mugen33.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: buyvmus2.6bnw.top
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+  server: mugen44.6bnw.top
+  port: 8080
+  type: vmess
+  uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: "/?ed=2560"
+    headers:
+      Host: buyvmus2.6bnw.top
+  udp: true
+proxy-groups:
+- name: "\U0001F680 节点选择"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "♻️ 自动选择"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F680 GitHub"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F4F2 Telegram"
+  type: select
+  proxies:
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+- name: "\U0001F54A️ Twitter(X)"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F4AC ChatGPT"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F4AC Copilot"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F916 AI服务"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3B6 TikTok"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F4F9 YouTube"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3A5 Netflix"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3A5 DisneyPlus"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3A5 HBO"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3A5 PrimeVideo"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3A5 AppleTV+"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3A5 Emby"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F3BB Spotify"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F4FA Bahamut"
+  type: select
+  proxies:
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F680 节点选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F30E 国外媒体"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F6D2 国外电商"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F4E2 谷歌FCM"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F1EC 谷歌服务"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F34E 苹果服务"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+- name: "\U0001F3AE 游戏平台"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+- name: "\U0001F3AE Steam"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F680 测速工具"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F41F 漏网之鱼"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - 迈阿密
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - 迈阿密01-下载&防失联-0.1x
+  - 迈阿密02-下载&防失联-0.1x
+  - 迈阿密03-下载&防失联-0.1x
+  - 迈阿密04-下载&防失联-0.1x
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F1ED\U0001F1F0 香港节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港01-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港02-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港03-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港04-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港05-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港06-IPv6"
+  - "\U0001F1ED\U0001F1F0 香港07-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港08-流媒体解锁"
+  - "\U0001F1ED\U0001F1F0 香港09-流媒体解锁"
+- name: "\U0001F1FA\U0001F1F8 美国节点"
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯"
+  - "\U0001F1FA\U0001F1F8 凤凰城"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密01"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密02"
+  - "\U0001F1FA\U0001F1F8 美国迈阿密03"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯01"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯02"
+  - "\U0001F1FA\U0001F1F8 美国拉斯维加斯03"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城01"
+  - "\U0001F1FA\U0001F1F8 美国凤凰城02"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯01-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯02-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯03-下载&防失联-0.1x"
+  - "\U0001F1FA\U0001F1F8 拉斯维加斯04-下载&防失联-0.1x"
+- name: "\U0001F1EF\U0001F1F5 日本节点"
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1EF\U0001F1F5 日本1"
+  - "\U0001F1EF\U0001F1F5 日本2"
+  - "\U0001F1EF\U0001F1F5 日本01"
+  - "\U0001F1EF\U0001F1F5 日本02"
+  - "\U0001F1EF\U0001F1F5 日本03"
+  - "\U0001F1EF\U0001F1F5 日本04"
+  - "\U0001F1EF\U0001F1F5 日本05"
+  - "\U0001F1EF\U0001F1F5 日本06"
+- name: "\U0001F1F8\U0001F1EC 新加坡节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡1"
+  - "\U0001F1F8\U0001F1EC 新加坡2"
+  - "\U0001F1F8\U0001F1EC 新加坡01-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡02-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡03-流媒体解锁"
+  - "\U0001F1F8\U0001F1EC 新加坡04"
+  - "\U0001F1F8\U0001F1EC 新加坡05"
+  - "\U0001F1F8\U0001F1EC 新加坡06"
+- name: "\U0001F1F9\U0001F1FC 台湾节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1E8\U0001F1F3 台湾1-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾2-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾01-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾02-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾03-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾04-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾05-Gpt"
+  - "\U0001F1E8\U0001F1F3 台湾06-Gpt"
+- name: "\U0001F1F0\U0001F1F7 韩国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F0\U0001F1F7 韩国-家宽"
+  - "\U0001F1F0\U0001F1F7 韩国春川01"
+  - "\U0001F1F0\U0001F1F7 韩国春川02"
+  - "\U0001F1F0\U0001F1F7 韩国春川03"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽04"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽05"
+  - "\U0001F1F0\U0001F1F7 韩国-家宽06"
+- name: "\U0001F1E8\U0001F1E6 加拿大节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1E8\U0001F1E6 加拿大01"
+  - "\U0001F1E8\U0001F1E6 加拿大02"
+  - "\U0001F1E8\U0001F1E6 加拿大03"
+- name: "\U0001F1EC\U0001F1E7 英国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F1EB\U0001F1F7 法国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F1E9\U0001F1EA 德国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F1F3\U0001F1F1 荷兰节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F1F9\U0001F1F7 土耳其节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F1FB\U0001F1F3 越南节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F3AF 全球直连"
+  type: select
+  proxies:
+  - DIRECT
+rules:
+- "RULE-SET,Lan,\U0001F3AF 全球直连"
+- "RULE-SET,Custom_Direct,\U0001F3AF 全球直连"
+- "RULE-SET,Custom_Proxy,\U0001F680 节点选择"
+- "RULE-SET,Direct,\U0001F3AF 全球直连"
+- "GEOSITE,google-cn,\U0001F3AF 全球直连"
+- "RULE-SET,GoogleCNProxyIP,\U0001F680 节点选择"
+- "GEOSITE,category-games@cn,\U0001F3AF 全球直连"
+- "RULE-SET,Steam_CDN,\U0001F3AF 全球直连"
+- "RULE-SET,Game_Download_CDN,\U0001F3AF 全球直连"
+- "GEOSITE,category-public-tracker,\U0001F3AF 全球直连"
+- "RULE-SET,Telegram,\U0001F4F2 Telegram"
+- "RULE-SET,Twitter,\U0001F54A️ Twitter(X)"
+- "GEOSITE,openai,\U0001F4AC ChatGPT"
+- "RULE-SET,Copilot,\U0001F4AC Copilot"
+- "RULE-SET,Claude,\U0001F916 AI服务"
+- "GEOSITE,google-gemini,\U0001F916 AI服务"
+- "GEOSITE,github,\U0001F680 GitHub"
+- "RULE-SET,Speedtest,\U0001F680 测速工具"
+- "RULE-SET,YouTube,\U0001F4F9 YouTube"
+- "RULE-SET,AppleTV,\U0001F3A5 AppleTV+"
+- "RULE-SET,Apple,\U0001F34E 苹果服务"
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- "RULE-SET,XiaoMi,\U0001F3AF 全球直连"
+- "RULE-SET,GoogleFCM,\U0001F4E2 谷歌FCM"
+- "RULE-SET,Google,\U0001F1EC 谷歌服务"
+- "RULE-SET,TikTok,\U0001F3B6 TikTok"
+- "RULE-SET,Netflix,\U0001F3A5 Netflix"
+- "RULE-SET,Disney,\U0001F3A5 DisneyPlus"
+- "RULE-SET,HBO,\U0001F3A5 HBO"
+- "RULE-SET,HBO_fix,\U0001F3A5 HBO"
+- "RULE-SET,AmazonPrimeVideo,\U0001F3A5 PrimeVideo"
+- "RULE-SET,Emby,\U0001F3A5 Emby"
+- "RULE-SET,Emby 2,\U0001F3A5 Emby"
+- "RULE-SET,Spotify,\U0001F3BB Spotify"
+- "RULE-SET,Bahamut,\U0001F4FA Bahamut"
+- "RULE-SET,NetEaseMusic,\U0001F3AF 全球直连"
+- "RULE-SET,ChinaMedia,\U0001F3AF 全球直连"
+- "RULE-SET,IPTVMainland_Domain,\U0001F3AF 全球直连"
+- "RULE-SET,GlobalMedia,\U0001F30E 国外媒体"
+- "RULE-SET,Amazon,\U0001F6D2 国外电商"
+- "RULE-SET,AmazonIP,\U0001F6D2 国外电商"
+- "RULE-SET,Shopee,\U0001F6D2 国外电商"
+- "RULE-SET,Shopify,\U0001F6D2 国外电商"
+- "RULE-SET,Ozon,\U0001F6D2 国外电商"
+- "GEOSITE,steam,\U0001F3AE Steam"
+- "GEOSITE,category-games,\U0001F3AE 游戏平台"
+- "GEOSITE,gfw,\U0001F680 节点选择"
+- "RULE-SET,Download,\U0001F3AF 全球直连"
+- "GEOSITE,cn,\U0001F3AF 全球直连"
+- "MATCH,\U0001F41F 漏网之鱼"
+rule-providers:
+  Lan:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTGFuL0xhbi5saXN0
+    path: "./rule_provider/7858144499399907784.yaml"
+    interval: 28800
+  Custom_Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fRGlyZWN0Lmxpc3Q
+    path: "./rule_provider/2137848265989215840.yaml"
+    interval: 28800
+  Custom_Proxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fUHJveHkubGlzdA
+    path: "./rule_provider/4222299409953005873.yaml"
+    interval: 28800
+  Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlyZWN0L0RpcmVjdC5saXN0
+    path: "./rule_provider/8929112245643976536.yaml"
+    interval: 28800
+  GoogleCNProxyIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVDTlByb3h5SVAubGlzdA
+    path: "./rule_provider/13931322773426722605.yaml"
+    interval: 28800
+  Steam_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9TdGVhbV9DRE4ubGlzdA
+    path: "./rule_provider/3180876761672982007.yaml"
+    interval: 28800
+  Game_Download_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9HYW1lX0Rvd25sb2FkX0NETi5saXN0
+    path: "./rule_provider/7790104057346731950.yaml"
+    interval: 28800
+  Telegram:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    path: "./rule_provider/7648184409179964316.yaml"
+    interval: 28800
+  Twitter:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVHdpdHRlci9Ud2l0dGVyLmxpc3Q
+    path: "./rule_provider/10863985479704216936.yaml"
+    interval: 28800
+  Copilot:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ29waWxvdC9Db3BpbG90Lmxpc3Q
+    path: "./rule_provider/7519609039371296716.yaml"
+    interval: 28800
+  Claude:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9DbGF1ZGUvQ2xhdWRlLmxpc3Q
+    path: "./rule_provider/17787541590397062551.yaml"
+    interval: 28800
+  Speedtest:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BlZWR0ZXN0L1NwZWVkdGVzdC5saXN0
+    path: "./rule_provider/1783786751169689672.yaml"
+    interval: 28800
+  YouTube:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWW91VHViZS9Zb3VUdWJlLmxpc3Q
+    path: "./rule_provider/10846968446785762576.yaml"
+    interval: 28800
+  AppleTV:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BcHBsZVRWL0FwcGxlVFYubGlzdA
+    path: "./rule_provider/8065079127248644929.yaml"
+    interval: 28800
+  Apple:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQXBwbGUvQXBwbGUubGlzdA
+    path: "./rule_provider/10039033783654605368.yaml"
+    interval: 28800
+  Microsoft:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTWljcm9zb2Z0L01pY3Jvc29mdC5saXN0
+    path: "./rule_provider/2660296301157109308.yaml"
+    interval: 28800
+  XiaoMi:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWGlhb01pL1hpYW9NaS5saXN0
+    path: "./rule_provider/5706382992651923624.yaml"
+    interval: 28800
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlRkNNL0dvb2dsZUZDTS5saXN0
+    path: "./rule_provider/17286755956605385544.yaml"
+    interval: 28800
+  Google:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlL0dvb2dsZS5saXN0
+    path: "./rule_provider/5207499971064055564.yaml"
+    interval: 28800
+  TikTok:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGlrVG9rL1Rpa1Rvay5saXN0
+    path: "./rule_provider/1153352524583868546.yaml"
+    interval: 28800
+  Netflix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTmV0ZmxpeC9OZXRmbGl4Lmxpc3Q
+    path: "./rule_provider/5911240376645404092.yaml"
+    interval: 28800
+  Disney:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlzbmV5L0Rpc25leS5saXN0
+    path: "./rule_provider/6945122580773929854.yaml"
+    interval: 28800
+  HBO:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvSEJPL0hCTy5saXN0
+    path: "./rule_provider/17391180098406173840.yaml"
+    interval: 28800
+  HBO_fix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0hCT19maXgubGlzdA
+    path: "./rule_provider/1416747755207583533.yaml"
+    interval: 28800
+  AmazonPrimeVideo:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25QcmltZVZpZGVvL0FtYXpvblByaW1lVmlkZW8ubGlzdA
+    path: "./rule_provider/11994536476406262387.yaml"
+    interval: 28800
+  Emby:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRW1ieS9FbWJ5Lmxpc3Q
+    path: "./rule_provider/17364998702164715888.yaml"
+    interval: 28800
+  Emby 2:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RkZ2tzZjIwMTMvRmlsdGVyL3JlZnMvaGVhZHMvbWFzdGVyL0VtYnkubGlzdA
+    path: "./rule_provider/12368831718135117146.yaml"
+    interval: 28800
+  Spotify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BvdGlmeS9TcG90aWZ5Lmxpc3Q
+    path: "./rule_provider/4978068464364291208.yaml"
+    interval: 28800
+  Bahamut:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQmFoYW11dC9CYWhhbXV0Lmxpc3Q
+    path: "./rule_provider/13823274708054929692.yaml"
+    interval: 28800
+  NetEaseMusic:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTmV0RWFzZU11c2ljL05ldEVhc2VNdXNpYy5saXN0
+    path: "./rule_provider/7484936835438027998.yaml"
+    interval: 28800
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmFNZWRpYS9DaGluYU1lZGlhLmxpc3Q
+    path: "./rule_provider/2421848327466713840.yaml"
+    interval: 28800
+  IPTVMainland_Domain:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0lQVFZNYWlubGFuZF9Eb21haW4ubGlzdA
+    path: "./rule_provider/17504826188631249768.yaml"
+    interval: 28800
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR2xvYmFsTWVkaWEvR2xvYmFsTWVkaWEubGlzdA
+    path: "./rule_provider/8169842531796433964.yaml"
+    interval: 28800
+  Amazon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b24vQW1hem9uLmxpc3Q
+    path: "./rule_provider/15539959981190034955.yaml"
+    interval: 28800
+  AmazonIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25JUC9BbWF6b25JUC5saXN0
+    path: "./rule_provider/7963761571606130029.yaml"
+    interval: 28800
+  Shopee:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9TaG9wZWUvU2hvcGVlLmxpc3Q
+    path: "./rule_provider/678501726063682119.yaml"
+    interval: 28800
+  Shopify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU2hvcGlmeS9TaG9waWZ5Lmxpc3Q
+    path: "./rule_provider/15049338479425272128.yaml"
+    interval: 28800
+  Ozon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL096b24ubGlzdA
+    path: "./rule_provider/16385268891300374468.yaml"
+    interval: 28800
+  Download:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRG93bmxvYWQvRG93bmxvYWQubGlzdA
+    path: "./rule_provider/4606680353694276526.yaml"
+    interval: 28800
+dns:
+  enable: true
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  nameserver:
+  - dhcp://"pppoe-wan"
+  - 100.97.0.1
+  - "[fe80::200:5eff:fe00:10b]:53"
+  - 211.137.191.26
+  - 218.201.96.130
+  - "[2409:803c:2000:1::26]:53"
+  - "[2409:803c:2000:3::130]:53"
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.qq.com"
+  - "+.tencent.com"
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.cdn.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - na.b.g-tun.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - Mijia Cloud
+  - "+.cmbchina.com"
+  - "+.cmbimg.com"
+  - local.adguard.org
+  - "+.sandai.net"
+  - "+.n0808.com"
+  - "+.uu.163.com"
+  - ps.res.netease.com
+  - "+.pub.3gppnetwork.org"
+  - geosite:category-games
+  - "+.services.googleapis.cn"
+  - "+.googleapis.cn"
+  - "+.xn--ngstr-lra8j.com"
+  - "+.clientservices.googleapis.com"
+  - geosite:cn
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7892
+secret: pBwYtZuN
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+keep-alive-interval: 15
+keep-alive-idle: 600
+ipv6: true
+tcp-concurrent: true
+unified-delay: true
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  force-dns-mapping: true
+  override-destination: false
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - "+.apple.com"
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+authentication:
+- super:892515357
+profile:
+  store-selected: true
+  store-fake-ip: true
+routing-mark: 6666

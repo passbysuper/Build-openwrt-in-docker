@@ -1,0 +1,3810 @@
+---
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+proxies:
+- name: "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  server: bepgzbgp01.114837322.xyz
+  port: 14091
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  server: bepgzbgp01.114837322.xyz
+  port: 14092
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  server: bepshbgp01.114837322.xyz
+  port: 14093
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  server: bepshbgp01.114837322.xyz
+  port: 14094
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  server: bepgzbgp01.114837322.xyz
+  port: 14101
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  server: bepgzbgp01.114837322.xyz
+  port: 14102
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  server: bepgzbgp01.114837322.xyz
+  port: 14103
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  server: bepgzbgp01.114837322.xyz
+  port: 14104
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  server: bepgzbgp01.114837322.xyz
+  port: 14105
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  server: bepgzbgp01.114837322.xyz
+  port: 14106
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  server: bepgzbgp01.114837322.xyz
+  port: 14107
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  server: bepgzbgp01.114837322.xyz
+  port: 14108
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  server: bepgzbgp01.114837322.xyz
+  port: 14111
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  server: bepgzbgp01.114837322.xyz
+  port: 14112
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  server: bepgzbgp01.114837322.xyz
+  port: 14113
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  server: bepgzbgp01.114837322.xyz
+  port: 14114
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  server: bepgzbgp01.114837322.xyz
+  port: 14115
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14131
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  server: bepshbgp01.114837322.xyz
+  port: 14132
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  server: bepshbgp01.114837322.xyz
+  port: 14133
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  server: bepshbgp01.114837322.xyz
+  port: 14134
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  server: bepshbgp01.114837322.xyz
+  port: 14135
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  server: bepshbgp01.114837322.xyz
+  port: 14136
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  server: bepshbgp01.114837322.xyz
+  port: 14137
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  server: bepshbgp01.114837322.xyz
+  port: 14138
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  server: bepshbgp01.114837322.xyz
+  port: 14139
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  server: bepshbgp01.114837322.xyz
+  port: 14140
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14141
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  server: bepshbgp01.114837322.xyz
+  port: 14142
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  server: bepgzbgp01.114837322.xyz
+  port: 14151
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  server: bepgzbgp01.114837322.xyz
+  port: 14152
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14121
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  server: bepshbgp01.114837322.xyz
+  port: 14122
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  server: bepshbgp01.114837322.xyz
+  port: 14123
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  server: bepshbgp01.114837322.xyz
+  port: 14124
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  server: bepshbgp01.114837322.xyz
+  port: 14125
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  server: bepshbgp01.114837322.xyz
+  port: 14126
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  server: bepshbgp01.114837322.xyz
+  port: 14127
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  server: bepshbgp01.114837322.xyz
+  port: 14128
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  server: bepgzbgp01.114837322.xyz
+  port: 14001
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  server: bepgzbgp01.114837322.xyz
+  port: 14002
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  server: bepgzbgp01.114837322.xyz
+  port: 14003
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  server: bepgzbgp01.114837322.xyz
+  port: 14011
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  server: bepgzbgp01.114837322.xyz
+  port: 14012
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  server: bepgzbgp01.114837322.xyz
+  port: 14013
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14031
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  server: bepshbgp01.114837322.xyz
+  port: 14032
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  server: bepshbgp01.114837322.xyz
+  port: 14033
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  server: bepshbgp01.114837322.xyz
+  port: 14034
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  server: bepshbgp01.114837322.xyz
+  port: 14035
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  server: bepshbgp01.114837322.xyz
+  port: 14036
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14041
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14021
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  server: bepshbgp01.114837322.xyz
+  port: 14022
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  server: bepshbgp01.114837322.xyz
+  port: 14023
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  server: bepshbgp01.114837322.xyz
+  port: 14024
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  server: bepgzbgp01.114837322.xyz
+  port: 14051
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  server: bepbjbgp01.114837322.xyz
+  port: 14201
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  server: bepbjbgp01.114837322.xyz
+  port: 14202
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  server: bepbjbgp01.114837322.xyz
+  port: 14200
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  server: bepbjbgp01.114837322.xyz
+  port: 14207
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14205
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  server: bepshbgp01.114837322.xyz
+  port: 14206
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  server: bepshbgp01.114837322.xyz
+  port: 14208
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  server: bepbjbgp01.114837322.xyz
+  port: 14198
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  server: bepbjbgp01.114837322.xyz
+  port: 14218
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  server: bepgzbgp01.114837322.xyz
+  port: 14161
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  server: bepgzbgp01.114837322.xyz
+  port: 14162
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  server: bepgzbgp01.114837322.xyz
+  port: 14194
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  server: bepgzbgp01.114837322.xyz
+  port: 14199
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  server: bepgzbgp01.114837322.xyz
+  port: 14203
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  server: bepbjbgp01.114837322.xyz
+  port: 14204
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  server: bepbjbgp01.114837322.xyz
+  port: 14213
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  server: bepgzbgp01.114837322.xyz
+  port: 14214
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  server: bepbjbgp01.114837322.xyz
+  port: 14220
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  server: bepgzbgp01.114837322.xyz
+  port: 14191
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  server: bepbjbgp01.114837322.xyz
+  port: 14193
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  server: bepbjbgp01.114837322.xyz
+  port: 14192
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  server: bepbjbgp01.114837322.xyz
+  port: 14196
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  server: bepbjbgp01.114837322.xyz
+  port: 14209
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  server: bepbjbgp01.114837322.xyz
+  port: 14211
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  server: bepbjbgp01.114837322.xyz
+  port: 14195
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  server: bepgzbgp01.114837322.xyz
+  port: 14219
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  server: bepgzbgp01.114837322.xyz
+  port: 14210
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  server: bepgzbgp01.114837322.xyz
+  port: 14216
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  server: bepbjbgp01.114837322.xyz
+  port: 14217
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+- name: "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+  server: bepshbgp01.114837322.xyz
+  port: 14197
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: lE9uL5fR3yR9
+  plugin: obfs
+  plugin-opts:
+    mode: http
+    host: 5da3b1ac3d.iqiyi.com
+  udp: true
+proxy-groups:
+- name: "\U0001F680 节点选择"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "♻️ 自动选择"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F680 GitHub"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F4F2 Telegram"
+  type: select
+  proxies:
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+- name: "\U0001F54A️ Twitter(X)"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F4AC ChatGPT"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F4AC Copilot"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F916 AI服务"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3B6 TikTok"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F4F9 YouTube"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3A5 Netflix"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3A5 DisneyPlus"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3A5 HBO"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3A5 PrimeVideo"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3A5 AppleTV+"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3A5 Emby"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F3BB Spotify"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F4FA Bahamut"
+  type: select
+  proxies:
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F680 节点选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F30E 国外媒体"
+  type: select
+  proxies:
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F6D2 国外电商"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F4E2 谷歌FCM"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F1EC 谷歌服务"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+- name: "\U0001F34E 苹果服务"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+- name: "\U0001F3AE 游戏平台"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+- name: "\U0001F3AE Steam"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F680 测速工具"
+  type: select
+  proxies:
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F41F 漏网之鱼"
+  type: select
+  proxies:
+  - "\U0001F1ED\U0001F1F0 香港节点"
+  - "\U0001F1FA\U0001F1F8 美国节点"
+  - "\U0001F1EF\U0001F1F5 日本节点"
+  - "\U0001F1F8\U0001F1EC 新加坡节点"
+  - "\U0001F1F9\U0001F1FC 台湾节点"
+  - "\U0001F1F0\U0001F1F7 韩国节点"
+  - "\U0001F1E8\U0001F1E6 加拿大节点"
+  - "\U0001F1EC\U0001F1E7 英国节点"
+  - "\U0001F1EB\U0001F1F7 法国节点"
+  - "\U0001F1E9\U0001F1EA 德国节点"
+  - "\U0001F1F3\U0001F1F1 荷兰节点"
+  - "\U0001F1F9\U0001F1F7 土耳其节点"
+  - "\U0001F1FB\U0001F1F3 越南节点"
+  - "\U0001F680 节点选择"
+  - "♻️ 自动选择"
+  - "\U0001F3AF 全球直连"
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 01"
+  - "\U0001F1EC\U0001F1E7 特殊 专线 伦敦 02"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+  - "\U0001F1E7\U0001F1F7 特殊 专线 巴西 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+  - "\U0001F1F9\U0001F1ED 特殊 专线 泰国"
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+  - "\U0001F1EE\U0001F1F3 特殊 专线 印度"
+  - "\U0001F1E6\U0001F1FA 特殊 专线 悉尼"
+  - "\U0001F1E6\U0001F1EA 特殊 专线 迪拜"
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+  - "\U0001F1EE\U0001F1E9 特殊 专线 印尼"
+  - "\U0001F1EA\U0001F1EC 特殊 专线 埃及"
+  - "\U0001F1F5\U0001F1ED 特殊 专线 菲律宾"
+  - "\U0001F1EE\U0001F1F9 特殊 专线 意大利"
+  - "\U0001F1EA\U0001F1F8 特殊 专线 西班牙"
+  - "\U0001F1ED\U0001F1FA 特殊 专线 匈牙利"
+  - "\U0001F1EE\U0001F1F1 特殊 专线 以色列"
+  - "\U0001F1FA\U0001F1E6 特殊 专线 乌克兰"
+  - "\U0001F1F7\U0001F1FA 特殊 专线 俄罗斯"
+  - "\U0001F1F2\U0001F1FE 特殊 专线 马来西亚"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+  - "\U0001F1F5\U0001F1F0 特殊 专线 巴基斯坦"
+  - "\U0001F1F2\U0001F1E9 特殊 专线 摩尔多瓦"
+  - "\U0001F1E6\U0001F1F7 购物 专线 阿根廷"
+- name: "\U0001F1ED\U0001F1F0 香港节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 03"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 04"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 05"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 06"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 07"
+  - "\U0001F1ED\U0001F1F0 高级 专线 香港 08"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 01"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 02"
+  - "\U0001F1ED\U0001F1F0 标准 专线 香港 03"
+- name: "\U0001F1FA\U0001F1F8 美国节点"
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 06"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 07"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 08"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 09"
+  - "\U0001F1FA\U0001F1F8 高级 专线 美国 10"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 01"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 02"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 03"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 04"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 05"
+  - "\U0001F1FA\U0001F1F8 标准 专线 美国 06"
+- name: "\U0001F1EF\U0001F1F5 日本节点"
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1ED\U0001F1F0 日用 专线 香港 [0.2]"
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1EF\U0001F1F5 日用 专线 日本 [0.2]"
+  - "\U0001F1FA\U0001F1F8 日用 专线 美国 [0.2]"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 04"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 05"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 06"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 07"
+  - "\U0001F1EF\U0001F1F5 高级 专线 日本 08"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 01"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 02"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 03"
+  - "\U0001F1EF\U0001F1F5 标准 专线 日本 04"
+  - "\U0001F1F3\U0001F1EC 特殊 专线 尼日利亚"
+- name: "\U0001F1F8\U0001F1EC 新加坡节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F8\U0001F1EC 日用 专线 狮城 [0.2]"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 03"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 04"
+  - "\U0001F1F8\U0001F1EC 高级 专线 狮城 05"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 01"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 02"
+  - "\U0001F1F8\U0001F1EC 标准 专线 狮城 03"
+- name: "\U0001F1F9\U0001F1FC 台湾节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 01"
+  - "\U0001F1E8\U0001F1F3 高级 专线 台湾 02"
+  - "\U0001F1E8\U0001F1F3 标准 专线 台湾 01"
+- name: "\U0001F1F0\U0001F1F7 韩国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 01"
+  - "\U0001F1F0\U0001F1F7 高级 专线 韩国 02"
+  - "\U0001F1F0\U0001F1F7 标准 专线 韩国 01"
+- name: "\U0001F1E8\U0001F1E6 加拿大节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 01"
+  - "\U0001F1E8\U0001F1E6 特殊 专线 加拿大 02"
+- name: "\U0001F1EC\U0001F1E7 英国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - DIRECT
+- name: "\U0001F1EB\U0001F1F7 法国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1EB\U0001F1F7 特殊 专线 法国"
+- name: "\U0001F1E9\U0001F1EA 德国节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 01"
+  - "\U0001F1E9\U0001F1EA 特殊 专线 德国 02"
+- name: "\U0001F1F3\U0001F1F1 荷兰节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F3\U0001F1F1 特殊 专线 荷兰"
+- name: "\U0001F1F9\U0001F1F7 土耳其节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 01"
+  - "\U0001F1F9\U0001F1F7 特殊 专线 土耳其 02"
+- name: "\U0001F1FB\U0001F1F3 越南节点"
+  type: url-test
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "\U0001F1FB\U0001F1F3 特殊 专线 越南"
+- name: "\U0001F3AF 全球直连"
+  type: select
+  proxies:
+  - DIRECT
+rules:
+- DOMAIN-SUFFIX,ip6only.me,DIRECT
+- DOMAIN-SUFFIX,edu.cn,DIRECT
+- DOMAIN-KEYWORD,ipv6,DIRECT
+- "RULE-SET,Lan,\U0001F3AF 全球直连"
+- "RULE-SET,Custom_Direct,\U0001F3AF 全球直连"
+- "RULE-SET,Custom_Proxy,\U0001F680 节点选择"
+- "RULE-SET,Direct,\U0001F3AF 全球直连"
+- "GEOSITE,google-cn,\U0001F3AF 全球直连"
+- "RULE-SET,GoogleCNProxyIP,\U0001F680 节点选择"
+- "GEOSITE,category-games@cn,\U0001F3AF 全球直连"
+- "RULE-SET,Steam_CDN,\U0001F3AF 全球直连"
+- "RULE-SET,Game_Download_CDN,\U0001F3AF 全球直连"
+- "GEOSITE,category-public-tracker,\U0001F3AF 全球直连"
+- "RULE-SET,Telegram,\U0001F4F2 Telegram"
+- "RULE-SET,Twitter,\U0001F54A️ Twitter(X)"
+- "GEOSITE,openai,\U0001F4AC ChatGPT"
+- "RULE-SET,Copilot,\U0001F4AC Copilot"
+- "GEOSITE,anthropic,\U0001F916 AI服务"
+- "GEOSITE,google-gemini,\U0001F916 AI服务"
+- "GEOSITE,github,\U0001F680 GitHub"
+- "RULE-SET,Speedtest,\U0001F680 测速工具"
+- "RULE-SET,YouTube,\U0001F4F9 YouTube"
+- "RULE-SET,AppleTV,\U0001F3A5 AppleTV+"
+- "RULE-SET,Apple,\U0001F34E 苹果服务"
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- "RULE-SET,XiaoMi,\U0001F3AF 全球直连"
+- "RULE-SET,GoogleFCM,\U0001F4E2 谷歌FCM"
+- "RULE-SET,Google,\U0001F1EC 谷歌服务"
+- "RULE-SET,TikTok,\U0001F3B6 TikTok"
+- "RULE-SET,Netflix,\U0001F3A5 Netflix"
+- "RULE-SET,Disney,\U0001F3A5 DisneyPlus"
+- "RULE-SET,HBO,\U0001F3A5 HBO"
+- "RULE-SET,HBO_fix,\U0001F3A5 HBO"
+- "RULE-SET,AmazonPrimeVideo,\U0001F3A5 PrimeVideo"
+- "RULE-SET,Emby,\U0001F3A5 Emby"
+- "RULE-SET,Emby 2,\U0001F3A5 Emby"
+- "RULE-SET,Spotify,\U0001F3BB Spotify"
+- "RULE-SET,Bahamut,\U0001F4FA Bahamut"
+- "RULE-SET,ChinaMedia,\U0001F3AF 全球直连"
+- "RULE-SET,IPTVMainland_Domain,\U0001F3AF 全球直连"
+- "RULE-SET,GlobalMedia,\U0001F30E 国外媒体"
+- "RULE-SET,Amazon,\U0001F6D2 国外电商"
+- "RULE-SET,AmazonIP,\U0001F6D2 国外电商"
+- "RULE-SET,Shopee,\U0001F6D2 国外电商"
+- "RULE-SET,Shopify,\U0001F6D2 国外电商"
+- "RULE-SET,Ozon,\U0001F6D2 国外电商"
+- "GEOSITE,steam,\U0001F3AE Steam"
+- "GEOSITE,category-games,\U0001F3AE 游戏平台"
+- "GEOSITE,gfw,\U0001F680 节点选择"
+- "RULE-SET,Download,\U0001F3AF 全球直连"
+- "GEOSITE,cn,\U0001F3AF 全球直连"
+- "MATCH,\U0001F41F 漏网之鱼"
+rule-providers:
+  Lan:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTGFuL0xhbi5saXN0
+    path: "./rule_provider/7858144499399907784.yaml"
+    interval: 28800
+  Custom_Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fRGlyZWN0Lmxpc3Q
+    path: "./rule_provider/2137848265989215840.yaml"
+    interval: 28800
+  Custom_Proxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fUHJveHkubGlzdA
+    path: "./rule_provider/4222299409953005873.yaml"
+    interval: 28800
+  Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlyZWN0L0RpcmVjdC5saXN0
+    path: "./rule_provider/8929112245643976536.yaml"
+    interval: 28800
+  GoogleCNProxyIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVDTlByb3h5SVAubGlzdA
+    path: "./rule_provider/13931322773426722605.yaml"
+    interval: 28800
+  Steam_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9TdGVhbV9DRE4ubGlzdA
+    path: "./rule_provider/3180876761672982007.yaml"
+    interval: 28800
+  Game_Download_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9HYW1lX0Rvd25sb2FkX0NETi5saXN0
+    path: "./rule_provider/7790104057346731950.yaml"
+    interval: 28800
+  Telegram:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    path: "./rule_provider/7648184409179964316.yaml"
+    interval: 28800
+  Twitter:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVHdpdHRlci9Ud2l0dGVyLmxpc3Q
+    path: "./rule_provider/10863985479704216936.yaml"
+    interval: 28800
+  Copilot:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ29waWxvdC9Db3BpbG90Lmxpc3Q
+    path: "./rule_provider/7519609039371296716.yaml"
+    interval: 28800
+  Speedtest:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BlZWR0ZXN0L1NwZWVkdGVzdC5saXN0
+    path: "./rule_provider/1783786751169689672.yaml"
+    interval: 28800
+  YouTube:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWW91VHViZS9Zb3VUdWJlLmxpc3Q
+    path: "./rule_provider/10846968446785762576.yaml"
+    interval: 28800
+  AppleTV:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BcHBsZVRWL0FwcGxlVFYubGlzdA
+    path: "./rule_provider/8065079127248644929.yaml"
+    interval: 28800
+  Apple:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQXBwbGUvQXBwbGUubGlzdA
+    path: "./rule_provider/10039033783654605368.yaml"
+    interval: 28800
+  Microsoft:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTWljcm9zb2Z0L01pY3Jvc29mdC5saXN0
+    path: "./rule_provider/2660296301157109308.yaml"
+    interval: 28800
+  XiaoMi:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWGlhb01pL1hpYW9NaS5saXN0
+    path: "./rule_provider/5706382992651923624.yaml"
+    interval: 28800
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlRkNNL0dvb2dsZUZDTS5saXN0
+    path: "./rule_provider/17286755956605385544.yaml"
+    interval: 28800
+  Google:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlL0dvb2dsZS5saXN0
+    path: "./rule_provider/5207499971064055564.yaml"
+    interval: 28800
+  TikTok:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGlrVG9rL1Rpa1Rvay5saXN0
+    path: "./rule_provider/1153352524583868546.yaml"
+    interval: 28800
+  Netflix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTmV0ZmxpeC9OZXRmbGl4Lmxpc3Q
+    path: "./rule_provider/5911240376645404092.yaml"
+    interval: 28800
+  Disney:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlzbmV5L0Rpc25leS5saXN0
+    path: "./rule_provider/6945122580773929854.yaml"
+    interval: 28800
+  HBO:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvSEJPL0hCTy5saXN0
+    path: "./rule_provider/17391180098406173840.yaml"
+    interval: 28800
+  HBO_fix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0hCT19maXgubGlzdA
+    path: "./rule_provider/1416747755207583533.yaml"
+    interval: 28800
+  AmazonPrimeVideo:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25QcmltZVZpZGVvL0FtYXpvblByaW1lVmlkZW8ubGlzdA
+    path: "./rule_provider/11994536476406262387.yaml"
+    interval: 28800
+  Emby:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRW1ieS9FbWJ5Lmxpc3Q
+    path: "./rule_provider/17364998702164715888.yaml"
+    interval: 28800
+  Emby 2:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RkZ2tzZjIwMTMvRmlsdGVyL3JlZnMvaGVhZHMvbWFzdGVyL0VtYnkubGlzdA
+    path: "./rule_provider/12368831718135117146.yaml"
+    interval: 28800
+  Spotify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BvdGlmeS9TcG90aWZ5Lmxpc3Q
+    path: "./rule_provider/4978068464364291208.yaml"
+    interval: 28800
+  Bahamut:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQmFoYW11dC9CYWhhbXV0Lmxpc3Q
+    path: "./rule_provider/13823274708054929692.yaml"
+    interval: 28800
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmFNZWRpYS9DaGluYU1lZGlhLmxpc3Q
+    path: "./rule_provider/2421848327466713840.yaml"
+    interval: 28800
+  IPTVMainland_Domain:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0lQVFZNYWlubGFuZF9Eb21haW4ubGlzdA
+    path: "./rule_provider/17504826188631249768.yaml"
+    interval: 28800
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR2xvYmFsTWVkaWEvR2xvYmFsTWVkaWEubGlzdA
+    path: "./rule_provider/8169842531796433964.yaml"
+    interval: 28800
+  Amazon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b24vQW1hem9uLmxpc3Q
+    path: "./rule_provider/15539959981190034955.yaml"
+    interval: 28800
+  AmazonIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25JUC9BbWF6b25JUC5saXN0
+    path: "./rule_provider/7963761571606130029.yaml"
+    interval: 28800
+  Shopee:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9TaG9wZWUvU2hvcGVlLmxpc3Q
+    path: "./rule_provider/678501726063682119.yaml"
+    interval: 28800
+  Shopify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU2hvcGlmeS9TaG9waWZ5Lmxpc3Q
+    path: "./rule_provider/15049338479425272128.yaml"
+    interval: 28800
+  Ozon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL096b24ubGlzdA
+    path: "./rule_provider/16385268891300374468.yaml"
+    interval: 28800
+  Download:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRG93bmxvYWQvRG93bmxvYWQubGlzdA
+    path: "./rule_provider/4606680353694276526.yaml"
+    interval: 28800
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:7874
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
+  - time-ios.apple.com
+  - time1.*.com
+  - time2.*.com
+  - time3.*.com
+  - time4.*.com
+  - time5.*.com
+  - time6.*.com
+  - time7.*.com
+  - ntp.*.com
+  - ntp1.*.com
+  - ntp2.*.com
+  - ntp3.*.com
+  - ntp4.*.com
+  - ntp5.*.com
+  - ntp6.*.com
+  - ntp7.*.com
+  - "*.time.edu.cn"
+  - "*.ntp.org.cn"
+  - "+.pool.ntp.org"
+  - time1.cloud.tencent.com
+  - music.163.com
+  - "*.music.163.com"
+  - "*.126.net"
+  - musicapi.taihe.com
+  - music.taihe.com
+  - songsearch.kugou.com
+  - trackercdn.kugou.com
+  - "*.kuwo.cn"
+  - api-jooxtt.sanook.com
+  - api.joox.com
+  - joox.com
+  - y.qq.com
+  - "*.y.qq.com"
+  - streamoc.music.tc.qq.com
+  - mobileoc.music.tc.qq.com
+  - isure.stream.qqmusic.qq.com
+  - dl.stream.qqmusic.qq.com
+  - aqqmusic.tc.qq.com
+  - amobile.music.tc.qq.com
+  - "*.xiami.com"
+  - "*.music.migu.cn"
+  - music.migu.cn
+  - "+.msftconnecttest.com"
+  - "+.msftncsi.com"
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - "+.qq.com"
+  - "+.tencent.com"
+  - "+.srv.nintendo.net"
+  - "*.n.n.srv.nintendo.net"
+  - "+.cdn.nintendo.net"
+  - "+.stun.playstation.net"
+  - xbox.*.*.microsoft.com
+  - "*.*.xboxlive.com"
+  - xbox.*.microsoft.com
+  - xnotify.xboxlive.com
+  - "+.battlenet.com.cn"
+  - "+.wotgame.cn"
+  - "+.wggames.cn"
+  - "+.wowsgame.cn"
+  - "+.wargaming.net"
+  - proxy.golang.org
+  - stun.*.*
+  - stun.*.*.*
+  - "+.stun.*.*"
+  - "+.stun.*.*.*"
+  - "+.stun.*.*.*.*"
+  - "+.stun.*.*.*.*.*"
+  - heartbeat.belkin.com
+  - "*.linksys.com"
+  - "*.linksyssmartwifi.com"
+  - "*.router.asus.com"
+  - mesu.apple.com
+  - swscan.apple.com
+  - swquery.apple.com
+  - swdownload.apple.com
+  - swcdn.apple.com
+  - swdist.apple.com
+  - lens.l.google.com
+  - stun.l.google.com
+  - na.b.g-tun.com
+  - "+.nflxvideo.net"
+  - "*.square-enix.com"
+  - "*.finalfantasyxiv.com"
+  - "*.ffxiv.com"
+  - "*.ff14.sdo.com"
+  - ff.dorado.sdo.com
+  - "*.mcdn.bilivideo.cn"
+  - "+.media.dssott.com"
+  - shark007.net
+  - Mijia Cloud
+  - "+.cmbchina.com"
+  - "+.cmbimg.com"
+  - local.adguard.org
+  - "+.sandai.net"
+  - "+.n0808.com"
+  - "+.uu.163.com"
+  - ps.res.netease.com
+  - "+.pub.3gppnetwork.org"
+  - geosite:category-games
+  - "+.services.googleapis.cn"
+  - "+.googleapis.cn"
+  - "+.xn--ngstr-lra8j.com"
+  - "+.clientservices.googleapis.com"
+  - geosite:cn
+  nameserver:
+  - 114.114.114.114
+  - 119.29.29.29
+  - 8.8.8.8
+  - 1.1.1.1
+  fallback:
+  - https://dns.cloudflare.com/dns-query
+  - https://dns.google/dns-query
+redir-port: 7892
+tproxy-port: 7895
+mixed-port: 7892
+secret: pBwYtZuN
+bind-address: "*"
+external-ui: "/usr/share/openclash/ui"
+keep-alive-interval: 15
+keep-alive-idle: 600
+ipv6: true
+tcp-concurrent: true
+unified-delay: true
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  force-dns-mapping: true
+  override-destination: false
+  sniff:
+    QUIC:
+      ports:
+      - 443
+    TLS:
+      ports:
+      - 443
+      - 8443
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+  force-domain:
+  - "+.netflix.com"
+  - "+.nflxvideo.net"
+  - "+.amazonaws.com"
+  - "+.media.dssott.com"
+  skip-domain:
+  - "+.apple.com"
+  - Mijia Cloud
+  - dlg.io.mi.com
+  - "+.oray.com"
+  - "+.sunlogin.net"
+  - "+.push.apple.com"
+profile:
+  store-selected: true
+  store-fake-ip: true
+routing-mark: 6666
+authentication:
+- Clash:YbbSvlLG

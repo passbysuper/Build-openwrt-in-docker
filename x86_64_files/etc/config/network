@@ -1,0 +1,42 @@
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0'
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fdc5:0a05:cda7::/48'
+	option packet_steering '1'
+
+config device 'device'
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0'
+	list ports 'eth1'
+	list ports 'eth2'
+	list ports 'eth3'
+	list ports 'eth4'
+
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option ipaddr '10.10.10.1'
+	option netmask '255.255.255.0'
+	option ip6assign '64'
+	option delegate '0'
+	option ip6ifaceid 'eui64'
+
+config interface 'wan'
+	option proto 'pppoe'
+	option device 'eth5'
+	option ipv6 'auto'
+	option username '18763265199'
+	option password '123123'
+	option service 'ZXHN F663N'
+

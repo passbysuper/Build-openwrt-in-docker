@@ -1,0 +1,2756 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: "🇭🇰 日用 专线 香港 [0.2]", server: bepgzbgp01.114837322.xyz, port: 14091, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: "🇸🇬 日用 专线 狮城 [0.2]", server: bepgzbgp01.114837322.xyz, port: 14092, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: "🇯🇵 日用 专线 日本 [0.2]", server: bepshbgp01.114837322.xyz, port: 14093, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: "🇺🇸 日用 专线 美国 [0.2]", server: bepshbgp01.114837322.xyz, port: 14094, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 01, server: bepgzbgp01.114837322.xyz, port: 14101, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 02, server: bepgzbgp01.114837322.xyz, port: 14102, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 03, server: bepgzbgp01.114837322.xyz, port: 14103, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 04, server: bepgzbgp01.114837322.xyz, port: 14104, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 05, server: bepgzbgp01.114837322.xyz, port: 14105, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 06, server: bepgzbgp01.114837322.xyz, port: 14106, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 07, server: bepgzbgp01.114837322.xyz, port: 14107, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 高级 专线 香港 08, server: bepgzbgp01.114837322.xyz, port: 14108, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 高级 专线 狮城 01, server: bepgzbgp01.114837322.xyz, port: 14111, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 高级 专线 狮城 02, server: bepgzbgp01.114837322.xyz, port: 14112, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 高级 专线 狮城 03, server: bepgzbgp01.114837322.xyz, port: 14113, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 高级 专线 狮城 04, server: bepgzbgp01.114837322.xyz, port: 14114, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 高级 专线 狮城 05, server: bepgzbgp01.114837322.xyz, port: 14115, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 01, server: bepshbgp01.114837322.xyz, port: 14131, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 02, server: bepshbgp01.114837322.xyz, port: 14132, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 03, server: bepshbgp01.114837322.xyz, port: 14133, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 04, server: bepshbgp01.114837322.xyz, port: 14134, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 05, server: bepshbgp01.114837322.xyz, port: 14135, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 06, server: bepshbgp01.114837322.xyz, port: 14136, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 07, server: bepshbgp01.114837322.xyz, port: 14137, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 08, server: bepshbgp01.114837322.xyz, port: 14138, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 09, server: bepshbgp01.114837322.xyz, port: 14139, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 高级 专线 美国 10, server: bepshbgp01.114837322.xyz, port: 14140, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇰🇷 高级 专线 韩国 01, server: bepshbgp01.114837322.xyz, port: 14141, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇰🇷 高级 专线 韩国 02, server: bepshbgp01.114837322.xyz, port: 14142, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇨🇳 高级 专线 台湾 01, server: bepgzbgp01.114837322.xyz, port: 14151, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇨🇳 高级 专线 台湾 02, server: bepgzbgp01.114837322.xyz, port: 14152, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 01, server: bepshbgp01.114837322.xyz, port: 14121, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 02, server: bepshbgp01.114837322.xyz, port: 14122, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 03, server: bepshbgp01.114837322.xyz, port: 14123, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 04, server: bepshbgp01.114837322.xyz, port: 14124, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 05, server: bepshbgp01.114837322.xyz, port: 14125, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 06, server: bepshbgp01.114837322.xyz, port: 14126, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 07, server: bepshbgp01.114837322.xyz, port: 14127, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 高级 专线 日本 08, server: bepshbgp01.114837322.xyz, port: 14128, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 标准 专线 香港 01, server: bepgzbgp01.114837322.xyz, port: 14001, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 标准 专线 香港 02, server: bepgzbgp01.114837322.xyz, port: 14002, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇰 标准 专线 香港 03, server: bepgzbgp01.114837322.xyz, port: 14003, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 标准 专线 狮城 01, server: bepgzbgp01.114837322.xyz, port: 14011, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 标准 专线 狮城 02, server: bepgzbgp01.114837322.xyz, port: 14012, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇸🇬 标准 专线 狮城 03, server: bepgzbgp01.114837322.xyz, port: 14013, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 标准 专线 美国 01, server: bepshbgp01.114837322.xyz, port: 14031, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 标准 专线 美国 02, server: bepshbgp01.114837322.xyz, port: 14032, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 标准 专线 美国 03, server: bepshbgp01.114837322.xyz, port: 14033, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 标准 专线 美国 04, server: bepshbgp01.114837322.xyz, port: 14034, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 标准 专线 美国 05, server: bepshbgp01.114837322.xyz, port: 14035, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇸 标准 专线 美国 06, server: bepshbgp01.114837322.xyz, port: 14036, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇰🇷 标准 专线 韩国 01, server: bepshbgp01.114837322.xyz, port: 14041, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 标准 专线 日本 01, server: bepshbgp01.114837322.xyz, port: 14021, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 标准 专线 日本 02, server: bepshbgp01.114837322.xyz, port: 14022, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 标准 专线 日本 03, server: bepshbgp01.114837322.xyz, port: 14023, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇯🇵 标准 专线 日本 04, server: bepshbgp01.114837322.xyz, port: 14024, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇨🇳 标准 专线 台湾 01, server: bepgzbgp01.114837322.xyz, port: 14051, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇬🇧 特殊 专线 伦敦 01, server: bepbjbgp01.114837322.xyz, port: 14201, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇬🇧 特殊 专线 伦敦 02, server: bepbjbgp01.114837322.xyz, port: 14202, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇩🇪 特殊 专线 德国 01, server: bepbjbgp01.114837322.xyz, port: 14200, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇩🇪 特殊 专线 德国 02, server: bepbjbgp01.114837322.xyz, port: 14207, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇧🇷 特殊 专线 巴西 01, server: bepshbgp01.114837322.xyz, port: 14205, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇨🇦 特殊 专线 加拿大 01, server: bepshbgp01.114837322.xyz, port: 14206, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇨🇦 特殊 专线 加拿大 02, server: bepshbgp01.114837322.xyz, port: 14208, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇹🇷 特殊 专线 土耳其 01, server: bepbjbgp01.114837322.xyz, port: 14198, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇹🇷 特殊 专线 土耳其 02, server: bepbjbgp01.114837322.xyz, port: 14218, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇹🇭 特殊 专线 泰国, server: bepgzbgp01.114837322.xyz, port: 14161, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇻🇳 特殊 专线 越南, server: bepgzbgp01.114837322.xyz, port: 14162, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇮🇳 特殊 专线 印度, server: bepgzbgp01.114837322.xyz, port: 14194, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇦🇺 特殊 专线 悉尼, server: bepgzbgp01.114837322.xyz, port: 14199, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇦🇪 特殊 专线 迪拜, server: bepgzbgp01.114837322.xyz, port: 14203, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇫🇷 特殊 专线 法国, server: bepbjbgp01.114837322.xyz, port: 14204, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇳🇱 特殊 专线 荷兰, server: bepbjbgp01.114837322.xyz, port: 14213, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇮🇩 特殊 专线 印尼, server: bepgzbgp01.114837322.xyz, port: 14214, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇪🇬 特殊 专线 埃及, server: bepbjbgp01.114837322.xyz, port: 14220, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇵🇭 特殊 专线 菲律宾, server: bepgzbgp01.114837322.xyz, port: 14191, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇮🇹 特殊 专线 意大利, server: bepbjbgp01.114837322.xyz, port: 14193, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇪🇸 特殊 专线 西班牙, server: bepbjbgp01.114837322.xyz, port: 14192, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇭🇺 特殊 专线 匈牙利, server: bepbjbgp01.114837322.xyz, port: 14196, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇮🇱 特殊 专线 以色列, server: bepbjbgp01.114837322.xyz, port: 14209, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇺🇦 特殊 专线 乌克兰, server: bepbjbgp01.114837322.xyz, port: 14211, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇷🇺 特殊 专线 俄罗斯, server: bepbjbgp01.114837322.xyz, port: 14195, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇲🇾 特殊 专线 马来西亚, server: bepgzbgp01.114837322.xyz, port: 14219, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇳🇬 特殊 专线 尼日利亚, server: bepgzbgp01.114837322.xyz, port: 14210, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇵🇰 特殊 专线 巴基斯坦, server: bepgzbgp01.114837322.xyz, port: 14216, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇲🇩 特殊 专线 摩尔多瓦, server: bepbjbgp01.114837322.xyz, port: 14217, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+  - {name: 🇦🇷 购物 专线 阿根廷, server: bepshbgp01.114837322.xyz, port: 14197, type: ss, cipher: chacha20-ietf-poly1305, password: lE9uL5fR3yR9, plugin: obfs, plugin-opts: {mode: http, host: 5da3b1ac3d.iqiyi.com}, udp: true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🚀 GitHub
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 📲 Telegram
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+  - name: 🕊️ Twitter(X)
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 💬 ChatGPT
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 💬 Copilot
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🤖 AI服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎶 TikTok
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎥 DisneyPlus
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎥 HBO
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎥 PrimeVideo
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎥 AppleTV+
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎥 Emby
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🎻 Spotify
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 📺 Bahamut
+    type: select
+    proxies:
+      - 🇹🇼 台湾节点
+      - 🚀 节点选择
+      - 🎯 全球直连
+  - name: 🌎 国外媒体
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🛒 国外电商
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 🇬 谷歌服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎮 Steam
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🚀 测速工具
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+      - 🇰🇷 标准 专线 韩国 01
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇨🇳 标准 专线 台湾 01
+      - 🇬🇧 特殊 专线 伦敦 01
+      - 🇬🇧 特殊 专线 伦敦 02
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+      - 🇧🇷 特殊 专线 巴西 01
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+      - 🇹🇭 特殊 专线 泰国
+      - 🇻🇳 特殊 专线 越南
+      - 🇮🇳 特殊 专线 印度
+      - 🇦🇺 特殊 专线 悉尼
+      - 🇦🇪 特殊 专线 迪拜
+      - 🇫🇷 特殊 专线 法国
+      - 🇳🇱 特殊 专线 荷兰
+      - 🇮🇩 特殊 专线 印尼
+      - 🇪🇬 特殊 专线 埃及
+      - 🇵🇭 特殊 专线 菲律宾
+      - 🇮🇹 特殊 专线 意大利
+      - 🇪🇸 特殊 专线 西班牙
+      - 🇭🇺 特殊 专线 匈牙利
+      - 🇮🇱 特殊 专线 以色列
+      - 🇺🇦 特殊 专线 乌克兰
+      - 🇷🇺 特殊 专线 俄罗斯
+      - 🇲🇾 特殊 专线 马来西亚
+      - 🇳🇬 特殊 专线 尼日利亚
+      - 🇵🇰 特殊 专线 巴基斯坦
+      - 🇲🇩 特殊 专线 摩尔多瓦
+      - 🇦🇷 购物 专线 阿根廷
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇭🇰 高级 专线 香港 01
+      - 🇭🇰 高级 专线 香港 02
+      - 🇭🇰 高级 专线 香港 03
+      - 🇭🇰 高级 专线 香港 04
+      - 🇭🇰 高级 专线 香港 05
+      - 🇭🇰 高级 专线 香港 06
+      - 🇭🇰 高级 专线 香港 07
+      - 🇭🇰 高级 专线 香港 08
+      - 🇭🇰 标准 专线 香港 01
+      - 🇭🇰 标准 专线 香港 02
+      - 🇭🇰 标准 专线 香港 03
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇺🇸 高级 专线 美国 01
+      - 🇺🇸 高级 专线 美国 02
+      - 🇺🇸 高级 专线 美国 03
+      - 🇺🇸 高级 专线 美国 04
+      - 🇺🇸 高级 专线 美国 05
+      - 🇺🇸 高级 专线 美国 06
+      - 🇺🇸 高级 专线 美国 07
+      - 🇺🇸 高级 专线 美国 08
+      - 🇺🇸 高级 专线 美国 09
+      - 🇺🇸 高级 专线 美国 10
+      - 🇺🇸 标准 专线 美国 01
+      - 🇺🇸 标准 专线 美国 02
+      - 🇺🇸 标准 专线 美国 03
+      - 🇺🇸 标准 专线 美国 04
+      - 🇺🇸 标准 专线 美国 05
+      - 🇺🇸 标准 专线 美国 06
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰 日用 专线 香港 [0.2]
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇯🇵 日用 专线 日本 [0.2]
+      - 🇺🇸 日用 专线 美国 [0.2]
+      - 🇯🇵 高级 专线 日本 01
+      - 🇯🇵 高级 专线 日本 02
+      - 🇯🇵 高级 专线 日本 03
+      - 🇯🇵 高级 专线 日本 04
+      - 🇯🇵 高级 专线 日本 05
+      - 🇯🇵 高级 专线 日本 06
+      - 🇯🇵 高级 专线 日本 07
+      - 🇯🇵 高级 专线 日本 08
+      - 🇯🇵 标准 专线 日本 01
+      - 🇯🇵 标准 专线 日本 02
+      - 🇯🇵 标准 专线 日本 03
+      - 🇯🇵 标准 专线 日本 04
+      - 🇳🇬 特殊 专线 尼日利亚
+  - name: 🇸🇬 新加坡节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇸🇬 日用 专线 狮城 [0.2]
+      - 🇸🇬 高级 专线 狮城 01
+      - 🇸🇬 高级 专线 狮城 02
+      - 🇸🇬 高级 专线 狮城 03
+      - 🇸🇬 高级 专线 狮城 04
+      - 🇸🇬 高级 专线 狮城 05
+      - 🇸🇬 标准 专线 狮城 01
+      - 🇸🇬 标准 专线 狮城 02
+      - 🇸🇬 标准 专线 狮城 03
+  - name: 🇹🇼 台湾节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇨🇳 高级 专线 台湾 01
+      - 🇨🇳 高级 专线 台湾 02
+      - 🇨🇳 标准 专线 台湾 01
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇰🇷 高级 专线 韩国 01
+      - 🇰🇷 高级 专线 韩国 02
+      - 🇰🇷 标准 专线 韩国 01
+  - name: 🇨🇦 加拿大节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇨🇦 特殊 专线 加拿大 01
+      - 🇨🇦 特殊 专线 加拿大 02
+  - name: 🇬🇧 英国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🇫🇷 法国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇫🇷 特殊 专线 法国
+  - name: 🇩🇪 德国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇩🇪 特殊 专线 德国 01
+      - 🇩🇪 特殊 专线 德国 02
+  - name: 🇳🇱 荷兰节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇳🇱 特殊 专线 荷兰
+  - name: 🇹🇷 土耳其节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇹🇷 特殊 专线 土耳其 01
+      - 🇹🇷 特殊 专线 土耳其 02
+  - name: 🇻🇳 越南节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇻🇳 特殊 专线 越南
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,Custom_Direct,🎯 全球直连
+  - RULE-SET,Custom_Proxy,🚀 节点选择
+  - RULE-SET,Direct,🎯 全球直连
+  - GEOSITE,google-cn,🎯 全球直连
+  - RULE-SET,GoogleCNProxyIP,🚀 节点选择
+  - GEOSITE,category-games@cn,🎯 全球直连
+  - RULE-SET,Steam_CDN,🎯 全球直连
+  - RULE-SET,Game_Download_CDN,🎯 全球直连
+  - GEOSITE,category-public-tracker,🎯 全球直连
+  - RULE-SET,Telegram,📲 Telegram
+  - RULE-SET,Twitter,🕊️ Twitter(X)
+  - GEOSITE,openai,💬 ChatGPT
+  - RULE-SET,Copilot,💬 Copilot
+  - GEOSITE,anthropic,🤖 AI服务
+  - GEOSITE,google-gemini,🤖 AI服务
+  - GEOSITE,github,🚀 GitHub
+  - RULE-SET,Speedtest,🚀 测速工具
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,AppleTV,🎥 AppleTV+
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,XiaoMi,🎯 全球直连
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,Google,🇬 谷歌服务
+  - RULE-SET,TikTok,🎶 TikTok
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,Disney,🎥 DisneyPlus
+  - RULE-SET,HBO,🎥 HBO
+  - RULE-SET,HBO_fix,🎥 HBO
+  - RULE-SET,AmazonPrimeVideo,🎥 PrimeVideo
+  - RULE-SET,Emby,🎥 Emby
+  - RULE-SET,Emby 2,🎥 Emby
+  - RULE-SET,Spotify,🎻 Spotify
+  - RULE-SET,Bahamut,📺 Bahamut
+  - RULE-SET,ChinaMedia,🎯 全球直连
+  - RULE-SET,IPTVMainland_Domain,🎯 全球直连
+  - RULE-SET,GlobalMedia,🌎 国外媒体
+  - RULE-SET,Amazon,🛒 国外电商
+  - RULE-SET,AmazonIP,🛒 国外电商
+  - RULE-SET,Shopee,🛒 国外电商
+  - RULE-SET,Shopify,🛒 国外电商
+  - RULE-SET,Ozon,🛒 国外电商
+  - GEOSITE,steam,🎮 Steam
+  - GEOSITE,category-games,🎮 游戏平台
+  - GEOSITE,gfw,🚀 节点选择
+  - RULE-SET,Download,🎯 全球直连
+  - GEOSITE,cn,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  Lan:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTGFuL0xhbi5saXN0
+    path: ./providers/7858144499399907784.yaml
+    interval: 28800
+  Custom_Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fRGlyZWN0Lmxpc3Q
+    path: ./providers/2137848265989215840.yaml
+    interval: 28800
+  Custom_Proxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fUHJveHkubGlzdA
+    path: ./providers/4222299409953005873.yaml
+    interval: 28800
+  Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlyZWN0L0RpcmVjdC5saXN0
+    path: ./providers/8929112245643976536.yaml
+    interval: 28800
+  GoogleCNProxyIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVDTlByb3h5SVAubGlzdA
+    path: ./providers/13931322773426722605.yaml
+    interval: 28800
+  Steam_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9TdGVhbV9DRE4ubGlzdA
+    path: ./providers/3180876761672982007.yaml
+    interval: 28800
+  Game_Download_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9HYW1lX0Rvd25sb2FkX0NETi5saXN0
+    path: ./providers/7790104057346731950.yaml
+    interval: 28800
+  Telegram:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    path: ./providers/7648184409179964316.yaml
+    interval: 28800
+  Twitter:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVHdpdHRlci9Ud2l0dGVyLmxpc3Q
+    path: ./providers/10863985479704216936.yaml
+    interval: 28800
+  Copilot:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ29waWxvdC9Db3BpbG90Lmxpc3Q
+    path: ./providers/7519609039371296716.yaml
+    interval: 28800
+  Speedtest:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BlZWR0ZXN0L1NwZWVkdGVzdC5saXN0
+    path: ./providers/1783786751169689672.yaml
+    interval: 28800
+  YouTube:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWW91VHViZS9Zb3VUdWJlLmxpc3Q
+    path: ./providers/10846968446785762576.yaml
+    interval: 28800
+  AppleTV:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BcHBsZVRWL0FwcGxlVFYubGlzdA
+    path: ./providers/8065079127248644929.yaml
+    interval: 28800
+  Apple:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQXBwbGUvQXBwbGUubGlzdA
+    path: ./providers/10039033783654605368.yaml
+    interval: 28800
+  Microsoft:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTWljcm9zb2Z0L01pY3Jvc29mdC5saXN0
+    path: ./providers/2660296301157109308.yaml
+    interval: 28800
+  XiaoMi:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWGlhb01pL1hpYW9NaS5saXN0
+    path: ./providers/5706382992651923624.yaml
+    interval: 28800
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlRkNNL0dvb2dsZUZDTS5saXN0
+    path: ./providers/17286755956605385544.yaml
+    interval: 28800
+  Google:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlL0dvb2dsZS5saXN0
+    path: ./providers/5207499971064055564.yaml
+    interval: 28800
+  TikTok:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGlrVG9rL1Rpa1Rvay5saXN0
+    path: ./providers/1153352524583868546.yaml
+    interval: 28800
+  Netflix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTmV0ZmxpeC9OZXRmbGl4Lmxpc3Q
+    path: ./providers/5911240376645404092.yaml
+    interval: 28800
+  Disney:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlzbmV5L0Rpc25leS5saXN0
+    path: ./providers/6945122580773929854.yaml
+    interval: 28800
+  HBO:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvSEJPL0hCTy5saXN0
+    path: ./providers/17391180098406173840.yaml
+    interval: 28800
+  HBO_fix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0hCT19maXgubGlzdA
+    path: ./providers/1416747755207583533.yaml
+    interval: 28800
+  AmazonPrimeVideo:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25QcmltZVZpZGVvL0FtYXpvblByaW1lVmlkZW8ubGlzdA
+    path: ./providers/11994536476406262387.yaml
+    interval: 28800
+  Emby:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRW1ieS9FbWJ5Lmxpc3Q
+    path: ./providers/17364998702164715888.yaml
+    interval: 28800
+  Emby 2:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RkZ2tzZjIwMTMvRmlsdGVyL3JlZnMvaGVhZHMvbWFzdGVyL0VtYnkubGlzdA
+    path: ./providers/12368831718135117146.yaml
+    interval: 28800
+  Spotify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BvdGlmeS9TcG90aWZ5Lmxpc3Q
+    path: ./providers/4978068464364291208.yaml
+    interval: 28800
+  Bahamut:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQmFoYW11dC9CYWhhbXV0Lmxpc3Q
+    path: ./providers/13823274708054929692.yaml
+    interval: 28800
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmFNZWRpYS9DaGluYU1lZGlhLmxpc3Q
+    path: ./providers/2421848327466713840.yaml
+    interval: 28800
+  IPTVMainland_Domain:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0lQVFZNYWlubGFuZF9Eb21haW4ubGlzdA
+    path: ./providers/17504826188631249768.yaml
+    interval: 28800
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR2xvYmFsTWVkaWEvR2xvYmFsTWVkaWEubGlzdA
+    path: ./providers/8169842531796433964.yaml
+    interval: 28800
+  Amazon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b24vQW1hem9uLmxpc3Q
+    path: ./providers/15539959981190034955.yaml
+    interval: 28800
+  AmazonIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25JUC9BbWF6b25JUC5saXN0
+    path: ./providers/7963761571606130029.yaml
+    interval: 28800
+  Shopee:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9TaG9wZWUvU2hvcGVlLmxpc3Q
+    path: ./providers/678501726063682119.yaml
+    interval: 28800
+  Shopify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU2hvcGlmeS9TaG9waWZ5Lmxpc3Q
+    path: ./providers/15049338479425272128.yaml
+    interval: 28800
+  Ozon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL096b24ubGlzdA
+    path: ./providers/16385268891300374468.yaml
+    interval: 28800
+  Download:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRG93bmxvYWQvRG93bmxvYWQubGlzdA
+    path: ./providers/4606680353694276526.yaml
+    interval: 28800

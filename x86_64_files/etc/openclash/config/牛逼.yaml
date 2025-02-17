@@ -1,0 +1,2223 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: 🇸🇬 新加坡1, server: linsg1.jueduibupao.top, port: 43242, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: linsg1.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡2, server: linsg2.jueduibupao.top, port: 40580, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: linsg2.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇳 台湾1-Gpt, server: tw2.jueduibupao.top, port: 30052, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: tw2.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇳 台湾2-Gpt, server: tw22.jueduibupao.top, port: 30104, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: tw22.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本1, server: linjp1.jueduibupao.top, port: 48740, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: linjp1.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 日本2, server: linjp2.jueduibupao.top, port: 48799, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: linjp2.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 韩国-家宽, server: 6bkr1.6bnw.top, port: 50750, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: 6bkr1.6bnw.top, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 拉斯维加斯, server: lvs.jueduibupao.top, port: 50001, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: lvs.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 迈阿密, server: ny.jueduibupao.top, port: 50001, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: ny.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 凤凰城, server: azcus1.jueduibupao.top, port: 20101, type: hysteria2, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, sni: azcus1.jueduibupao.top, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港01-IPv6, server: hzhz1.sssyun.xyz, port: 29527, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港02-IPv6, server: hzhz2.sssyun.xyz, port: 40010, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港03-IPv6, server: hzhz3.sssyun.xyz, port: 54511, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港04-IPv6, server: hzhz1.sssyun.xyz, port: 19527, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港05-IPv6, server: hzhz2.sssyun.xyz, port: 40023, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港06-IPv6, server: hzhz3.sssyun.xyz, port: 54512, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港07-流媒体解锁, server: hzhz1.sssyun.xyz, port: 39301, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港08-流媒体解锁, server: hzhz2.sssyun.xyz, port: 40011, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇭🇰 香港09-流媒体解锁, server: hzhz3.sssyun.xyz, port: 54513, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇸🇬 新加坡01-流媒体解锁, server: hzhz1.sssyun.xyz, port: 39204, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇸🇬 新加坡02-流媒体解锁, server: hzhz2.sssyun.xyz, port: 40013, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇸🇬 新加坡03-流媒体解锁, server: hzhz3.sssyun.xyz, port: 54514, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇸🇬 新加坡04, server: hzhz1.sssyun.xyz, port: 39505, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇸🇬 新加坡05, server: hzhz2.sssyun.xyz, port: 44014, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇸🇬 新加坡06, server: hzhz3.sssyun.xyz, port: 54515, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇰🇷 韩国春川01, server: hzhz1.sssyun.xyz, port: 39202, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇰🇷 韩国春川02, server: hzhz2.sssyun.xyz, port: 40015, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇰🇷 韩国春川03, server: hzhz3.sssyun.xyz, port: 40016, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇰🇷 韩国-家宽04, server: hzhz1.sssyun.xyz, port: 39206, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇰🇷 韩国-家宽05, server: hzhz2.sssyun.xyz, port: 40016, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇰🇷 韩国-家宽06, server: hzhz3.sssyun.xyz, port: 40017, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇳 台湾01-Gpt, server: hzhz1.sssyun.xyz, port: 32207, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇳 台湾02-Gpt, server: hzhz2.sssyun.xyz, port: 40017, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇳 台湾03-Gpt, server: hzhz3.sssyun.xyz, port: 40018, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇳 台湾04-Gpt, server: hzhz1.sssyun.xyz, port: 39201, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇳 台湾05-Gpt, server: hzhz2.sssyun.xyz, port: 40018, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇳 台湾06-Gpt, server: hzhz3.sssyun.xyz, port: 40019, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NjVhMWE2YmVmNzg4MTcwMA==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇯🇵 日本01, server: hzhz1.sssyun.xyz, port: 19529, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇯🇵 日本02, server: hzhz2.sssyun.xyz, port: 40019, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇯🇵 日本03, server: hzhz3.sssyun.xyz, port: 41020, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇯🇵 日本04, server: hzhz1.sssyun.xyz, port: 49207, type: ss, cipher: 2022-blake3-aes-256-gcm, password: MDhhMTdjZDI0MjI2ZWRlNjE5OWQyNDYxZjM1MjA0OTg=:NTVlNzE1ZjgtMDQyNS00YTE4LThlYTAtNmZkMTI1MjE=, udp: true}
+  - {name: 🇯🇵 日本05, server: hzhz2.sssyun.xyz, port: 40020, type: ss, cipher: 2022-blake3-aes-256-gcm, password: MDhhMTdjZDI0MjI2ZWRlNjE5OWQyNDYxZjM1MjA0OTg=:NTVlNzE1ZjgtMDQyNS00YTE4LThlYTAtNmZkMTI1MjE=, udp: true}
+  - {name: 🇯🇵 日本06, server: hzhz3.sssyun.xyz, port: 41021, type: ss, cipher: 2022-blake3-aes-256-gcm, password: MDhhMTdjZDI0MjI2ZWRlNjE5OWQyNDYxZjM1MjA0OTg=:NTVlNzE1ZjgtMDQyNS00YTE4LThlYTAtNmZkMTI1MjE=, udp: true}
+  - {name: 🇨🇦 加拿大01, server: hzhz1.sssyun.xyz, port: 39209, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇦 加拿大02, server: hzhz2.sssyun.xyz, port: 40021, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇨🇦 加拿大03, server: hzhz3.sssyun.xyz, port: 41022, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国迈阿密01, server: hzhz1.sssyun.xyz, port: 12980, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国迈阿密02, server: hzhz2.sssyun.xyz, port: 12981, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国迈阿密03, server: hzhz3.sssyun.xyz, port: 12982, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国拉斯维加斯01, server: hzhz1.sssyun.xyz, port: 12983, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国拉斯维加斯02, server: hzhz2.sssyun.xyz, port: 12984, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国拉斯维加斯03, server: hzhz3.sssyun.xyz, port: 13984, type: ss, cipher: 2022-blake3-aes-128-gcm, password: MDhhMTdjZDI0MjI2ZWRlNg==:NTVlNzE1ZjgtMDQyNS00YQ==, udp: true}
+  - {name: 🇺🇸 美国凤凰城01, server: hzhz1.sssyun.xyz, port: 39203, type: ss, cipher: chacha20-ietf-poly1305, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, udp: true}
+  - {name: 🇺🇸 美国凤凰城02, server: hzhz2.sssyun.xyz, port: 40022, type: ss, cipher: chacha20-ietf-poly1305, password: 55e715f8-0425-4a18-8ea0-6fd12521605a, udp: true}
+  - {name: 迈阿密01-下载&防失联-0.1x, server: mugen11.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/cctv?ed=2048", headers: {Host: buyvmus.6bnw.top}}, udp: true}
+  - {name: 迈阿密02-下载&防失联-0.1x, server: mugen22.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/cctv?ed=2048", headers: {Host: buyvmus.6bnw.top}}, udp: true}
+  - {name: 迈阿密03-下载&防失联-0.1x, server: mugen33.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/cctv?ed=2048", headers: {Host: buyvmus.6bnw.top}}, udp: true}
+  - {name: 迈阿密04-下载&防失联-0.1x, server: mugen44.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/cctv?ed=2048", headers: {Host: buyvmus.6bnw.top}}, udp: true}
+  - {name: 🇺🇸 拉斯维加斯01-下载&防失联-0.1x, server: mugen11.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: buyvmus2.6bnw.top}}, udp: true}
+  - {name: 🇺🇸 拉斯维加斯02-下载&防失联-0.1x, server: mugen22.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: buyvmus2.6bnw.top}}, udp: true}
+  - {name: 🇺🇸 拉斯维加斯03-下载&防失联-0.1x, server: mugen33.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: buyvmus2.6bnw.top}}, udp: true}
+  - {name: 🇺🇸 拉斯维加斯04-下载&防失联-0.1x, server: mugen44.6bnw.top, port: 8080, type: vmess, uuid: 55e715f8-0425-4a18-8ea0-6fd12521605a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: buyvmus2.6bnw.top}}, udp: true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: ♻️ 自动选择
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🚀 GitHub
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 📲 Telegram
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+  - name: 🕊️ Twitter(X)
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 💬 ChatGPT
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 💬 Copilot
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🤖 AI服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎶 TikTok
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 📹 YouTube
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎥 Netflix
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎥 DisneyPlus
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎥 HBO
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎥 PrimeVideo
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎥 AppleTV+
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎥 Emby
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🎻 Spotify
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 📺 Bahamut
+    type: select
+    proxies:
+      - 🇹🇼 台湾节点
+      - 🚀 节点选择
+      - 🎯 全球直连
+  - name: 🌎 国外媒体
+    type: select
+    proxies:
+      - 🇸🇬 新加坡节点
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🛒 国外电商
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 📢 谷歌FCM
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 🇬 谷歌服务
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: Ⓜ️ 微软服务
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🎮 Steam
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🚀 测速工具
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🇭🇰 香港节点
+      - 🇺🇸 美国节点
+      - 🇯🇵 日本节点
+      - 🇸🇬 新加坡节点
+      - 🇹🇼 台湾节点
+      - 🇰🇷 韩国节点
+      - 🇨🇦 加拿大节点
+      - 🇬🇧 英国节点
+      - 🇫🇷 法国节点
+      - 🇩🇪 德国节点
+      - 🇳🇱 荷兰节点
+      - 🇹🇷 土耳其节点
+      - 🇻🇳 越南节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🎯 全球直连
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇰🇷 韩国-家宽
+      - 🇺🇸 拉斯维加斯
+      - 迈阿密
+      - 🇺🇸 凤凰城
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 迈阿密01-下载&防失联-0.1x
+      - 迈阿密02-下载&防失联-0.1x
+      - 迈阿密03-下载&防失联-0.1x
+      - 迈阿密04-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇭🇰 香港01-IPv6
+      - 🇭🇰 香港02-IPv6
+      - 🇭🇰 香港03-IPv6
+      - 🇭🇰 香港04-IPv6
+      - 🇭🇰 香港05-IPv6
+      - 🇭🇰 香港06-IPv6
+      - 🇭🇰 香港07-流媒体解锁
+      - 🇭🇰 香港08-流媒体解锁
+      - 🇭🇰 香港09-流媒体解锁
+  - name: 🇺🇸 美国节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇺🇸 拉斯维加斯
+      - 🇺🇸 凤凰城
+      - 🇺🇸 美国迈阿密01
+      - 🇺🇸 美国迈阿密02
+      - 🇺🇸 美国迈阿密03
+      - 🇺🇸 美国拉斯维加斯01
+      - 🇺🇸 美国拉斯维加斯02
+      - 🇺🇸 美国拉斯维加斯03
+      - 🇺🇸 美国凤凰城01
+      - 🇺🇸 美国凤凰城02
+      - 🇺🇸 拉斯维加斯01-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯02-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯03-下载&防失联-0.1x
+      - 🇺🇸 拉斯维加斯04-下载&防失联-0.1x
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇯🇵 日本1
+      - 🇯🇵 日本2
+      - 🇯🇵 日本01
+      - 🇯🇵 日本02
+      - 🇯🇵 日本03
+      - 🇯🇵 日本04
+      - 🇯🇵 日本05
+      - 🇯🇵 日本06
+  - name: 🇸🇬 新加坡节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇸🇬 新加坡1
+      - 🇸🇬 新加坡2
+      - 🇸🇬 新加坡01-流媒体解锁
+      - 🇸🇬 新加坡02-流媒体解锁
+      - 🇸🇬 新加坡03-流媒体解锁
+      - 🇸🇬 新加坡04
+      - 🇸🇬 新加坡05
+      - 🇸🇬 新加坡06
+  - name: 🇹🇼 台湾节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇨🇳 台湾1-Gpt
+      - 🇨🇳 台湾2-Gpt
+      - 🇨🇳 台湾01-Gpt
+      - 🇨🇳 台湾02-Gpt
+      - 🇨🇳 台湾03-Gpt
+      - 🇨🇳 台湾04-Gpt
+      - 🇨🇳 台湾05-Gpt
+      - 🇨🇳 台湾06-Gpt
+  - name: 🇰🇷 韩国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇰🇷 韩国-家宽
+      - 🇰🇷 韩国春川01
+      - 🇰🇷 韩国春川02
+      - 🇰🇷 韩国春川03
+      - 🇰🇷 韩国-家宽04
+      - 🇰🇷 韩国-家宽05
+      - 🇰🇷 韩国-家宽06
+  - name: 🇨🇦 加拿大节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇨🇦 加拿大01
+      - 🇨🇦 加拿大02
+      - 🇨🇦 加拿大03
+  - name: 🇬🇧 英国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🇫🇷 法国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🇩🇪 德国节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🇳🇱 荷兰节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🇹🇷 土耳其节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🇻🇳 越南节点
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,Custom_Direct,🎯 全球直连
+  - RULE-SET,Custom_Proxy,🚀 节点选择
+  - RULE-SET,Direct,🎯 全球直连
+  - GEOSITE,google-cn,🎯 全球直连
+  - RULE-SET,GoogleCNProxyIP,🚀 节点选择
+  - GEOSITE,category-games@cn,🎯 全球直连
+  - RULE-SET,Steam_CDN,🎯 全球直连
+  - RULE-SET,Game_Download_CDN,🎯 全球直连
+  - GEOSITE,category-public-tracker,🎯 全球直连
+  - RULE-SET,Telegram,📲 Telegram
+  - RULE-SET,Twitter,🕊️ Twitter(X)
+  - GEOSITE,openai,💬 ChatGPT
+  - RULE-SET,Copilot,💬 Copilot
+  - GEOSITE,anthropic,🤖 AI服务
+  - GEOSITE,google-gemini,🤖 AI服务
+  - GEOSITE,github,🚀 GitHub
+  - RULE-SET,Speedtest,🚀 测速工具
+  - RULE-SET,YouTube,📹 YouTube
+  - RULE-SET,AppleTV,🎥 AppleTV+
+  - RULE-SET,Apple,🍎 苹果服务
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,XiaoMi,🎯 全球直连
+  - RULE-SET,GoogleFCM,📢 谷歌FCM
+  - RULE-SET,Google,🇬 谷歌服务
+  - RULE-SET,TikTok,🎶 TikTok
+  - RULE-SET,Netflix,🎥 Netflix
+  - RULE-SET,Disney,🎥 DisneyPlus
+  - RULE-SET,HBO,🎥 HBO
+  - RULE-SET,HBO_fix,🎥 HBO
+  - RULE-SET,AmazonPrimeVideo,🎥 PrimeVideo
+  - RULE-SET,Emby,🎥 Emby
+  - RULE-SET,Emby 2,🎥 Emby
+  - RULE-SET,Spotify,🎻 Spotify
+  - RULE-SET,Bahamut,📺 Bahamut
+  - RULE-SET,ChinaMedia,🎯 全球直连
+  - RULE-SET,IPTVMainland_Domain,🎯 全球直连
+  - RULE-SET,GlobalMedia,🌎 国外媒体
+  - RULE-SET,Amazon,🛒 国外电商
+  - RULE-SET,AmazonIP,🛒 国外电商
+  - RULE-SET,Shopee,🛒 国外电商
+  - RULE-SET,Shopify,🛒 国外电商
+  - RULE-SET,Ozon,🛒 国外电商
+  - GEOSITE,steam,🎮 Steam
+  - GEOSITE,category-games,🎮 游戏平台
+  - GEOSITE,gfw,🚀 节点选择
+  - RULE-SET,Download,🎯 全球直连
+  - GEOSITE,cn,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  Lan:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTGFuL0xhbi5saXN0
+    path: ./providers/7858144499399907784.yaml
+    interval: 28800
+  Custom_Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fRGlyZWN0Lmxpc3Q
+    path: ./providers/2137848265989215840.yaml
+    interval: 28800
+  Custom_Proxy:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9DdXN0b21fUHJveHkubGlzdA
+    path: ./providers/4222299409953005873.yaml
+    interval: 28800
+  Direct:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlyZWN0L0RpcmVjdC5saXN0
+    path: ./providers/8929112245643976536.yaml
+    interval: 28800
+  GoogleCNProxyIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGVDTlByb3h5SVAubGlzdA
+    path: ./providers/13931322773426722605.yaml
+    interval: 28800
+  Steam_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9TdGVhbV9DRE4ubGlzdA
+    path: ./providers/3180876761672982007.yaml
+    interval: 28800
+  Game_Download_CDN:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL21haW4vcnVsZS9HYW1lX0Rvd25sb2FkX0NETi5saXN0
+    path: ./providers/7790104057346731950.yaml
+    interval: 28800
+  Telegram:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGVsZWdyYW0vVGVsZWdyYW0ubGlzdA
+    path: ./providers/7648184409179964316.yaml
+    interval: 28800
+  Twitter:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVHdpdHRlci9Ud2l0dGVyLmxpc3Q
+    path: ./providers/10863985479704216936.yaml
+    interval: 28800
+  Copilot:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ29waWxvdC9Db3BpbG90Lmxpc3Q
+    path: ./providers/7519609039371296716.yaml
+    interval: 28800
+  Speedtest:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BlZWR0ZXN0L1NwZWVkdGVzdC5saXN0
+    path: ./providers/1783786751169689672.yaml
+    interval: 28800
+  YouTube:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWW91VHViZS9Zb3VUdWJlLmxpc3Q
+    path: ./providers/10846968446785762576.yaml
+    interval: 28800
+  AppleTV:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BcHBsZVRWL0FwcGxlVFYubGlzdA
+    path: ./providers/8065079127248644929.yaml
+    interval: 28800
+  Apple:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQXBwbGUvQXBwbGUubGlzdA
+    path: ./providers/10039033783654605368.yaml
+    interval: 28800
+  Microsoft:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTWljcm9zb2Z0L01pY3Jvc29mdC5saXN0
+    path: ./providers/2660296301157109308.yaml
+    interval: 28800
+  XiaoMi:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvWGlhb01pL1hpYW9NaS5saXN0
+    path: ./providers/5706382992651923624.yaml
+    interval: 28800
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlRkNNL0dvb2dsZUZDTS5saXN0
+    path: ./providers/17286755956605385544.yaml
+    interval: 28800
+  Google:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR29vZ2xlL0dvb2dsZS5saXN0
+    path: ./providers/5207499971064055564.yaml
+    interval: 28800
+  TikTok:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvVGlrVG9rL1Rpa1Rvay5saXN0
+    path: ./providers/1153352524583868546.yaml
+    interval: 28800
+  Netflix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvTmV0ZmxpeC9OZXRmbGl4Lmxpc3Q
+    path: ./providers/5911240376645404092.yaml
+    interval: 28800
+  Disney:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRGlzbmV5L0Rpc25leS5saXN0
+    path: ./providers/6945122580773929854.yaml
+    interval: 28800
+  HBO:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvSEJPL0hCTy5saXN0
+    path: ./providers/17391180098406173840.yaml
+    interval: 28800
+  HBO_fix:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0hCT19maXgubGlzdA
+    path: ./providers/1416747755207583533.yaml
+    interval: 28800
+  AmazonPrimeVideo:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25QcmltZVZpZGVvL0FtYXpvblByaW1lVmlkZW8ubGlzdA
+    path: ./providers/11994536476406262387.yaml
+    interval: 28800
+  Emby:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRW1ieS9FbWJ5Lmxpc3Q
+    path: ./providers/17364998702164715888.yaml
+    interval: 28800
+  Emby 2:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RkZ2tzZjIwMTMvRmlsdGVyL3JlZnMvaGVhZHMvbWFzdGVyL0VtYnkubGlzdA
+    path: ./providers/12368831718135117146.yaml
+    interval: 28800
+  Spotify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU3BvdGlmeS9TcG90aWZ5Lmxpc3Q
+    path: ./providers/4978068464364291208.yaml
+    interval: 28800
+  Bahamut:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQmFoYW11dC9CYWhhbXV0Lmxpc3Q
+    path: ./providers/13823274708054929692.yaml
+    interval: 28800
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvQ2hpbmFNZWRpYS9DaGluYU1lZGlhLmxpc3Q
+    path: ./providers/2421848327466713840.yaml
+    interval: 28800
+  IPTVMainland_Domain:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL0lQVFZNYWlubGFuZF9Eb21haW4ubGlzdA
+    path: ./providers/17504826188631249768.yaml
+    interval: 28800
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvR2xvYmFsTWVkaWEvR2xvYmFsTWVkaWEubGlzdA
+    path: ./providers/8169842531796433964.yaml
+    interval: 28800
+  Amazon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b24vQW1hem9uLmxpc3Q
+    path: ./providers/15539959981190034955.yaml
+    interval: 28800
+  AmazonIP:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9BbWF6b25JUC9BbWF6b25JUC5saXN0
+    path: ./providers/7963761571606130029.yaml
+    interval: 28800
+  Shopee:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvcmVmcy9oZWFkcy9tYXN0ZXIvcnVsZS9DbGFzaC9TaG9wZWUvU2hvcGVlLmxpc3Q
+    path: ./providers/678501726063682119.yaml
+    interval: 28800
+  Shopify:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvU2hvcGlmeS9TaG9waWZ5Lmxpc3Q
+    path: ./providers/15049338479425272128.yaml
+    interval: 28800
+  Ozon:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FldGhlcnNhaWxvci9DdXN0b21fT3BlbkNsYXNoX1J1bGVzL3JlZnMvaGVhZHMvbWFpbi9ydWxlL096b24ubGlzdA
+    path: ./providers/16385268891300374468.yaml
+    interval: 28800
+  Download:
+    type: http
+    behavior: classical
+    url: http://127.0.0.1:25500/getruleset?type=6&url=aHR0cHM6Ly9naC1wcm94eS5jb20vaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2JsYWNrbWF0cml4Ny9pb3NfcnVsZV9zY3JpcHQvbWFzdGVyL3J1bGUvQ2xhc2gvRG93bmxvYWQvRG93bmxvYWQubGlzdA
+    path: ./providers/4606680353694276526.yaml
+    interval: 28800
