@@ -75,14 +75,14 @@ jobs:
 
     - name: Extract Docker image
       run: |
-        7z x immortalwrt-build-docker.tar.gz.7z.001 -o./
-        rm immortalwrt-build-docker.tar.gz.7z.*
-        sudo docker load < immortalwrt-build-docker.tar.gz
-        rm immortalwrt-build-docker.tar.gz
+        7z x pre-immortalwrt-build-docker.tar.gz.7z.001 -o./
+        rm pre-immortalwrt-build-docker.tar.gz.7z.*
+        sudo docker load < pre-immortalwrt-build-docker.tar.gz
+        rm pre-immortalwrt-build-docker.tar.gz
 
     - name: Run Docker container
       run: |
-        sudo docker run -d --name immortalwrt-build-docker immortalwrt-build-docker tail -f /dev/null
+        sudo docker run -d --name immortalwrt-build-docker pre-immortalwrt-build-docker tail -f /dev/null
 
     - name: Move Files
       run: |
@@ -95,7 +95,7 @@ jobs:
 
     - name: Download package inside Docker container
       run: |
-        sudo docker exec -u user -w /home/user/openwrt immortalwrt-build-docker bash -c "
+        sudo docker exec -u user -w /home/user/openwrt pre-immortalwrt-build-docker bash -c "
           echo '+++++++++++++++++++++++++++'
           echo '当前目录为：'
           pwd
@@ -115,13 +115,13 @@ jobs:
 
     - name: Compile the firmware inside Docker container
       run: |
-        sudo docker exec -u user -w /home/user/openwrt immortalwrt-build-docker bash -c "
+        sudo docker exec -u user -w /home/user/openwrt pre-immortalwrt-build-docker bash -c "
           make -j$(nproc) || make -j1 V=s
         "
 
     - name: Move compiled files to host machine
       run: |
-        sudo docker exec immortalwrt-build-docker bash -c "
+        sudo docker exec pre-immortalwrt-build-docker bash -c "
           find /home/user/openwrt/bin/targets -type f \
           \( -name '*immortalwrt*' -o \
           -name '*config*' \)" \
@@ -146,7 +146,7 @@ jobs:
       with:
           tag_name: ${{ env.TAG_NAME }}  # 从环境变量中获取标签名
           files: |
-              immortalwrt-build-docker.tar.gz.*
+              /openwrt/*
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
