@@ -75,11 +75,32 @@ jobs:
 
     - name: Download Docker image
       run: |
-        tag=$(curl -s https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/latest | jq -r '.tag_name')
-        echo "下载的 tag: $tag"
-        curl -s https://api.github.com/repos/superpassby/pre-build-docker/releases/latest \
-         | jq -r '.assets[].browser_download_url' \
-         | xargs -n 1 wget
+        # 获取所有 releases 列表
+        RELEASES_URL="https://api.github.com/repos/superpassby/pre-build-docker/releases"
+        releases_info=$(curl -s $RELEASES_URL)
+
+        # 过滤符合 version, branch 和 platform 的 release，并按 created_at 排序，获取最新的 release
+        TAG_NAME=$(echo $releases_info | jq -r --arg version "${{ matrix.version }}" --arg branch "${{ matrix.branch }}" --arg platform "${{ matrix.platform }}" \
+          '.[] | select(.tag_name | test("^" + $version + "_" + $branch + "_" + $platform + "_")) | {tag_name, created_at} | .tag_name' \
+          | sort -r | head -n 1)
+
+        # 如果没有找到符合条件的 release，则退出
+        if [ -z "$TAG_NAME" ]; then
+          echo "No release found for version: ${{ matrix.version }}, branch: ${{ matrix.branch }}, platform: ${{ matrix.platform }}"
+          exit 1
+        fi
+
+        echo "找到的最新 tag_name: $TAG_NAME"
+
+        # 获取符合条件的 release 文件
+        RELEASE_URL="https://api.github.com/repos/superpassby/pre-build-docker/releases/tags/$TAG_NAME"
+        release_info=$(curl -s $RELEASE_URL)
+
+        # 提取并下载所有文件
+        echo "下载文件..."
+        echo $release_info | jq -r '.assets[].browser_download_url' | while read url; do
+          wget "$url"
+        done
 
     - name: Extract Docker image
       run: |
