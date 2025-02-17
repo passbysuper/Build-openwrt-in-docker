@@ -76,7 +76,7 @@ jobs:
     - name: Download Docker image
       run: |
         # 获取所有 releases 列表
-        RELEASES_URL="https://api.github.com/repos/superpassby/pre-build-docker/releases"
+        RELEASES_URL="https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases"
         releases_info=$(curl -s $RELEASES_URL)
 
         # 过滤符合 version, branch 和 platform 的 release，并按 created_at 排序，获取最新的 release
@@ -93,7 +93,7 @@ jobs:
         echo "找到的最新 tag_name: $TAG_NAME"
 
         # 获取符合条件的 release 文件
-        RELEASE_URL="https://api.github.com/repos/superpassby/pre-build-docker/releases/tags/$TAG_NAME"
+        RELEASE_URL="https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/tags/$TAG_NAME"
         release_info=$(curl -s $RELEASE_URL)
 
         # 提取并下载所有文件
@@ -104,14 +104,14 @@ jobs:
 
     - name: Extract Docker image
       run: |
-        7z x pre-build-docker.tar.gz.7z.001 -o./
-        rm pre-build-docker.tar.gz.7z.*
-        sudo docker load < pre-build-docker.tar.gz
-        rm pre-build-docker.tar.gz
+        7z x Build-openwrt-in-docker-pre.tar.gz.7z.001 -o./
+        rm Build-openwrt-in-docker-pre.tar.gz.7z.*
+        sudo docker load < Build-openwrt-in-docker-pre.tar.gz
+        rm Build-openwrt-in-docker-pre.tar.gz
 
     - name: Run Docker container
       run: |
-        sudo docker run -d --name pre-build-docker pre-build-docker tail -f /dev/null
+        sudo docker run -d --name Build-openwrt-in-docker-pre Build-openwrt-in-docker-pre tail -f /dev/null
 
     - name: Move Files
       run: |
@@ -119,20 +119,20 @@ jobs:
         mkdir -p openwrt
         
         # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
-        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/files pre-build-docker:/home/user/openwrt/files
+        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/files Build-openwrt-in-docker-pre:/home/user/openwrt/files
 
         # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
-        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/.config pre-build-docker:/home/user/openwrt/.config
+        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/.config Build-openwrt-in-docker-pre:/home/user/openwrt/.config
 
         # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/diy.sh pre-build-docker:/home/user/openwrt/diy.sh
+        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/diy.sh Build-openwrt-in-docker-pre:/home/user/openwrt/diy.sh
 
         # 给 diy.sh 文件添加执行权限
-        sudo docker exec pre-build-docker sudo chmod +x /home/user/openwrt/diy.sh
+        sudo docker exec Build-openwrt-in-docker-pre sudo chmod +x /home/user/openwrt/diy.sh
 
     - name: Download package inside Docker container
       run: |
-        sudo docker exec -u user -w /home/user/openwrt pre-build-docker bash -c "
+        sudo docker exec -u user -w /home/user/openwrt Build-openwrt-in-docker-pre bash -c "
           echo '+++++++++++++++++++++++++++'
           echo '当前目录为：'
           pwd
@@ -153,7 +153,7 @@ jobs:
 
     - name: Compile the firmware inside Docker container
       run: |
-        sudo docker exec -u user -w /home/user/openwrt pre-build-docker bash -c "
+        sudo docker exec -u user -w /home/user/openwrt Build-openwrt-in-docker-pre bash -c "
           make -j$(nproc) || make -j1 V=s
         "
 
@@ -166,12 +166,12 @@ jobs:
         ls
         echo '+++++++++++++++++++++++++++'
       
-        sudo docker exec pre-build-docker bash -c "
+        sudo docker exec Build-openwrt-in-docker-pre bash -c "
           find /home/user/openwrt/bin/targets -type f \
           \( -name '*immortalwrt*' -o \
           -name '*config*' \)" \
         | while read file; do \
-          sudo docker cp pre-build-docker:$file ./openwrt/$(basename $file); \
+          sudo docker cp Build-openwrt-in-docker-pre:$file ./openwrt/$(basename $file); \
         done
 
     - name: Create Git tag
