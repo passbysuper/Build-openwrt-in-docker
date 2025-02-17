@@ -174,7 +174,7 @@ jobs:
           sudo docker cp Build-openwrt-in-docker-pre:$file ./openwrt/$(basename $file); \
         done
         #提取.config
-        sudo docker cp pre-build-docker:/home/user/openwrt/.config ./openwrt/.config
+        #sudo docker cp pre-build-docker:/home/user/openwrt/.config ./openwrt/.config
 
 
     - name: Create Git tag
