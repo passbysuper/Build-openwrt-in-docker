@@ -90,16 +90,16 @@ jobs:
         mkdir -p openwrt
         
         # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
-        sudo docker cp ./x86_64_files immortalwrt-build-docker:/home/user/openwrt/files
+        sudo docker cp ./x86_64_files pre-immortalwrt-build-docker:/home/user/openwrt/files
 
         # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
-        sudo docker cp ./.x86_64_config immortalwrt-build-docker:/home/user/openwrt/.config
+        sudo docker cp ./.x86_64_config pre-immortalwrt-build-docker:/home/user/openwrt/.config
 
         # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-        sudo docker cp ./x86_64_diy.sh immortalwrt-build-docker:/home/user/openwrt/diy.sh
+        sudo docker cp ./x86_64_diy.sh pre-immortalwrt-build-docker:/home/user/openwrt/diy.sh
 
         # 给 diy.sh 文件添加执行权限
-        sudo docker exec immortalwrt-build-docker chmod +x /home/user/openwrt/diy.sh
+        sudo docker exec pre-immortalwrt-build-docker chmod +x /home/user/openwrt/diy.sh
 
     - name: Download package inside Docker container
       run: |
