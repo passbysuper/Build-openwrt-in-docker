@@ -1,4 +1,4 @@
-name: Build x86_64 ImmortalWRT Docker In Dcoker
+name: Build ImmortalWRT 24.10 x86_64 In Dcoker
 
 on:
   # 手动触发
@@ -67,22 +67,22 @@ jobs:
 
     - name: Download Docker image
       run: |
-        tag=$(curl -s https://api.github.com/repos/superpassby/pre-immortalwrt-build-docker/releases/latest | jq -r '.tag_name')
+        tag=$(curl -s https://api.github.com/repos/superpassby/pre-build-docker/releases/latest | jq -r '.tag_name')
         echo "下载的 tag: $tag"
-        curl -s https://api.github.com/repos/superpassby/pre-immortalwrt-build-docker/releases/latest \
+        curl -s https://api.github.com/repos/superpassby/pre-build-docker/releases/latest \
          | jq -r '.assets[].browser_download_url' \
          | xargs -n 1 wget
 
     - name: Extract Docker image
       run: |
-        7z x pre-immortalwrt-build-docker.tar.gz.7z.001 -o./
-        rm pre-immortalwrt-build-docker.tar.gz.7z.*
-        sudo docker load < pre-immortalwrt-build-docker.tar.gz
-        rm pre-immortalwrt-build-docker.tar.gz
+        7z x pre-build-docker.tar.gz.7z.001 -o./
+        rm pre-build-docker.tar.gz.7z.*
+        sudo docker load < pre-build-docker.tar.gz
+        rm pre-build-docker.tar.gz
 
     - name: Run Docker container
       run: |
-        sudo docker run -d --name pre-immortalwrt-build-docker pre-immortalwrt-build-docker tail -f /dev/null
+        sudo docker run -d --name pre-build-docker pre-build-docker tail -f /dev/null
 
     - name: Move Files
       run: |
@@ -90,20 +90,20 @@ jobs:
         mkdir -p openwrt
         
         # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
-        sudo docker cp ./x86_64_files pre-immortalwrt-build-docker:/home/user/openwrt/files
+        sudo docker cp ./x86_64_files pre-build-docker:/home/user/openwrt/files
 
         # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
-        sudo docker cp ./.x86_64_config pre-immortalwrt-build-docker:/home/user/openwrt/.config
+        sudo docker cp ./.x86_64_config pre-build-docker:/home/user/openwrt/.config
 
         # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-        sudo docker cp ./x86_64_diy.sh pre-immortalwrt-build-docker:/home/user/openwrt/diy.sh
+        sudo docker cp ./x86_64_diy.sh pre-build-docker:/home/user/openwrt/diy.sh
 
         # 给 diy.sh 文件添加执行权限
-        sudo docker exec pre-immortalwrt-build-docker sudo chmod +x /home/user/openwrt/diy.sh
+        sudo docker exec pre-build-docker sudo chmod +x /home/user/openwrt/diy.sh
 
     - name: Download package inside Docker container
       run: |
-        sudo docker exec -u user -w /home/user/openwrt pre-immortalwrt-build-docker bash -c "
+        sudo docker exec -u user -w /home/user/openwrt pre-build-docker bash -c "
           echo '+++++++++++++++++++++++++++'
           echo '当前目录为：'
           pwd
@@ -124,24 +124,31 @@ jobs:
 
     - name: Compile the firmware inside Docker container
       run: |
-        sudo docker exec -u user -w /home/user/openwrt pre-immortalwrt-build-docker bash -c "
+        sudo docker exec -u user -w /home/user/openwrt pre-build-docker bash -c "
           make -j$(nproc) || make -j1 V=s
         "
 
     - name: Move compiled files to host machine
       run: |
-        sudo docker exec pre-immortalwrt-build-docker bash -c "
+        echo '+++++++++++++++++++++++++++'
+        echo '当前目录为：'
+        pwd
+        echo '目录下文件：'
+        ls
+        echo '+++++++++++++++++++++++++++'
+      
+        sudo docker exec pre-build-docker bash -c "
           find /home/user/openwrt/bin/targets -type f \
           \( -name '*immortalwrt*' -o \
           -name '*config*' \)" \
         | while read file; do \
-          sudo docker cp immortalwrt-build-docker:$file /openwrt/$(basename $file); \
+          sudo docker cp pre-build-docker:$file ./openwrt/$(basename $file); \
         done
 
     - name: Create Git tag
       id: create_tag  # 给步骤添加一个 id
       run: |
-         TAG_NAME="x86_64_$(date +'%Y.%m.%d-%H_%M')"  # 基于当前年、月、日、小时、分钟生成唯一标签
+         TAG_NAME="immortalwrt_openwrt-24.10_x86_64_$(date +'%Y.%m.%d-%H_%M')"  # 基于当前年、月、日、小时、分钟生成唯一标签
          echo "TAG_NAME=${TAG_NAME}"  # 显示标签名
          git tag $TAG_NAME  # 创建新的 Git 标签
          git push origin $TAG_NAME  # 推送标签到远程仓库
