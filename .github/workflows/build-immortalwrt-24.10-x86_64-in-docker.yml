@@ -173,6 +173,9 @@ jobs:
         | while read file; do \
           sudo docker cp Build-openwrt-in-docker-pre:$file ./openwrt/$(basename $file); \
         done
+        #提取.config
+        sudo docker cp pre-build-docker:/home/user/openwrt/.config ./openwrt/.config
+
 
     - name: Create Git tag
       id: create_tag  # 给步骤添加一个 id
