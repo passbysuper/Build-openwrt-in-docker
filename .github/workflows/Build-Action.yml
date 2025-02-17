@@ -67,9 +67,9 @@ jobs:
 
     - name: Download Docker image
       run: |
-        tag=$(curl -s https://api.github.com/repos/superpassby/immortalwrt-build-docker/releases/latest | jq -r '.tag_name')
+        tag=$(curl -s https://api.github.com/repos/superpassby/pre-immortalwrt-build-docker/releases/latest | jq -r '.tag_name')
         echo "下载的 tag: $tag"
-        curl -s https://api.github.com/repos/superpassby/immortalwrt-build-docker/releases/latest \
+        curl -s https://api.github.com/repos/superpassby/pre-immortalwrt-build-docker/releases/latest \
          | jq -r '.assets[].browser_download_url' \
          | xargs -n 1 wget
 
