@@ -14,12 +14,12 @@ jobs:
     strategy:
       matrix:
         #version: [immortalwrt, openwrt, lede]
-        version: [immortalwrt, openwrt]
-        platform: [x86_64]
+        version: [immortalwrt]
         #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
         branch: [openwrt-24.10]
         # 如果 version 为 lede，默认分支将是 main，稍后调整
-
+        platform: [x86_64]
+        
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -75,7 +75,7 @@ jobs:
 
     - name: Download Docker image
       run: |
-        tag=$(curl -s https://api.github.com/repos/superpassby/pre-build-docker/releases/latest | jq -r '.tag_name')
+        tag=$(curl -s https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/latest | jq -r '.tag_name')
         echo "下载的 tag: $tag"
         curl -s https://api.github.com/repos/superpassby/pre-build-docker/releases/latest \
          | jq -r '.assets[].browser_download_url' \
@@ -98,13 +98,13 @@ jobs:
         mkdir -p openwrt
         
         # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
-        sudo docker cp ./x86_64_files pre-build-docker:/home/user/openwrt/files
+        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/files pre-build-docker:/home/user/openwrt/files
 
         # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
-        sudo docker cp ./.x86_64_config pre-build-docker:/home/user/openwrt/.config
+        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/.config pre-build-docker:/home/user/openwrt/.config
 
         # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-        sudo docker cp ./x86_64_diy.sh pre-build-docker:/home/user/openwrt/diy.sh
+        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/diy.sh pre-build-docker:/home/user/openwrt/diy.sh
 
         # 给 diy.sh 文件添加执行权限
         sudo docker exec pre-build-docker sudo chmod +x /home/user/openwrt/diy.sh
@@ -156,11 +156,11 @@ jobs:
     - name: Create Git tag
       id: create_tag  # 给步骤添加一个 id
       run: |
-         TAG_NAME="immortalwrt_openwrt-24.10_x86_64_$(date +'%Y.%m.%d-%H_%M')"  # 基于当前年、月、日、小时、分钟生成唯一标签
+         TAG_NAME="${{ matrix.version }}_${{ matrix.branch }}_${{ matrix.platform }}_$(date +'%Y.%m.%d-%H_%M')"  # 基于当前年、月、日、小时、分钟生成唯一标签
          echo "TAG_NAME=${TAG_NAME}"  # 显示标签名
          git tag $TAG_NAME  # 创建新的 Git 标签
          git push origin $TAG_NAME  # 推送标签到远程仓库
-         git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/superpassby/immortalwrt-build-docker $TAG_NAME  # 使用 PAT 推送标签
+         git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/superpassby/Build-openwrt-in-docker $TAG_NAME  # 使用 PAT 推送标签
          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV  # 将标签名存储在环境变量中，供后续步骤使用
       env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -178,33 +178,33 @@ jobs:
       run: |
         echo "Deleting old workflow runs..."
         WORKFLOW_RUNS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/immortalwrt-build-docker/actions/runs")
+          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/actions/runs")
         RUN_IDS=$(echo $WORKFLOW_RUNS | jq '.workflow_runs | sort_by(.created_at) | reverse | .[3:] | .[].id')
         for RUN_ID in $(echo $RUN_IDS); do
           echo "Deleting workflow run: $RUN_ID"
           curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/immortalwrt-build-docker/actions/runs/$RUN_ID"
+          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/actions/runs/$RUN_ID"
         done
 
     - name: Delete old releases
       run: |
         echo "Deleting old releases..."
         RELEASES=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/immortalwrt-build-docker/releases")
+          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/releases")
         # 按创建时间排序，并排除最近的三个版本
         RELEASE_IDS=$(echo $RELEASES | jq '. | sort_by(.created_at) | reverse | .[3:] | .[].id')
         for RELEASE_ID in $(echo $RELEASE_IDS); do
           RELEASE_NAME=$(echo $RELEASES | jq -r ".[] | select(.id == $RELEASE_ID) | .name")
           echo "Deleting release: $RELEASE_NAME"
           curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/immortalwrt-build-docker/releases/$RELEASE_ID"
+          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/releases/$RELEASE_ID"
         done
 
     - name: Delete old tags
       run: |
         echo "Deleting old tags..."
         TAGS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/immortalwrt-build-docker/tags")
+          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/tags")
         # 提取时间戳部分并按日期排序
         TAG_NAMES=$(echo $TAGS | jq -r '.[] | {name: .name, date: (.name | match("[0-9]{4}.[0-9]{2}.[0-9]{2}-[0-9]{2}_[0-9]{2}") | .string)} | select(.date != null) | .name' | sort)
         # 删除排名较老的标签
@@ -212,7 +212,7 @@ jobs:
         for TAG_NAME in $(echo "$TAG_NAMES"); do
           echo "Deleting tag: $TAG_NAME"
           curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/immortalwrt-build-docker/git/refs/tags/$TAG_NAME"
+          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/git/refs/tags/$TAG_NAME"
         done
 
 
