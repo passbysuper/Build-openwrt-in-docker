@@ -11,6 +11,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        #version: [immortalwrt, openwrt, lede]
+        version: [immortalwrt, openwrt]
+        platform: [x86_64]
+        #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
+        branch: [openwrt-24.10]
+        # 如果 version 为 lede，默认分支将是 main，稍后调整
 
     steps:
     - name: Checkout repository
