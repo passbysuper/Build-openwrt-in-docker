@@ -111,7 +111,7 @@ jobs:
       - name: Move Files
         run: |
           # 创建 openwrt 目录
-          mkdir -p openwrt
+          mkdir -p target
         
           # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
           sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/files
@@ -161,7 +161,7 @@ jobs:
             \( -name '*img*' -o \
             -name '*config*' \)" \
           | while read file; do \
-            sudo docker cp ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:$file ./openwrt/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file); \
+            sudo docker cp ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:$file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file); \
           done
 
       - name: Upload artifacts
@@ -169,7 +169,7 @@ jobs:
         with:
           name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
           path: |
-            ./openwrt/*
+            ./target/*
           compression-level: 0  # 禁用压缩
 
   Release:
