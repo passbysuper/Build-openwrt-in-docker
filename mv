@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd openwrt
-make menuconfig
+sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "make menuconfig"
 
 # 1. 获取本机 ./target 目录下 .config* 文件的数量
 target_dir="$(pwd)/target"
