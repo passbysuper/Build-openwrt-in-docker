@@ -1,47 +1,53 @@
-name: Test TAG_NAME and Release Name
+name: Create Git tag and Release
 
 on:
   push:
     branches:
-      - main
+      - main  # 仅当推送到主分支时触发
 
 jobs:
-  test-tag:
+  create-release:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set TAG_NAME and Release Name
+      # Create Git tag
+      - name: Create Git tag
+        id: create_tag
         run: |
-          # 设置标签名（TAG_NAME）
+          # 设置标签名
           TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
-          
-          # 设置发布名（Release Name）
-          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d_%H-%M')"
+          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M Build')"
           
           # 输出标签名和发布名
           echo "TAG_NAME=${TAG_NAME}"
           echo "RELEASE_NAME=${RELEASE_NAME}"
-          
+
+          # 将标签名和发布名传递给后续步骤
+          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+          echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+
           # 配置 Git 用户
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          
-          # 检查标签是否已存在
-          if ! git tag -l "$TAG_NAME"; then
-            git tag -a "$TAG_NAME" -m "Release tag for ${TAG_NAME}"
-          else
-            echo "Tag already exists, skipping creation."
-          fi
-          
+
+          # 创建标签
+          git tag $TAG_NAME
           # 推送标签到远程仓库
-          git push origin "$TAG_NAME"
-          
-          # 输出标签是否成功
-          echo "Successfully created and pushed tag: $TAG_NAME"
-          
-          # 创建发布
-          gh release create "$TAG_NAME" --title "$RELEASE_NAME" --notes "Release notes for ${RELEASE_NAME}"
-          echo "Successfully created release: $RELEASE_NAME"
+          git push origin $TAG_NAME
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} $TAG_NAME
+
+      # Set up GitHub Release
+      - name: Set up GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: ${{ env.RELEASE_NAME }}
+          files: ./artifacts/**/*  # 递归匹配所有文件
+          body: "Release with multiple builds"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
