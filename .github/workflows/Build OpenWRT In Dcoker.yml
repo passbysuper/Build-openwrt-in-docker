@@ -1,4 +1,4 @@
-name: Build ImmortalWRT 24.10 x86_64 In Dcoker
+name: Build OpenWRT In Dcoker
 
 on:
   # 手动触发
@@ -78,13 +78,10 @@ jobs:
           df -hT
           echo "=============================================================================="
 
-
-
-
       - name: Download Docker image
         run: |
           # 获取最新的 release 的 tag
-          tag=$(curl -s https://api.github.com/repos/superpassby/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/releases/latest | jq -r '.tag_name')
+          tag=$(curl -s https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/latest | jq -r '.tag_name')
           echo "下载的 tag: $tag"
 
           # 获取所有资产的下载链接，并筛选出文件名符合 lienol_24.10_x86_64* 的文件
@@ -93,9 +90,6 @@ jobs:
             | grep -E '${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.*' \
             | xargs -n 1 wget
 
-
-
-    
 
       - name: Extract Docker image
         run: |
