@@ -214,7 +214,7 @@ jobs:
           compression-level: 0  # 禁用压缩
 
   Release:
-    needs: Building
+    needs: Get_config_Building
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
