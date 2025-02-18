@@ -39,4 +39,4 @@ read -p "是否生成与默认config的差异文件patch？选择 Y/y 继续，N
 if [[ "$run_diff" == "Y" || "$run_diff" == "y" ]]; then
     git diff $(pwd)/target/config.txt $new_config_name > config.patch
 fi
-
+ls -l ./config.patch
