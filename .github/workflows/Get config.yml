@@ -3,6 +3,11 @@ name: Get config
 on:
   # 手动触发
   workflow_dispatch:
+    inputs:
+      run_ssh:
+        description: 'Whether to run SSH for make menuconfig'
+        required: false
+        default: 'false'  # 默认不执行
 
   # 定时触发 (例如每天凌晨 1 点触发)
 #  schedule:
@@ -136,15 +141,28 @@ jobs:
 
 
       - name: SSH远程连接（make menuconfig）
+        if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
         uses: mxschmitt/action-tmate@v3
 
-    
-      - name: Upload artifacts
-        uses: actions/upload-artifact@main
-        with:
-          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
-          path: |
-            ./target/*
-          compression-level: 0  # 禁用压缩
+      - name: Commit and push files to the repository
+        run: |
+          # 创建目标目录
+          mkdir -p ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}
+
+          # 仅复制 /target/ 中的内容到目标目录
+          cp -r ./target/* ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/
+
+          # 配置 Git 用户
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
+          git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/*
+
+          # 提交更改
+          git commit -m "Add build artifacts"
+
+          # 推送到远程仓库
+          git push origin ${{ github.ref }}
 
 
