@@ -25,9 +25,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Debug Session
-        #uses: csexton/debugger-action@master
-        uses: mxschmitt/action-tmate@v3
+#      - name: Setup Debug Session
+#        uses: csexton/debugger-action@master
+#        uses: mxschmitt/action-tmate@v3
         
       - name: Determine branch
         id: set_branch
@@ -68,8 +68,8 @@ jobs:
           docker_include: ".+"
           docker_prune: "True"
           docker_clean: "True"
-          apt_prune: "True"
-          apt_clean: "True"
+          #apt_prune: "True"
+          #apt_clean: "True"
           #homebrew_prune: "True"
           #homebrew_clean: "True"
           #npm_prune: "True"
@@ -108,6 +108,8 @@ jobs:
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
+          mkdir target
+          chmod +x mv
 
       - name: Run Docker container
         run: |
