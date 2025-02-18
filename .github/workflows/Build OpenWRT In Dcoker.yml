@@ -85,7 +85,7 @@ jobs:
           echo "下载的 tag: $tag"
 
           # 获取所有资产的下载链接，并筛选出文件名符合 lienol_24.10_x86_64* 的文件
-          curl -s https://api.github.com/repos/superpassby/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/releases/latest \
+          curl -s https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/latest \
             | jq -r '.assets[].browser_download_url' \
             | grep -E '${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.*' \
             | xargs -n 1 wget
