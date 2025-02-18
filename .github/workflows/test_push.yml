@@ -1,0 +1,28 @@
+name: Test File Push
+
+on:
+  # 手动触发
+  workflow_dispatch:
+
+jobs:
+  test_push:
+    runs-on: ubuntu-22.04
+
+    steps:
+      # 拉取仓库代码
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # 生成 test 文件
+      - name: Generate test file
+        run: |
+          echo "This is a test file created by GitHub Actions." > test.txt
+
+      # 提交并推送到仓库
+      - name: Commit and push test file to the repository
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add test.txt
+          git commit -m "Add test file"
+          git push origin ${{ github.ref }}
