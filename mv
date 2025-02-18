@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "sudo apt-get update && sudo apt-get install -y screen"
 sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "screen make menuconfig"
 
 # 1. 获取本机 ./target 目录下 .config* 文件的数量
