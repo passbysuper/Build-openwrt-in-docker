@@ -24,7 +24,7 @@ jobs:
     strategy:
       matrix:
         #version: version: [immortalwrt, openwrt, lede, lienol]
-        version: [openwrt]
+        version: [immortalwrt]
         #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
         branch: [openwrt-24.10]
         # 如果 version 为 lede，默认分支将是 main，稍后调整
@@ -201,11 +201,9 @@ jobs:
       - name: Move compiled files to host machine
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
-            find /home/user/openwrt/bin/targets -type f \
-            \( -name '*img*' -o \
-            -name '*config*' \)" \
-          | while read file; do \
-            sudo docker cp ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:$file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file); \
+            find /home/user/openwrt/bin/targets -type f \( -name '*img*' -o -name '*config*' \)
+          " | while read file; do
+            sudo docker cp openwrt_build:$file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file);
           done
 
       - name: Upload artifacts
@@ -277,18 +275,35 @@ jobs:
       - name: Create Git tag
         id: create_tag
         run: |
-          TAG_NAME="发布时间（UTC）：$(date +'%Y.%m.%d-%H_%M')"
+          # 设置标签名
+          TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
+          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
+          
+          # 输出标签名和发布名
           echo "TAG_NAME=${TAG_NAME}"
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} $TAG_NAME
+          echo "RELEASE_NAME=${RELEASE_NAME}"
+
+          # 将标签名和发布名传递给后续步骤
           echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+          echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+          
+          # 配置 Git 用户
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # 创建标签
+          git tag $TAG_NAME
+
+          # 推送标签到远程仓库
+          git push origin $TAG_NAME
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} $TAG_NAME          
 
       - name: Set up GitHub Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME }}
+          name: ${{ env.RELEASE_NAME }}
           files: ./artifacts/**/*  # 递归匹配所有文件
           body: "Release with multiple builds"
         env:
