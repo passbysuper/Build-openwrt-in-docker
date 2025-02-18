@@ -1,5 +1,4 @@
-name: test Build OpenWRT In Dcoker
-
+name: test
 on:
   # 手动触发
   workflow_dispatch:
