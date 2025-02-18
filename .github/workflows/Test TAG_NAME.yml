@@ -1,4 +1,4 @@
-name: Test TAG_NAME
+name: Test TAG_NAME and Release Name
 
 on:
   push:
@@ -13,15 +13,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set TAG_NAME
+      - name: Set TAG_NAME and Release Name
         run: |
-          # 设置标签名
-          TAG_NAME="发布时间（UTC+8:00）：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
+          # 设置标签名（TAG_NAME）
+          TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
           
-          # 输出标签名
+          # 设置发布名（Release Name）
+          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d_%H-%M')"
+          
+          # 输出标签名和发布名
           echo "TAG_NAME=${TAG_NAME}"
+          echo "RELEASE_NAME=${RELEASE_NAME}"
           
-          # 创建标签并推送
+          # 配置 Git 用户
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           
@@ -37,3 +41,7 @@ jobs:
           
           # 输出标签是否成功
           echo "Successfully created and pushed tag: $TAG_NAME"
+          
+          # 创建发布
+          gh release create "$TAG_NAME" --title "$RELEASE_NAME" --notes "Release notes for ${RELEASE_NAME}"
+          echo "Successfully created release: $RELEASE_NAME"
