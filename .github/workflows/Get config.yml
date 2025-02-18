@@ -74,3 +74,13 @@ jobs:
       - name: SSH远程连接（make menuconfig）
         uses: danshui-git/debugger-action@main
 
+    
+      - name: Upload artifacts
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
+          path: |
+            ./openwrt/*
+          compression-level: 0  # 禁用压缩
+
+
