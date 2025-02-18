@@ -123,11 +123,12 @@ jobs:
 
       - name: Move Files
         run: |
+          ls || true
           # 创建 target 目录
-          mkdir -p target
-        
+          mkdir -p ./target || true
+          ls || true
           # 将 files 复制到 Docker 容器中的 /home/user/openwrt
-          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files
+          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files || true
 
           # 将 diffconfig 复制到 Docker 容器中的 /home/user/openwrt 
           sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
