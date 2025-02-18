@@ -9,7 +9,7 @@ on:
 #    - cron: '0 1 * * *'  # 每天凌晨 1 点 UTC，按需求调整时间
 
 jobs:
-  build_and_release:
+  Building:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,222 +21,276 @@ jobs:
         platform: [x86_64]
         
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Check Server Performance
-      run: |
-        echo "--------------------------CPU信息--------------------------"
-        echo "CPU物理数量: $(cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l)"
-        echo "CPU核心数量: $(nproc)"
-        echo -e "CPU型号信息:$(cat /proc/cpuinfo | grep -m1 name | awk -F: '{print $2}')\n"
-        echo "--------------------------内存信息--------------------------"
-        echo "已安装内存详细信息:"
-        echo -e "$(sudo lshw -short -C memory | grep GiB)\n"
-        echo "--------------------------硬盘信息--------------------------"
-        echo "硬盘数量: $(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT 
-    
-    - name: Before freeing up disk space
-      run: |
-        echo "Before freeing up disk space"
-        echo "=============================================================================="
-        df -hT
-        echo "=============================================================================="
-
-    - name: "Optimize Disk Space"
-      uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.1"
-      #if: false  # 跳过该步骤
-      #if: true  # 该步骤会执行
-      with:
-        operate_sudo: "True"
-        general_include: ".+"
-        general_exclude: |-
-          ^GCC$
-          ^G\+\+$
-          Clang
-          LLVM
-        docker_include: ".+"
-        docker_prune: "True"
-        docker_clean: "True"
-        apt_prune: "True"
-        apt_clean: "True"
-        homebrew_prune: "True"
-        homebrew_clean: "True"
-        npm_prune: "True"
-        npm_clean: "True"
-        os_swap: "True"
-
-    - name: Show disk space
-      run: |
-        echo "Show disk space"
-        echo "=============================================================================="
-        df -hT
-        echo "=============================================================================="
-
-    - name: Download Docker image
-      run: |
-        # 获取所有 releases 列表
-        RELEASES_URL="https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases"
-        releases_info=$(curl -s $RELEASES_URL)
-
-        # 过滤符合 version, branch 和 platform 的 release，并按 created_at 排序，获取最新的 release
-        TAG_NAME=$(echo $releases_info | jq -r --arg version "${{ matrix.version }}" --arg branch "${{ matrix.branch }}" --arg platform "${{ matrix.platform }}" \
-          '.[] | select(.tag_name | test("^" + $version + "_" + $branch + "_" + $platform + "_")) | {tag_name, created_at} | .tag_name' \
-          | sort -r | head -n 1)
-
-        # 如果没有找到符合条件的 release，则退出
-        if [ -z "$TAG_NAME" ]; then
-          echo "No release found for version: ${{ matrix.version }}, branch: ${{ matrix.branch }}, platform: ${{ matrix.platform }}"
-          exit 1
-        fi
-
-        echo "找到的最新 tag_name: $TAG_NAME"
-
-        # 获取符合条件的 release 文件
-        RELEASE_URL="https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/tags/$TAG_NAME"
-        release_info=$(curl -s $RELEASE_URL)
-
-        # 提取并下载所有文件
-        echo "下载文件..."
-        echo $release_info | jq -r '.assets[].browser_download_url' | while read url; do
-          wget "$url"
-        done
-
-    - name: Extract Docker image
-      run: |
-        7z x Build-openwrt-in-docker-pre.tar.gz.7z.001 -o./
-        rm Build-openwrt-in-docker-pre.tar.gz.7z.*
-        sudo docker load < Build-openwrt-in-docker-pre.tar.gz
-        rm Build-openwrt-in-docker-pre.tar.gz
-
-    - name: Run Docker container
-      run: |
-        sudo docker run -d --name Build-openwrt-in-docker-pre Build-openwrt-in-docker-pre tail -f /dev/null
-
-    - name: Move Files
-      run: |
-        # 创建 openwrt 目录
-        mkdir -p openwrt
+      - name: Determine branch
+        id: set_branch
+        run: |
+          if [[ "${{ matrix.version }}" == "immortalwrt" || "${{ matrix.version }}" == "openwrt" ]]; then
+            echo "branch=${{ matrix.branch }}" >> $GITHUB_ENV
+          elif [[ "${{ matrix.version }}" == "lede" ]]; then
+            if [[ "${{ matrix.branch }}" == "openwrt-24.10" ]]; then
+              echo "branch=master" >> $GITHUB_ENV
+            else
+              exit 0
+            fi
+          elif [[ "${{ matrix.version }}" == "lienol" ]]; then
+            branch_name=$(echo "${{ matrix.branch }}" | sed 's/^openwrt-//')
+            echo "branch=${branch_name}" >> $GITHUB_ENV
+          fi
         
-        # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
-        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/files Build-openwrt-in-docker-pre:/home/user/openwrt/files
+      - name: 查看机器配置  
+        run: |  
+          echo "警告⚠"  
+          echo "分配的服务器性能有限，若选择的插件过多，务必注意CPU性能！"  
+          echo -e "CPU性能排序: 7763 > 8370C > 8272CL > 8171M > E5-2673\n"  
+          echo "--------------------------CPU信息--------------------------"  
+          echo "CPU物理数量: $(cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l)"  
+          echo "CPU核心数量: $(nproc)"  
+          echo -e "CPU型号信息:$(cat /proc/cpuinfo | grep -m1 name | awk -F: '{print $2}')\n"  
+          echo "--------------------------内存信息--------------------------"  
+          echo "已安装内存详细信息:"  
+          echo -e "$(sudo lshw -short -C memory | grep GiB)\n"  
+          echo "--------------------------硬盘信息--------------------------"  
+          echo "硬盘数量: $(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT  
 
-        # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
-        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/.config Build-openwrt-in-docker-pre:/home/user/openwrt/.config
+      - name: "Optimize Disk Space"
+        uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.0"
+        with:
+          operate_sudo: "True"
+          general_include: ".+"
+          docker_include: ".+"
+          docker_prune: "True"
+          docker_clean: "True"
+          apt_prune: "True"
+          apt_clean: "True"
+          homebrew_prune: "True"
+          homebrew_clean: "True"
+          npm_prune: "True"
+          npm_clean: "True"
+          os_swap: "True" 
+      
+      - name: Show disk space
+        run: |
+          echo "Show disk space"
+          echo "=============================================================================="
+          df -hT
+          echo "=============================================================================="
 
-        # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-        sudo docker cp ./${{ matrix.version }}/${{ matrix.branch }}/${{ matrix.platform }}/diy.sh Build-openwrt-in-docker-pre:/home/user/openwrt/diy.sh
 
-        # 给 diy.sh 文件添加执行权限
-        sudo docker exec Build-openwrt-in-docker-pre sudo chmod +x /home/user/openwrt/diy.sh
 
-    - name: Download package inside Docker container
-      run: |
-        sudo docker exec -u user -w /home/user/openwrt Build-openwrt-in-docker-pre bash -c "
+
+      - name: Download Docker image
+        run: |
+          # 获取最新的 release 的 tag
+          tag=$(curl -s https://api.github.com/repos/superpassby/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/releases/latest | jq -r '.tag_name')
+          echo "下载的 tag: $tag"
+
+          # 获取所有资产的下载链接，并筛选出文件名符合 lienol_24.10_x86_64* 的文件
+          curl -s https://api.github.com/repos/superpassby/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/releases/latest \
+            | jq -r '.assets[].browser_download_url' \
+            | grep -E '${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.*' \
+            | xargs -n 1 wget
+
+
+
+    
+
+      - name: Extract Docker image
+        run: |
+          7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.7z.001 -o./
+          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.gz.7z.*
+          sudo docker load < ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
+          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
+
+      - name: Run Docker container
+        run: |
+          sudo docker run -d --name ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
+
+      - name: Move Files
+        run: |
+          # 创建 openwrt 目录
+          mkdir -p openwrt
+        
+          # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
+          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/files
+
+          # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
+          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/.config ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/.config
+
+          # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
+          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diy.sh ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/diy.sh
+
+          # 给 diy.sh 文件添加执行权限
+          sudo docker exec ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} sudo chmod +x /home/user/openwrt/diy.sh
+
+      - name: Download package inside Docker container
+        run: |
+          sudo docker exec -u user -w /home/user/openwrt ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} bash -c "
+            echo '+++++++++++++++++++++++++++'
+            echo '当前目录为：'
+            pwd
+            echo '目录下文件：'
+            ls
+            echo '+++++++++++++++++++++++++++'            
+            git pull          
+            ./diy.sh         
+            ./scripts/feeds update -a && ./scripts/feeds install -a          
+            make defconfig
+            make download -j8
+          "
+
+      - name: Compile the firmware inside Docker container
+        run: |
+          sudo docker exec -u user -w /home/user/openwrt ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} bash -c "
+            make -j$(nproc) || make -j1 V=s
+          "
+
+      - name: Move compiled files to host machine
+        run: |
           echo '+++++++++++++++++++++++++++'
           echo '当前目录为：'
           pwd
           echo '目录下文件：'
           ls
           echo '+++++++++++++++++++++++++++'
-          
-          git pull
-          
-          # git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
-          ./diy.sh
-          
-          ./scripts/feeds update -a && ./scripts/feeds install -a
-          
-          make defconfig
-          make download -j8
-        "
-
-    - name: Compile the firmware inside Docker container
-      run: |
-        sudo docker exec -u user -w /home/user/openwrt Build-openwrt-in-docker-pre bash -c "
-          make -j$(nproc) || make -j1 V=s
-        "
-
-    - name: Move compiled files to host machine
-      run: |
-        echo '+++++++++++++++++++++++++++'
-        echo '当前目录为：'
-        pwd
-        echo '目录下文件：'
-        ls
-        echo '+++++++++++++++++++++++++++'
       
-        sudo docker exec Build-openwrt-in-docker-pre bash -c "
-          find /home/user/openwrt/bin/targets -type f \
-          \( -name '*immortalwrt*' -o \
-          -name '*config*' \)" \
-        | while read file; do \
-          sudo docker cp Build-openwrt-in-docker-pre:$file ./openwrt/$(basename $file); \
-        done
-        #提取.config
-        #sudo docker cp pre-build-docker:/home/user/openwrt/.config ./openwrt/.config
+          sudo docker exec ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} bash -c "
+            find /home/user/openwrt/bin/targets -type f \
+            \( -name '*img*' -o \
+            -name '*config*' \)" \
+          | while read file; do \
+            sudo docker cp ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:$file ./openwrt/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file); \
+          done
 
+      - name: Upload artifacts
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
+          path: |
+            ./openwrt/*
+          compression-level: 0  # 禁用压缩
 
-    - name: Create Git tag
-      id: create_tag  # 给步骤添加一个 id
-      run: |
-         TAG_NAME="${{ matrix.version }}_${{ matrix.branch }}_${{ matrix.platform }}_$(date +'%Y.%m.%d-%H_%M')"  # 基于当前年、月、日、小时、分钟生成唯一标签
-         echo "TAG_NAME=${TAG_NAME}"  # 显示标签名
-         git tag $TAG_NAME  # 创建新的 Git 标签
-         git push origin $TAG_NAME  # 推送标签到远程仓库
-         git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/superpassby/Build-openwrt-in-docker $TAG_NAME  # 使用 PAT 推送标签
-         echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV  # 将标签名存储在环境变量中，供后续步骤使用
-      env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  Release:
+    needs: Building
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Upload Docker parts to GitHub Release
-      uses: softprops/action-gh-release@v1
-      with:
-          tag_name: ${{ env.TAG_NAME }}  # 从环境变量中获取标签名
-          files: |
-              /openwrt/*
-      env:
+      - name: List files in ./artifacts
+        #if: false  # 跳过该步骤
+        if: true  # 该步骤会执行
+        run: |
+          echo "Show disk space"
+          echo "=============================================================================="
+          df -hT
+          echo "=============================================================================="
+          echo "Listing files in ./artifacts after unzipping:"
+          ls -la ./artifacts/**/  # 显示解压后的文件列表
+  
+      - name: Download artifacts
+        uses: actions/download-artifact@main
+        with:
+          path: ./artifacts/
+
+      - name: List files in ./artifacts
+        #if: false  # 跳过该步骤
+        if: true  # 该步骤会执行
+        run: |
+          echo "Show disk space"
+          echo "=============================================================================="
+          df -hT
+          echo "=============================================================================="
+          echo "Listing files in ./artifacts after unzipping:"
+          ls -la ./artifacts/**/  # 显示解压后的文件列表
+          
+      - name: Unzip all artifact files
+        run: |
+          # 解压 ./artifacts/ 目录及其子目录中的所有 .zip 文件
+          shopt -s globstar  # 开启 globstar 以支持 ** 递归匹配
+          for zip_file in ./artifacts/**/*.zip; do
+            if [[ -f "$zip_file" ]]; then
+              echo "Unzipping $zip_file..."
+              unzip "$zip_file" -d ./artifacts/  # 解压到 ./artifacts/ 目录
+              rm "$zip_file"  # 删除 .zip 文件
+            fi
+          done
+
+          
+      - name: List files in ./artifacts
+        #if: false  # 跳过该步骤
+        if: true  # 该步骤会执行
+        run: |
+          echo "Show disk space"
+          echo "=============================================================================="
+          df -hT
+          echo "=============================================================================="
+          echo "Listing files in ./artifacts after unzipping:"
+          ls -la ./artifacts/**/  # 显示解压后的文件列表
+  
+      - name: Create Git tag
+        id: create_tag
+        run: |
+          TAG_NAME="发布时间（UTC）：$(date +'%Y.%m.%d-%H_%M')"
+          echo "TAG_NAME=${TAG_NAME}"
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} $TAG_NAME
+          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
+
+      - name: Set up GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          files: ./artifacts/**/*  # 递归匹配所有文件
+          body: "Release with multiple builds"
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             
+      - name: Delete old workflow runs
+        run: |
+          echo "Deleting old workflow runs..."
+          WORKFLOW_RUNS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/actions/runs")
+          RUN_IDS=$(echo $WORKFLOW_RUNS | jq '.workflow_runs | sort_by(.created_at) | reverse | .[3:] | .[].id')
+          for RUN_ID in $(echo $RUN_IDS); do
+            echo "Deleting workflow run: $RUN_ID"
+            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RUN_ID"
+          done
 
-    - name: Delete old workflow runs
-      run: |
-        echo "Deleting old workflow runs..."
-        WORKFLOW_RUNS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/actions/runs")
-        RUN_IDS=$(echo $WORKFLOW_RUNS | jq '.workflow_runs | sort_by(.created_at) | reverse | .[3:] | .[].id')
-        for RUN_ID in $(echo $RUN_IDS); do
-          echo "Deleting workflow run: $RUN_ID"
-          curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/actions/runs/$RUN_ID"
-        done
+      - name: Delete old releases
+        run: |
+          echo "Deleting old releases..."
+          RELEASES=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/releases")
+          RELEASE_IDS=$(echo $RELEASES | jq '. | sort_by(.created_at) | reverse | .[3:] | .[].id')
+          for RELEASE_ID in $(echo $RELEASE_IDS); do
+            RELEASE_NAME=$(echo $RELEASES | jq -r ".[] | select(.id == $RELEASE_ID) | .name")
+            echo "Deleting release: $RELEASE_NAME"
+            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID"
+          done
 
-    - name: Delete old releases
-      run: |
-        echo "Deleting old releases..."
-        RELEASES=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/releases")
-        # 按创建时间排序，并排除最近的三个版本
-        RELEASE_IDS=$(echo $RELEASES | jq '. | sort_by(.created_at) | reverse | .[3:] | .[].id')
-        for RELEASE_ID in $(echo $RELEASE_IDS); do
-          RELEASE_NAME=$(echo $RELEASES | jq -r ".[] | select(.id == $RELEASE_ID) | .name")
-          echo "Deleting release: $RELEASE_NAME"
-          curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/releases/$RELEASE_ID"
-        done
+      - name: Delete old tags
+        run: |
+          echo "Deleting old tags..."
+          TAGS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/tags")
+          TAG_NAMES=$(echo $TAGS | jq -r '.[] | {name: .name, date: (.name | match("[0-9]{4}.[0-9]{2}.[0-9]{2}-[0-9]{2}_[0-9]{2}") | .string)} | select(.date != null) | .name' | sort)
+          TAG_NAMES=$(echo "$TAG_NAMES" | head -n -3)
+          for TAG_NAME in $(echo "$TAG_NAMES"); do
+            echo "Deleting tag: $TAG_NAME"
+            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$TAG_NAME"
+          done
 
-    - name: Delete old tags
-      run: |
-        echo "Deleting old tags..."
-        TAGS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/tags")
-        # 提取时间戳部分并按日期排序
-        TAG_NAMES=$(echo $TAGS | jq -r '.[] | {name: .name, date: (.name | match("[0-9]{4}.[0-9]{2}.[0-9]{2}-[0-9]{2}_[0-9]{2}") | .string)} | select(.date != null) | .name' | sort)
-        # 删除排名较老的标签
-        TAG_NAMES=$(echo "$TAG_NAMES" | head -n -3)  # 保留最新三个标签
-        for TAG_NAME in $(echo "$TAG_NAMES"); do
-          echo "Deleting tag: $TAG_NAME"
-          curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/superpassby/Build-openwrt-in-docker/git/refs/tags/$TAG_NAME"
-        done
-
-
+      - name: Delete all files in ./artifacts
+        #if: false  # 跳过该步骤
+        if: true  # 该步骤会执行
+        run: |
+          echo "Deleting all files in ./artifacts..."
+          rm -rf ./artifacts/*
