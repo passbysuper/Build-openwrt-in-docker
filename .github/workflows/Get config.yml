@@ -123,16 +123,16 @@ jobs:
           mkdir -p target
         
           # 将 x86_64_files 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 files
-          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/files
+          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files
 
           # 将 .x86_64_config 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 .config
-          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/.config ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/.config
+          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/.config openwrt_build:/home/user/openwrt/.config
 
           # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diy.sh ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}:/home/user/openwrt/diy.sh
+          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diy.sh openwrt_build:/home/user/openwrt/diy.sh
 
           # 给 diy.sh 文件添加执行权限
-          sudo docker exec ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} sudo chmod +x /home/user/openwrt/diy.sh
+          sudo docker exec openwrt_build sudo chmod +x /home/user/openwrt/diy.sh
 
 
       - name: SSH远程连接（make menuconfig）
