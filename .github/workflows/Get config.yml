@@ -64,7 +64,7 @@ jobs:
         uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.0"
         with:
           operate_sudo: "True"
-          #general_include: ".+"
+          general_include: ".+"
           docker_include: ".+"
           docker_prune: "True"
           docker_clean: "True"
