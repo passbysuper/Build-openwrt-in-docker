@@ -10,7 +10,8 @@ on:
 
 jobs:
   Building:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+
     strategy:
       matrix:
         #version: version: [immortalwrt, openwrt, lede, Lienol]
@@ -24,6 +25,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: SSH远程连接（make menuconfig）
+        uses: danshui-git/debugger-action@main
+      
       - name: Determine branch
         id: set_branch
         run: |
