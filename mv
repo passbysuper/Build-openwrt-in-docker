@@ -1,7 +1,18 @@
 #!/bin/bash
 
-sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "sudo apt-get update && sudo apt-get install -y screen"
-sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "screen make menuconfig"
+# 提示是否运行 diy.sh
+read -p "是否运行 diy.sh？选择 Y/y 继续，N/n 跳过: " run_diy
+if [[ "$run_diy" == "Y" || "$run_diy" == "y" ]]; then
+    sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "./diy.sh"
+    sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "./scripts/feeds update -a && ./scripts/feeds install -a"
+fi
+
+# 提示是否运行 make menuconfig
+read -p "是否运行 make menuconfig？选择 Y/y 继续，N/n 跳过: " run_menuconfig
+if [[ "$run_menuconfig" == "Y" || "$run_menuconfig" == "y" ]]; then
+    sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "sudo apt-get update && sudo apt-get install -y screen"
+    sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "screen make menuconfig"
+fi
 
 # 1. 获取本机 ./target 目录下 .config* 文件的数量
 target_dir="$(pwd)/target"
