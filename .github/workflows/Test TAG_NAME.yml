@@ -1,0 +1,39 @@
+name: Test TAG_NAME
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set TAG_NAME
+        run: |
+          # 设置标签名
+          TAG_NAME="发布时间（UTC+8:00）：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
+          
+          # 输出标签名
+          echo "TAG_NAME=${TAG_NAME}"
+          
+          # 创建标签并推送
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          # 检查标签是否已存在
+          if ! git tag -l "$TAG_NAME"; then
+            git tag -a "$TAG_NAME" -m "Release tag for ${TAG_NAME}"
+          else
+            echo "Tag already exists, skipping creation."
+          fi
+          
+          # 推送标签到远程仓库
+          git push origin "$TAG_NAME"
+          
+          # 输出标签是否成功
+          echo "Successfully created and pushed tag: $TAG_NAME"
