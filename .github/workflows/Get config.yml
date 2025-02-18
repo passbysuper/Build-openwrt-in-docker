@@ -58,8 +58,8 @@ jobs:
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
-          7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.7z.001 -o./
-          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.gz.7z.*
+          7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz.7z.001 -o./
+          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz.7z.*
           sudo docker load < ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
           rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
           mkdir openwrt
