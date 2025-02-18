@@ -20,7 +20,7 @@ jobs:
         run: |
           # 设置标签名
           TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
-          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M Build')"
+          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
           
           # 输出标签名和发布名
           echo "TAG_NAME=${TAG_NAME}"
