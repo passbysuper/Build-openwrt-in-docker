@@ -133,6 +133,11 @@ jobs:
           # 将 diffconfig 复制到 Docker 容器中的 /home/user/openwrt 
           sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
 
+          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
+            cp diffconfig .config
+            make defconfig
+          " || true
+
           # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
           sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diy.sh openwrt_build:/home/user/openwrt/diy.sh
 
