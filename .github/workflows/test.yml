@@ -182,10 +182,7 @@ jobs:
           # 推送到远程仓库
           git push origin ${{ github.ref }}
  
-      # 再次签出仓库，获取最新的内容
-      - name: Checkout repository (second time)
-        uses: actions/checkout@v2
-     
+    
       - name: SSH远程连接（make menuconfig）
         if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
         uses: mxschmitt/action-tmate@v3
