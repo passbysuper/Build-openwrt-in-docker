@@ -25,7 +25,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: SSH远程连接（make menuconfig）
+      - name: Setup Debug Session
         uses: danshui-git/debugger-action@main
       
       - name: Determine branch
