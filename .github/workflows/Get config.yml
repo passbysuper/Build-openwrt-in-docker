@@ -26,8 +26,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Debug Session
-        uses: csexton/debugger-action@master
-      
+        #uses: csexton/debugger-action@master
+        uses: mxschmitt/action-tmate@v3
+        
       - name: Determine branch
         id: set_branch
         run: |
@@ -75,7 +76,7 @@ jobs:
           sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
 
       - name: SSH远程连接（make menuconfig）
-        uses: danshui-git/debugger-action@main
+        uses: mxschmitt/action-tmate@v3
 
     
       - name: Upload artifacts
