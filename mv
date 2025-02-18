@@ -14,14 +14,14 @@ if [[ "$run_menuconfig" == "Y" || "$run_menuconfig" == "y" ]]; then
     sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "screen make menuconfig"
 fi
 
-# 1. 获取本机 ./target 目录下 .config* 文件的数量
+# 1. 获取本机 ./target 目录下 *config* 文件的数量
 target_dir="$(pwd)/target"
 echo "目标目录是: $target_dir"
 
-config_count=$(ls $target_dir/.config* 2>/dev/null | wc -l)
+config_count=$(ls $target_dir/*config* 2>/dev/null | wc -l)
 
 # 2. 计算新的文件名，去掉前面的点
-new_config_name="$target_dir/version_branch_platform_config_$((config_count + 1))"
+new_config_name="$target_dir/version_branch_platform_config_$((config_count + 1)).txt"
 
 # 3. 从容器内复制 .config 文件到本机 ./target 目录
 echo "复制文件到: $new_config_name"
