@@ -113,7 +113,6 @@ jobs:
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
-          mkdir target
           sed -i "s/version_branch_platform/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/g" mv
           chmod +x mv
           cat mv
@@ -124,7 +123,7 @@ jobs:
 
       - name: Move Files
         run: |
-          # 创建 openwrt 目录
+          # 创建 target 目录
           mkdir -p target
         
           # 将 files 复制到 Docker 容器中的 /home/user/openwrt
@@ -146,6 +145,7 @@ jobs:
 
       - name: Commit and push files to the repository
         if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
+        continue-on-error: true  # 设置即使该步骤失败，依然继续执行后续步骤
         run: |
           # 创建目标目录
           mkdir -p ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}
@@ -169,12 +169,13 @@ jobs:
       # 再次签出仓库，获取最新的内容
       - name: Checkout repository (second time)
         uses: actions/checkout@v2
+     
+      - name: SSH远程连接（make menuconfig）
+        if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
+        uses: mxschmitt/action-tmate@v3
 
       - name: Move Files (second time)
         run: |
-          # 创建 openwrt 目录
-          mkdir -p target
-
           # 将 diffconfig 复制到 Docker 容器中的 /home/user/openwrt 
           sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
           sudo docker cp ./target/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
