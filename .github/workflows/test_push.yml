@@ -23,7 +23,7 @@ jobs:
 
     strategy:
       matrix:
-        #version: version: [immortalwrt, openwrt, lede, Lienol]
+        #version: version: [immortalwrt, openwrt, lede, lienol]
         version: [openwrt]
         #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
         branch: [openwrt-24.10]
