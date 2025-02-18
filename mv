@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 从容器内复制 默认.config 文件到本机 ./target 目录
-docker cp openwrt_build:/home/user/openwrt/.config $(pwd)/target/config.txt
+sudo docker cp openwrt_build:/home/user/openwrt/.config $(pwd)/target/config.txt
 ls -l ./config.txt
 
 # 提示是否运行 diy.sh
@@ -29,7 +29,7 @@ new_config_name="$target_dir/version_branch_platform_config_$((config_count + 1)
 
 # 3. 从容器内复制 .config 文件到本机 ./target 目录
 echo "复制文件到: $new_config_name"
-docker cp openwrt_build:/home/user/openwrt/.config $new_config_name
+sudo docker cp openwrt_build:/home/user/openwrt/.config $new_config_name
 
 # 输出复制结果
 ls -l $new_config_name
