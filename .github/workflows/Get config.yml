@@ -83,7 +83,7 @@ jobs:
         with:
           name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
           path: |
-            ./openwrt/*
+            ./target/*
           compression-level: 0  # 禁用压缩
 
 
