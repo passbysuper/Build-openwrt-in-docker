@@ -1,0 +1,69 @@
+name: Get config
+
+on:
+  # 手动触发
+  workflow_dispatch:
+
+  # 定时触发 (例如每天凌晨 1 点触发)
+#  schedule:
+#    - cron: '0 1 * * *'  # 每天凌晨 1 点 UTC，按需求调整时间
+
+jobs:
+  Building:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        #version: version: [immortalwrt, openwrt, lede, Lienol]
+        version: [openwrt]
+        #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
+        branch: [openwrt-24.10]
+        # 如果 version 为 lede，默认分支将是 main，稍后调整
+        platform: [x86_64]
+        
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Determine branch
+        id: set_branch
+        run: |
+          if [[ "${{ matrix.version }}" == "immortalwrt" || "${{ matrix.version }}" == "openwrt" ]]; then
+            echo "branch=${{ matrix.branch }}" >> $GITHUB_ENV
+          elif [[ "${{ matrix.version }}" == "lede" ]]; then
+            if [[ "${{ matrix.branch }}" == "openwrt-24.10" ]]; then
+              echo "branch=master" >> $GITHUB_ENV
+            else
+              exit 0
+            fi
+          elif [[ "${{ matrix.version }}" == "lienol" ]]; then
+            branch_name=$(echo "${{ matrix.branch }}" | sed 's/^openwrt-//')
+            echo "branch=${branch_name}" >> $GITHUB_ENV
+          fi
+        
+      - name: Download Docker image
+        run: |
+          # 获取最新的 release 的 tag
+          tag=$(curl -s https://api.github.com/repos/superpassby/Build-openwrt-in-docker-pre/releases/latest | jq -r '.tag_name')
+          echo "下载的 tag: $tag"
+
+          # 获取所有资产的下载链接，并筛选出文件名符合 lienol_24.10_x86_64* 的文件
+          curl -s https://api.github.com/repos/superpassby/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/releases/latest \
+            | jq -r '.assets[].browser_download_url' \
+            | grep -E '${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.*' \
+            | xargs -n 1 wget
+
+
+      - name: Extract Docker image
+        run: |
+          7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.7z.001 -o./
+          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.gz.7z.*
+          sudo docker load < ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
+          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
+
+      - name: Run Docker container
+        run: |
+          sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
+
+      - name: SSH远程连接（make menuconfig）
+        uses: danshui-git/debugger-action@main
+
