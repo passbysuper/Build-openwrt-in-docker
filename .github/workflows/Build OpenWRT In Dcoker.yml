@@ -100,7 +100,6 @@ jobs:
           rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz.7z.*
           sudo docker load < ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
           rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.tar.gz
-          mkdir openwrt
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
