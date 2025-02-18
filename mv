@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# 从容器内复制 默认.config 文件到本机 ./target 目录
-sudo docker cp openwrt_build:/home/user/openwrt/.config $(pwd)/target/config.txt
-ls -l ./config.txt
-
 # 提示是否运行 diy.sh
 read -p "是否运行 diy.sh？选择 Y/y 继续，N/n 跳过: " run_diy
 if [[ "$run_diy" == "Y" || "$run_diy" == "y" ]]; then
@@ -18,25 +14,15 @@ if [[ "$run_menuconfig" == "Y" || "$run_menuconfig" == "y" ]]; then
     sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "screen make menuconfig"
 fi
 
-# 1. 获取本机 ./target 目录下 *config* 文件的数量
-target_dir="$(pwd)/target"
-echo "目标目录是: $target_dir"
+# 生成diffconfig文件
+sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "./scripts/diffconfig.sh > diffconfig"
+sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "ls -l diffconfig"
 
-config_count=$(ls $target_dir/*config* 2>/dev/null | wc -l)
 
-# 2. 计算新的文件名，去掉前面的点
-new_config_name="$target_dir/version_branch_platform_config_$((config_count + 1)).txt"
-
-# 3. 从容器内复制 .config 文件到本机 ./target 目录
-echo "复制文件到: $new_config_name"
-sudo docker cp openwrt_build:/home/user/openwrt/.config $new_config_name
+# 从容器内复制 diffconfig 文件到本机 ./target 目录
+sudo docker cp openwrt_build:/home/user/openwrt/diffconfig ./target/diffconfig
 
 # 输出复制结果
-ls -l $new_config_name
+ls -l ./target/diffconfig
 
-# 提示是否运行 git diff
-read -p "是否生成当前配置与默认config的差异文件patch？选择 Y/y 继续，N/n 跳过: " run_diff
-if [[ "$run_diff" == "Y" || "$run_diff" == "y" ]]; then
-    git diff $(pwd)/target/config.txt $new_config_name > $(pwd)/target/version_branch_platform_config_$((config_count + 1)).patch
-fi
-ls -l $(pwd)/target/version_branch_platform_config_$((config_count + 1)).patch
+
