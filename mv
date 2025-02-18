@@ -1,5 +1,7 @@
 #!/bin/bash
 
+make menuconfig
+
 # 1. 获取本机 ./target 目录下 .config* 文件的数量
 target_dir="$(pwd)/target"
 echo "目标目录是: $target_dir"
