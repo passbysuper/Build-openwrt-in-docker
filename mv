@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd openwrt
 make menuconfig
 
 # 1. 获取本机 ./target 目录下 .config* 文件的数量
@@ -9,7 +10,7 @@ echo "目标目录是: $target_dir"
 config_count=$(ls $target_dir/.config* 2>/dev/null | wc -l)
 
 # 2. 计算新的文件名，去掉前面的点
-new_config_name="$target_dir/config_$((config_count + 1))"
+new_config_name="$target_dir/version_branch_platform_config_$((config_count + 1))"
 
 # 3. 从容器内复制 .config 文件到本机 ./target 目录
 echo "复制文件到: $new_config_name"
