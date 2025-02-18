@@ -109,7 +109,9 @@ jobs:
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
           mkdir target
+          sed -i "s/version_branch_platform/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/g" mv
           chmod +x mv
+          cat mv
 
       - name: Run Docker container
         run: |
