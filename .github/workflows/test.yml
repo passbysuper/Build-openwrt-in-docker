@@ -131,7 +131,12 @@ jobs:
           ls || true
           # 创建 target 目录
           mkdir -p ./target || true
-          ls || true
+          echo "当前目录文件："
+          ls -lh 
+          echo "+++++++++++++++++++++++++++++++++++++++++++"
+          echo "当前目录tree："
+          tree
+          echo "+++++++++++++++++++++++++++++++++++++++++++"
           # 将 files 复制到 Docker 容器中的 /home/user/openwrt
           # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files || true
 
@@ -192,6 +197,7 @@ jobs:
           sudo docker cp ./target/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
           
       - name: Download package inside Docker container
+        if: false  # 跳过该步骤
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
             git pull          
@@ -203,19 +209,20 @@ jobs:
           "
  
       - name: Compile the firmware inside Docker container
+        if: false  # 跳过该步骤
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
             make -j$(nproc) || make -j1 V=s
           "
 
       - name: Move compiled files to host machine
-        run: |
-          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
-            find /home/user/openwrt/bin/targets -type f \( -name '*img*' -o -name '*config*' \)
-          " | while read file; do
-            sudo docker cp openwrt_build:$file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file);
-          done
-
+        run: |      
+          echo "+++++++++++++++++++++++++++++++++++++++++++"
+          echo "sudo docker cp openwrt_build:$file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file);"
+          echo "当前目录tree："
+          tree
+          echo "+++++++++++++++++++++++++++++++++++++++++++"
+          
       - name: Upload artifacts
         uses: actions/upload-artifact@main
         with:
