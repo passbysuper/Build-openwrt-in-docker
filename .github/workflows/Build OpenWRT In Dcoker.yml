@@ -190,6 +190,9 @@ jobs:
             make defconfig
             make download -j8
           "
+          # 执行General_Settings
+          sudo docker cp ./General_Settings openwrt_build:/home/user/openwrt/General_Settings
+          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c " chmod +x ./General_Settings && ./General_Settings "
  
       - name: Compile the firmware inside Docker container
         run: |
