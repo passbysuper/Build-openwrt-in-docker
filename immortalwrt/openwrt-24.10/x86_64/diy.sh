@@ -2,12 +2,16 @@
 
 # 定义仓库和目录映射
 luci_repo_url="https://github.com/immortalwrt/luci"
-luci_branch="master"
+luci_branch="openwrt-24.10"
 luci_dirs=(
     #"applications/luci-app-zerotier=package/luci-app-zerotier"
     #"applications/luci-app-argon-config=package/luci-app-argon-config"
     #"applications/luci-app-autoreboot=package/luci-app-autoreboot"
+    #"applications/luci-app-homeproxy=package/luci-app-homeproxy"
+    #"applications/openclash=package/openclash"
     #"themes/luci-theme-argon=package/luci-theme-argon"
+    
+    
 )
 
 small_package_repo_url="https://github.com/kenzok8/small-package"
