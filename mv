@@ -15,6 +15,7 @@ if [[ "$run_menuconfig" == "Y" || "$run_menuconfig" == "y" ]]; then
 fi
 
 # 生成diffconfig文件
+sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "rm -f diffconfig"
 sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "./scripts/diffconfig.sh > diffconfig"
 sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "ls -l diffconfig"
 
