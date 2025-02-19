@@ -47,7 +47,8 @@ jobs:
           mkdir -p ./target/
           echo "test1" > ./target/diffconfig.bak      
           echo "新diff文件与仓库文件差异："
-          diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig.bak ./target/diffconfig.bak || true   
+          diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig.bak ./target/diffconfig.bak || true
+          sed -i "s/version/branch/platform/${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/g" mv
                 
       - name: SSH远程连接（点击 "Web shell:" 链接后键入"q"方才显示终端；进入终端后执行："./mv"，所有设置完成后，键入“exit”退出）
         #if: false  # 跳过该步骤
