@@ -162,7 +162,7 @@ jobs:
           diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./target/diffconfig || true
          
           # 仅复制 /target/ 中的 diffconfig 到目标目录
-          cp -r ./target/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
+          cp -r ./target/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_diffconfig
 
           # 配置 Git 用户
           git config user.name "GitHub Actions"
