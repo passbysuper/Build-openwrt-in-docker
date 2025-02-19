@@ -113,7 +113,7 @@ jobs:
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
-          sed -i "s/version_branch_platform/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}/g" mv
+          sed -i "s/version/branch/platform/${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/g" mv
           chmod +x mv
           cat mv
 
