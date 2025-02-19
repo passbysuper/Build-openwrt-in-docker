@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# make download 之后，make -j$(nproc) 之前执行
+
 # General Settings
 CFG_FILE="./package/base-files/files/bin/config_generate"
 
