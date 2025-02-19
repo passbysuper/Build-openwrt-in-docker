@@ -339,8 +339,8 @@ jobs:
           done
 
       - name: Delete all files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
+        if: false  # 跳过该步骤
+        #if: true  # 该步骤会执行
         run: |
           echo "Deleting all files in ./artifacts..."
           rm -rf ./artifacts/*
