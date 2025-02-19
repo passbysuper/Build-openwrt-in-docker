@@ -84,7 +84,7 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: 发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')
+          tag_name: $(TZ=UTC-8 date +"%y.%m.%d_%H.%M.%S")
           name: 发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')
           files: ./artifacts/**/*  # 递归匹配所有文件
           body: "Release with multiple builds"
