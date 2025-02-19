@@ -26,7 +26,7 @@ jobs:
       - name: Create a test file in ./artifacts
         run: |
           mkdir -p ./target  # 确保文件夹存在
-          touch ../target/test  # 创建 test 文件
+          touch ./target/test  # 创建 test 文件
           echo "This is a test file" > ./target/test  # 向文件中写入一些内容
           echo "ls ./target++++++++++++++++++++++++++"
           ls ./target
