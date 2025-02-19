@@ -26,4 +26,7 @@ sudo docker cp openwrt_build:/home/user/openwrt/diffconfig ./target/diffconfig
 # 输出复制结果
 ls -l ./target/diffconfig
 
+echo "新diff文件与仓库文件差异："
+diff -u ./version/branch/platform/diffconfig ./target/diffconfig || true
+
 
