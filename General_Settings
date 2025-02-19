@@ -3,7 +3,6 @@
 # make download 之后，make -j$(nproc) 之前执行
 
 # General Settings
-CFG_FILE="./package/base-files/files/bin/config_generate"
 
 # 默认主机名
 DF_NAME="XWRT"
@@ -12,7 +11,21 @@ DF_NAME="XWRT"
 DF_IP="10.10.10.1"
 
 # 默认密码
-DF_WORD="12345678"
+DF_WORD="password"
+
+
+
+
+
+
+
+
+
+
+
+##############################################################
+
+CFG_FILE="./package/base-files/files/bin/config_generate"
 
 # 修改默认 IP 地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$DF_IP/g" $CFG_FILE
