@@ -28,6 +28,14 @@ jobs:
           mkdir -p ./artifacts  # 确保文件夹存在
           touch ./artifacts/test  # 创建 test 文件
           echo "This is a test file" > ./artifacts/test  # 向文件中写入一些内容
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
+          path: |
+            ./target/*
+          compression-level: 0  # 禁用压缩
           
   Release:
     needs: Get_config_Building
