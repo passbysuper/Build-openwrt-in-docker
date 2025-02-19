@@ -22,36 +22,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
+
+      - name: Create a test file in ./artifacts
+        run: |
+          mkdir -p ./artifacts  # 确保文件夹存在
+          touch ./artifacts/test  # 创建 test 文件
+          echo "This is a test file" > ./artifacts/test  # 向文件中写入一些内容
+          
   Release:
     needs: Get_config_Building
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: List files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
-        run: |
-          echo "Show disk space"
-          echo "=============================================================================="
-          df -hT
-          echo "=============================================================================="
   
       - name: Download artifacts
         uses: actions/download-artifact@main
         with:
           path: ./artifacts/
-
-      - name: List files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
-        run: |
-          echo "Show disk space"
-          echo "=============================================================================="
-          df -hT
-          echo "=============================================================================="
           
       - name: Unzip all artifact files
         run: |
@@ -64,18 +52,9 @@ jobs:
               rm "$zip_file"  # 删除 .zip 文件
             fi
           done
-
           
-      - name: List files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
-        run: |
-          echo "Show disk space"
-          echo "=============================================================================="
-          df -hT
-          echo "=============================================================================="
-  
       - name: Create Git tag
+        if: false  # 跳过该步骤
         id: create_tag
         run: |
           # 设置标签名
@@ -105,8 +84,8 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ env.TAG_NAME }}
-          name: ${{ env.RELEASE_NAME }}
+          tag_name: 发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')
+          name: 发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')
           files: ./artifacts/**/*  # 递归匹配所有文件
           body: "Release with multiple builds"
         env:
