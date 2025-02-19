@@ -1,7 +1,10 @@
-name: test_release
+
+name: Build OpenWRT In Dcoker
+
 on:
   # 手动触发
   workflow_dispatch:
+    inputs:
   # 定时触发 (例如每天凌晨 1 点触发)
 #  schedule:
 #    - cron: '0 1 * * *'  # 每天凌晨 1 点 UTC，按需求调整时间
@@ -12,8 +15,8 @@ jobs:
 
     strategy:
       matrix:
-        #version: version: [immortalwrt, openwrt, lede, lienol]
-        version: [lienol]
+        version: [openwrt]
+        #version: [lienol]
         #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
         branch: [openwrt-24.10]
         # 如果 version 为 lede，默认分支将是 main，稍后调整
@@ -22,103 +25,37 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+                
+      - name: SSH远程连接（点击 "Web shell:" 链接后键入"q"方才显示终端；进入终端后执行："./mv"，所有设置完成后，键入“exit”退出）
+        if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
+        uses: mxschmitt/action-tmate@v3
 
-      - name: Create a test file in ./artifacts
+      - name: Commit and push files to the repository
+        if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
+        continue-on-error: true  # 设置即使该步骤失败，依然继续执行后续步骤
         run: |
-          mkdir -p ./target  # 确保文件夹存在
-          touch ./target/test  # 创建 test 文件
-          echo "This is a test file" > ./target/test  # 向文件中写入一些内容
-          echo "ls ./target++++++++++++++++++++++++++"
-          ls ./target
-          echo "tree ../target++++++++++++++++++++++++++"
-          tree ./target
-          echo "tree++++++++++++++++++++++++++"
-          tree
+          # 创建目标目录
+          
+          mkdir -p ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@main
-        with:
-          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
-          path: |
-            ./target/*
-          compression-level: 0  # 禁用压缩
-          
-  Release:
-    needs: Get_config_Building
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-  
-      - name: Download artifacts
-        uses: actions/download-artifact@main
-        with:
-          path: ./artifacts/
-          
-      - name: Unzip all artifact files
-        run: |
-          # 解压 ./artifacts/ 目录及其子目录中的所有 .zip 文件
-          shopt -s globstar  # 开启 globstar 以支持 ** 递归匹配
-          for zip_file in ./artifacts/**/*.zip; do
-            if [[ -f "$zip_file" ]]; then
-              echo "Unzipping $zip_file..."
-              unzip "$zip_file" -d ./artifacts/  # 解压到 ./artifacts/ 目录
-              rm "$zip_file"  # 删除 .zip 文件
-            fi
-          done
-          
-      - name: Create Git tag
-        if: false  # 跳过该步骤
-        id: create_tag
-        run: |
-          # 设置标签名
-          TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
-          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
-          
-          # 输出标签名和发布名
-          echo "TAG_NAME=${TAG_NAME}"
-          echo "RELEASE_NAME=${RELEASE_NAME}"
+          echo "test" > ./target/diffconfig.bak
 
-          # 将标签名和发布名传递给后续步骤
-          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
-          echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
-          
+          # 仅复制 /target/ 中的内容到目标目录
+          cp -r ./target/* ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/
+
           # 配置 Git 用户
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
-          # 创建标签
-          git tag $TAG_NAME
+          # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
+          git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/*
 
-          # 推送标签到远程仓库
-          git push origin $TAG_NAME
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }} $TAG_NAME          
+          # 提交更改
+          git commit -m "Add build artifacts"
 
-      - name: Setup Git tag
-        id: setup_tag
-        run: |
-          # 设置标签名
-          TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
-          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
-          
-          # 输出标签名和发布名
-          echo "TAG_NAME=${TAG_NAME}"
-          echo "RELEASE_NAME=${RELEASE_NAME}"
+          git pull --rebase origin ${{ github.ref }}
 
-          # 将标签名和发布名传递给后续步骤
-          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
-          echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
+          # 推送到远程仓库
+          git push origin ${{ github.ref }}
 
-
-      - name: Set up GitHub Release
-        id: create_release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ env.TAG_NAME }}
-          name: ${{ env.RELEASE_NAME }}
-          files: ./artifacts/**/*  # 递归匹配所有文件
-          body: "Release with multiple builds"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-             
 
