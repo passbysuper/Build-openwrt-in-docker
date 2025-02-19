@@ -1,25 +1,15 @@
-# git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
-
-# 定义仓库和目录映射
-luci_repo_url="https://github.com/immortalwrt/luci"
-luci_branch="openwrt-24.10"
-luci_dirs=(
-    #"applications/luci-app-zerotier=package/luci-app-zerotier"
-    #"applications/luci-app-argon-config=package/luci-app-argon-config"
-    #"applications/luci-app-autoreboot=package/luci-app-autoreboot"
-    #"applications/luci-app-homeproxy=package/luci-app-homeproxy"
-    #"applications/openclash=package/openclash"
-    #"themes/luci-theme-argon=package/luci-theme-argon"
-    
-    
-)
+#git clone https://github.com/zxl78585/luci-app-autoreboot.git package/luci-app-autoreboot
+#git clone https://github.com/rufengsuixing/luci-app-zerotier package/luci-app-zerotier
 
 small_package_repo_url="https://github.com/kenzok8/small-package"
 small_package_branch="main"
 small_package_dirs=(
-    #"luci-app-homeproxy=package/luci-app-homeproxy"
-    #"luci-app-openclash=package/luci-app-openclash"
+    #"luci-theme-argon=package/luci-theme-argon"
+    #"luci-app-argon-config=package/luci-app-argon-config"
     "luci-app-lucky=package/luci-app-lucky"
+    "lucky=package/lucky"
+    #"luci-app-homeproxy=package/luci-app-homeproxy"
+    #"luci-app-openclash=package/luci-app-openclash" 
 )
 
 # 克隆并复制文件的函数
@@ -67,8 +57,6 @@ clone_and_copy() {
     echo "已删除临时目录: $TMP_DIR"
 }
 
-# 调用函数处理第一个仓库
-clone_and_copy "$luci_repo_url" "$luci_branch" "${luci_dirs[@]}"
 
-# 调用函数处理第二个仓库
+# 调用函数处理第仓库
 clone_and_copy "$small_package_repo_url" "$small_package_branch" "${small_package_dirs[@]}"
