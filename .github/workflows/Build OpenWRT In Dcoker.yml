@@ -113,7 +113,9 @@ jobs:
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
-          sed -i "s/version/branch/platform/${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/g" mv
+          sed -i "s/version/${{ matrix.version }}/g" mv
+          sed -i "s/branch/${{ env.branch }}/g" mv
+          sed -i "s/platform/${{ matrix.platform }}/g" mv
           chmod +x mv
           cat mv
 
@@ -155,9 +157,12 @@ jobs:
         run: |
           # 创建目标目录
           mkdir -p ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}
-
-          # 仅复制 /target/ 中的内容到目标目录
-          cp -r ./target/* ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/
+          
+          echo "新diff文件与仓库文件差异："
+          diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./target/diffconfig || true
+         
+          # 仅复制 /target/ 中的 diffconfig 到目标目录
+          cp -r ./target/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
           # 配置 Git 用户
           git config user.name "GitHub Actions"
