@@ -128,7 +128,7 @@ jobs:
           mkdir -p ./target || true
           ls || true
           # 将 files 复制到 Docker 容器中的 /home/user/openwrt
-          # sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files || true
+          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files || true
 
           # 将 diffconfig 复制到 Docker 容器中的 /home/user/openwrt 
           sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
@@ -199,11 +199,32 @@ jobs:
 
       - name: Move compiled files to host machine
         run: |
-          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
-            find /home/user/openwrt/bin/targets -type f \( -name '*img*' -o -name '*config*' \)
-          " | while read file; do
-            sudo docker cp openwrt_build:$file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $file);
+          # 从 ./Firmware Selector 文件中提取没有注释的文件名
+          files_to_copy=$(grep -v '^#' ./Firmware_Selector)
+          # 将文件名去除首尾空格
+          files_to_copy=$(echo "$files_to_copy" | sed 's/^[ \t]*//;s/[ \t]*$//')
+          # 进入 Docker 容器，找到匹配的文件并复制到本机
+          for file in $files_to_copy; do
+            # 输出当前要查找的文件名（调试信息）
+            echo "正在查找文件: $file"
+
+            # 使用 docker exec 查找文件，支持模糊匹配
+            found_files=$(sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
+              find /home/user/openwrt/bin/targets -type f -name '*$file*'
+            ")
+
+            # 如果找到了匹配的文件，输出并进行复制
+            for found_file in $found_files; do
+              # 输出每个要复制的文件（调试信息）
+              echo "找到文件: $found_file"   
+              
+              # 复制找到的文件到本机并重命名，添加前缀 "lede_master_x86_64_"
+              sudo docker cp openwrt_build:$found_file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $found_file)
+            done
           done
+          echo "文件复制完成！"
+
+          
 
       - name: Upload artifacts
         uses: actions/upload-artifact@main
