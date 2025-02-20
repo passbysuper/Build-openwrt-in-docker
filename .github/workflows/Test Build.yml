@@ -276,10 +276,10 @@ jobs:
             ./target/env/*
           compression-level: 0  # 禁用压缩
 
-      - name: Move compiled files to host machine
+      - name: 7z openwrt folder
         run: |          
           # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
-          7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z /work/openwrt/* -v2000m
+          7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
 
       - name: Create Git tag
         id: create_tag
@@ -287,8 +287,6 @@ jobs:
           # 设置标签名
           TAG_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_TAG }}"
           RELEASE_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
-
-
           
           # 输出标签名和发布名
           echo "TAG_NAME_ENV=$TAG_NAME_ENV" >> $GITHUB_ENV
@@ -307,10 +305,7 @@ jobs:
           files: ./target/env/*  # 递归匹配所有文件
           body: "编译目录"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-
-          
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}         
 
   Release:
     needs: Get_config_Building
