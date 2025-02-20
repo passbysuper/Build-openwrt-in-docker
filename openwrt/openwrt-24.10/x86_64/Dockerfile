@@ -24,8 +24,8 @@ RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/user && \
     chmod 0440 /etc/sudoers.d/user
 
 # 切换到 user 用户
-#USER user
-#WORKDIR /home/user
+USER user
+WORKDIR /home/user
 
 # 下载源码
 #RUN branch="openwrt-24.10" && \
