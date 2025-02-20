@@ -257,7 +257,8 @@ jobs:
               sudo docker cp openwrt_build:$found_file ./target/img/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $found_file)
             done
           done
-          echo "文件复制完成！"         
+          echo "文件复制完成！"   
+          ls ./target/img/
 
       - name: Upload artifacts for img
         uses: actions/upload-artifact@main
@@ -267,19 +268,11 @@ jobs:
             ./target/img/*
           compression-level: 0  # 禁用压缩
           
-      - name: Upload artifacts for env
-        if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
-        uses: actions/upload-artifact@main
-        with:
-          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_env
-          path: |
-            ./target/env/*
-          compression-level: 0  # 禁用压缩
-
       - name: 7z openwrt folder
         run: |          
           # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
-          7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
+          sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
+          ls ./target/env/
 
       - name: Create Git tag
         id: create_tag
