@@ -199,6 +199,7 @@ jobs:
           git config user.email "actions@github.com"
 
           # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
+          git status
           git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
           # 提交更改
