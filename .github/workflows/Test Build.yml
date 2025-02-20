@@ -327,7 +327,9 @@ jobs:
       - name: 7z openwrt folder
         run: |          
           # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
-          sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
+          #sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
+          sudo zip -r -s 2000m ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.zip ./work/openwrt/
+
           ls ./target/env/
                   
       - name: Set up GitHub Release
