@@ -150,8 +150,8 @@ jobs:
       - name: 7z
         if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
         run: |
-          7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o./work/openwrt
-          rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.*
+          sudo 7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o./work/openwrt
+          sudo rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.*
           echo "work目录文件："
           ls ./work
           echo "+++++++++++++++++++++++++++++++++++++++++++"
