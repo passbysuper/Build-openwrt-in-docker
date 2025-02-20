@@ -192,7 +192,7 @@ jobs:
           diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./work/openwrt/diffconfig || true
          
           # 复制 ssh 中新生成的diffconfig 到仓库的对应目录
-          cp ./work/openwrt/diffconfig ./${{ matrix.version }}/diffconfig
+          sudo cp ./work/openwrt/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
           # 配置 Git 用户
           git config user.name "GitHub Actions"
