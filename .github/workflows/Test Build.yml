@@ -247,6 +247,9 @@ jobs:
       - name: Download package inside Docker container
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
+            du -h --max-depth=1 /home/user/openwrt | sort -rh
+          " || true        
+          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
             git pull
             chmod +x diy.sh && ./diy.sh                
             ./scripts/feeds update -a && ./scripts/feeds install -a     
