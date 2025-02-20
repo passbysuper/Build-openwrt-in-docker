@@ -151,7 +151,7 @@ jobs:
 
             echo "Cloning OpenWrt repository from $openwrt_source_url..."
             # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
-            sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
+            #sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
             sudo docker exec -u user -w /home/user openwrt_build bash -c "git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt"
 
       - name: mv rename
@@ -166,10 +166,10 @@ jobs:
       - name: Move Files
         run: |
           # 将 files、diffconfig、diy. sh复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
-          cp -r ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/* ./work/openwrt
+          sudo cp -r ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/* ./work/openwrt
           
           # 将 ./General_Settings 复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
-          cp ./General_Settings ./work/openwrt
+          sudo cp ./General_Settings ./work/openwrt
 
           # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
           sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
