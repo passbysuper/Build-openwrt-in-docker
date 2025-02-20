@@ -283,7 +283,7 @@ jobs:
         run: |
           # 设置标签名
           TAG_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_TAG }}"
-          RELEASE_NAME="发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
+          RELEASE_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
 
 
           
