@@ -103,7 +103,8 @@ jobs:
 
       - name: Run Docker container
         run: |
-          sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
+          sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v ./work:/home/user tail -f /dev/null
+
 
 
       - name: 下载上次完成编译的openwrt文件夹，解压并复制到 work 文件夹内
@@ -114,12 +115,11 @@ jobs:
           如不选择，则在容器内开始 gitclone openwrt
 
       - name: 如不用现有openwrt文件夹，则下载最新的openwrt
-        if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
+        if: ${{ github.event.inputs.download_op_folder == 'false' }}  # 只有 download_op_folder 为 true 时执行
         run: |
-          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
             branch='${{ matrix.branch }}' && \
             version='${{ matrix.version }}' && \          
-    
+ 
             # 根据不同的版本选择源代码的 URL
             if [ '$version' == 'immortalwrt' ]; then
               openwrt_source_url='https://github.com/immortalwrt/immortalwrt'
@@ -133,12 +133,8 @@ jobs:
               echo 'Unknown version: $version' && exit 1
             fi
 
-            # 克隆对应版本的 openwrt 源代码
             echo 'Cloning OpenWrt repository from $openwrt_source_url...'
-            git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt
-          "
-
-
+            sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c " git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt "                  
 
       - name: mv rename
         run: |
@@ -155,23 +151,20 @@ jobs:
           # 创建 target 目录
           mkdir -p ./target || true
           ls || true
-          # 将 files 复制到 Docker 容器中的 /home/user/openwrt
-          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/files openwrt_build:/home/user/openwrt/files || true
+          # 将 files、diffconfig、diy. sh复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
+          cp -r ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/* ./work/openwrt
+          
+          # 将 ./General_Settings 复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
+          cp ./General_Settings ./work/openwrt
 
-          # 将 diffconfig 复制到 Docker 容器中的 /home/user/openwrt 
-          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
+          # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
+          sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
 
+          # 使用ssh修改配置前，按照仓库设置更新.config文件
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
             cp diffconfig .config
             make defconfig
           " || true
-
-          # 将 x86_64_diy.sh 复制到 Docker 容器中的 /home/user/openwrt 并重命名为 diy.sh
-          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diy.sh openwrt_build:/home/user/openwrt/diy.sh
-
-          # 给 diy.sh 文件添加执行权限
-          sudo docker exec openwrt_build sudo chmod +x /home/user/openwrt/diy.sh
-
 
       - name: SSH远程连接（点击 "Web shell:" 链接后键入"q"方才显示终端；进入终端后执行："./mv"，所有设置完成后，键入“exit”退出）
         if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
@@ -180,50 +173,40 @@ jobs:
       - name: Commit and push files to the repository
         if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
         continue-on-error: true  # 设置即使该步骤失败，依然继续执行后续步骤
-        run: |
-          # 创建目标目录
-          mkdir -p ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}
-          
+        run: |         
           echo "新diff文件与仓库文件差异："
-          diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./target/diffconfig || true
+          diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./work/openwrt/diffconfig || true
          
-          # 仅复制 /target/ 中的 diffconfig 到目标目录
-          cp -r ./target/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_diffconfig
+          # 复制 ssh 中新生成的diffconfig 到仓库的对应目录
+          cp ./work/openwrt/diffconfig ./${{ matrix.version }}/diffconfig
 
           # 配置 Git 用户
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
 
           # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
-          git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/*
+          git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
           # 提交更改
-          git commit -m "Add build artifacts"
+          git commit -m "New diffconfig from ssh"
 
           git pull --rebase origin ${{ github.ref }}
 
           # 推送到远程仓库
           git push origin ${{ github.ref }}
-
-      - name: Move Files (second time)
-        run: |
-          # 将 diffconfig 复制到 Docker 容器中的 /home/user/openwrt 
-          sudo docker cp ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
-          sudo docker cp ./target/diffconfig openwrt_build:/home/user/openwrt/diffconfig || true
           
       - name: Download package inside Docker container
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
-            git pull          
-            ./diy.sh         
+            git pull
+            chmod +x diy.sh && ./diy.sh                
             ./scripts/feeds update -a && ./scripts/feeds install -a     
             cp diffconfig .config
             make defconfig
             make download -j8
           "
-          # 执行General_Settings
-          chmod +x ./General_Settings || true
-          sudo docker cp ./General_Settings openwrt_build:/home/user/openwrt/General_Settings
+   
+          # 执行General_Settings，修改自定义设置
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "chmod +x ./General_Settings || true && ./General_Settings"
      
       - name: Compile the firmware inside Docker container
