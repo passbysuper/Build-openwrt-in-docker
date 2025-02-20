@@ -89,6 +89,7 @@ jobs:
           echo "硬盘数量: $(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT  
 
       - name: "Optimize Disk Space"
+        if: false  # 跳过该步骤
         uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.0"
         with:
           operate_sudo: "True"
@@ -118,8 +119,8 @@ jobs:
 
       - name: Run Docker container
         run: |
-          sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v ./work:/home/user tail -f /dev/null
-
+          #sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v ./work:/home/user tail -f /dev/null
+          sudo docker run -d --name openwrt_build -v ./work:/home/user ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
 
 
       - name: 下载上次完成编译的openwrt文件夹，解压并复制到 work 文件夹内
