@@ -21,12 +21,12 @@ sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "ls -l 
 
 
 # 从容器内复制 diffconfig 文件到本机 ./target 目录
-sudo docker cp openwrt_build:/home/user/openwrt/diffconfig ./target/diffconfig
+# sudo docker cp openwrt_build:/home/user/openwrt/diffconfig ./target/diffconfig
 
 # 输出复制结果
-ls -l ./target/diffconfig
+# ls -l ./target/diffconfig
 
 echo "新diff文件与仓库文件差异："
-diff -u ./version/branch/platform/diffconfig ./target/diffconfig || true
+diff -u ./version/branch/platform/diffconfig ./work/openwrt/diffconfig || true
 
 
