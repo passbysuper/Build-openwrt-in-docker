@@ -151,7 +151,7 @@ jobs:
 
             echo "Cloning OpenWrt repository from $openwrt_source_url..."
             # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
-            #sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
+            sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
             sudo docker exec -u user -w /home/user openwrt_build bash -c "git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt"
 
       - name: mv rename
