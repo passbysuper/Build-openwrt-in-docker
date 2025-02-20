@@ -50,10 +50,11 @@ jobs:
           START_TIME_RELEASE=$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')
           
           echo "Start time: $START_TIME_TAG"
+          
          
           # 将时间设置为环境变量，供后续步骤使用
-          echo "START_TIME_TAG=$START_TIME" >> $GITHUB_ENV
-          echo "START_TIME_RELEASE=$START_TIME" >> $GITHUB_ENV
+          echo "START_TIME_TAG=$START_TIME_TAG" >> $GITHUB_ENV
+          echo "START_TIME_RELEASE=$START_TIME_RELEASE" >> $GITHUB_ENV
           
         
       - name: Determine branch
@@ -283,11 +284,13 @@ jobs:
           # 设置标签名
           TAG_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_TAG }}"
           RELEASE_NAME="发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
+
+
           
           # 输出标签名和发布名
-          echo "TAG_NAME_ENV=${TAG_NAME_ENV}"
-          echo "RELEASE_NAME_ENV=${RELEASE_NAME_ENV}"
-
+          echo "TAG_NAME_ENV=$TAG_NAME_ENV" >> $GITHUB_ENV
+          echo "RELEASE_NAME_ENV=$RELEASE_NAME_ENV" >> $GITHUB_ENV
+     
           # 将标签名和发布名传递给后续步骤
           echo "TAG_NAME=${TAG_NAME_ENV}" >> $GITHUB_ENV
           echo "RELEASE_NAME=${RELEASE_NAME_ENV}" >> $GITHUB_ENV     
