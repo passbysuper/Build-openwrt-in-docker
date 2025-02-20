@@ -292,8 +292,8 @@ jobs:
           echo "RELEASE_NAME_ENV=$RELEASE_NAME_ENV" >> $GITHUB_ENV
      
           # 将标签名和发布名传递给后续步骤
-          echo "TAG_NAME=${TAG_NAME_ENV}" >> $GITHUB_ENV
-          echo "RELEASE_NAME=${RELEASE_NAME_ENV}" >> $GITHUB_ENV     
+          echo "TAG_NAME_ENV=${TAG_NAME_ENV}" >> $GITHUB_ENV
+          echo "RELEASE_NAME_ENV=${RELEASE_NAME_ENV}" >> $GITHUB_ENV     
                   
       - name: Set up GitHub Release
         id: create_release
