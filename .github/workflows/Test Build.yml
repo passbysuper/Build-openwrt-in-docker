@@ -150,7 +150,7 @@ jobs:
             fi
 
             echo "Cloning OpenWrt repository from $openwrt_source_url..."
-            sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt"
+            sudo docker exec -u user -w /home/user openwrt_build bash -c "git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt"
 
       - name: mv rename
         run: |
