@@ -19,13 +19,16 @@ RUN apt-get update -qq && apt-get install -qqy --no-install-recommends ack antlr
 # 创建一个用户来执行编译（避免使用 root 权限）
 RUN useradd -m user
 
+# 设置 /home/user 目录的权限为 755，确保 user 用户有权限访问
+RUN chmod 755 /home/user
+
 # 为 user 用户设置免密码 sudo 权限
 RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/user && \
     chmod 0440 /etc/sudoers.d/user
 
 # 切换到 user 用户
-USER user
-WORKDIR /home/user
+#USER user
+#WORKDIR /home/user
 
 # 下载源码
 #RUN branch="openwrt-24.10" && \
