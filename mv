@@ -27,6 +27,6 @@ sudo docker exec -it -u user -w /home/user/openwrt openwrt_build bash -c "ls -l 
 # ls -l ./target/diffconfig
 
 echo "新diff文件与仓库文件差异："
-diff -u ./version/branch/platform/diffconfig ./work/openwrt/diffconfig || true
+sudo diff -u ./version/branch/platform/diffconfig ./work/openwrt/diffconfig || true
 
 
