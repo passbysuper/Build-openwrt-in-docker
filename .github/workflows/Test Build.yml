@@ -200,12 +200,13 @@ jobs:
 
           # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
           git status
+          git pull --rebase origin ${{ github.ref }}
           git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
           # 提交更改
           git commit -m "New diffconfig from ssh"
 
-          git pull --rebase origin ${{ github.ref }}
+          #git pull --rebase origin ${{ github.ref }}
 
           # 推送到远程仓库
           git push origin ${{ github.ref }}
