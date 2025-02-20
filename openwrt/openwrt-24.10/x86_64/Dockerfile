@@ -24,23 +24,23 @@ RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/user && \
     chmod 0440 /etc/sudoers.d/user
 
 # 切换到 user 用户
-USER user
-WORKDIR /home/user
+#USER user
+#WORKDIR /home/user
 
 # 下载源码
-RUN branch="openwrt-24.10" && \
-    git clone -b $branch --single-branch --filter=blob:none https://github.com/openwrt/openwrt openwrt
+#RUN branch="openwrt-24.10" && \
+#    git clone -b $branch --single-branch --filter=blob:none https://github.com/openwrt/openwrt openwrt
 
 # 切换到 root 用户
-USER root
-WORKDIR /root
+#USER root
+#WORKDIR /root
 
 # 传入宿主机当前目录下的 diy.sh 和 diffconfig 到容器中的 /home/user/openwrt
-COPY ./diy.sh ./diffconfig /home/user/openwrt/
+#COPY ./diy.sh ./diffconfig /home/user/openwrt/
 
 # 赋予 diy.sh 执行权限
-RUN chmod +x /home/user/openwrt/diy.sh
-RUN chown -R user:user /home/user && chmod -R 755 /home/user
+#RUN chmod +x /home/user/openwrt/diy.sh
+#RUN chown -R user:user /home/user && chmod -R 755 /home/user
 
 # 切换到 user 用户
 #USER user
