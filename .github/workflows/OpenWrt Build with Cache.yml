@@ -68,7 +68,7 @@ jobs:
       
       # 上传构建的固件文件
       - name: Upload OpenWrt firmware
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: openwrt-firmware
-          path: ${{ github.workspace }}/openwrt/bin/targets/*/*.img
+          path: ${{ github.workspace }}/openwrt/bin/targets/*/*
