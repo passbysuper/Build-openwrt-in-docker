@@ -216,7 +216,7 @@ jobs:
         continue-on-error: true  # 设置即使该步骤失败，依然继续执行后续步骤
         run: |         
           echo "新diff文件与仓库文件差异："
-          diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./work/openwrt/diffconfig || true
+          sudo diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./work/openwrt/diffconfig || true
          
           # 复制 ssh 中新生成的diffconfig 到仓库的对应目录
           sudo cp ./work/openwrt/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
@@ -226,7 +226,13 @@ jobs:
           git config user.email "actions@github.com"
 
           # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
+          echo "git status"
           git status
+          echo "git reset mv"
+          git reset mv
+          echo "git status"
+          git status
+
           git pull --rebase origin ${{ github.ref }}
           git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
