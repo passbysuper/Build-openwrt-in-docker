@@ -41,6 +41,20 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Set start time (Asia/Shanghai timezone)
+        id: set_time
+        run: |
+          # 获取当前时间并格式化
+          START_TIME_TAG=$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')
+          START_TIME_RELEASE=$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')
+          
+          echo "Start time: $START_TIME_TAG"
+         
+          # 将时间设置为环境变量，供后续步骤使用
+          echo "START_TIME_TAG=$START_TIME" >> $GITHUB_ENV
+          echo "START_TIME_RELEASE=$START_TIME" >> $GITHUB_ENV
+          
         
       - name: Determine branch
         id: set_branch
@@ -147,10 +161,6 @@ jobs:
 
       - name: Move Files
         run: |
-          ls || true
-          # 创建 target 目录
-          mkdir -p ./target || true
-          ls || true
           # 将 files、diffconfig、diy. sh复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
           cp -r ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/* ./work/openwrt
           
@@ -216,7 +226,10 @@ jobs:
           "
 
       - name: Move compiled files to host machine
-        run: |
+        run: |          
+          # 创建 target 目录
+          mkdir -p ./target/img || true
+          mkdir -p ./target/env || true
           # 从 ./Firmware Selector 文件中提取没有注释的文件名
           files_to_copy=$(grep -v '^#' ./Firmware_Selector)
           # 将文件名去除首尾空格
@@ -237,20 +250,61 @@ jobs:
               echo "找到文件: $found_file"   
               
               # 复制找到的文件到本机并重命名，添加前缀 "lede_master_x86_64_"
-              sudo docker cp openwrt_build:$found_file ./target/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $found_file)
+              sudo docker cp openwrt_build:$found_file ./target/img/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_$(basename $found_file)
             done
           done
-          echo "文件复制完成！"
+          echo "文件复制完成！"         
 
-          
-
-      - name: Upload artifacts
+      - name: Upload artifacts for img
         uses: actions/upload-artifact@main
         with:
-          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_artifacts
+          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_img
           path: |
-            ./target/*
+            ./target/img/*
           compression-level: 0  # 禁用压缩
+          
+      - name: Upload artifacts for env
+        if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_env
+          path: |
+            ./target/env/*
+          compression-level: 0  # 禁用压缩
+
+      - name: Move compiled files to host machine
+        run: |          
+          # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
+          7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z /work/openwrt/* -v2000m
+
+      - name: Create Git tag
+        id: create_tag
+        run: |
+          # 设置标签名
+          TAG_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_TAG }}"
+          RELEASE_NAME="发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
+          
+          # 输出标签名和发布名
+          echo "TAG_NAME_ENV=${TAG_NAME_ENV}"
+          echo "RELEASE_NAME_ENV=${RELEASE_NAME_ENV}"
+
+          # 将标签名和发布名传递给后续步骤
+          echo "TAG_NAME=${TAG_NAME_ENV}" >> $GITHUB_ENV
+          echo "RELEASE_NAME=${RELEASE_NAME_ENV}" >> $GITHUB_ENV     
+                  
+      - name: Set up GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME_ENV }}
+          name: ${{ env.RELEASE_NAME_ENV }}
+          files: ./target/env/*  # 递归匹配所有文件
+          body: "编译目录"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+          
 
   Release:
     needs: Get_config_Building
@@ -258,42 +312,23 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: List files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
-        run: |
-          echo "Show disk space"
-          echo "=============================================================================="
-          df -hT
-          echo "=============================================================================="
-  
+ 
       - name: Download artifacts
         uses: actions/download-artifact@main
         with:
-          path: ./artifacts/
-
-      - name: List files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
-        run: |
-          echo "Show disk space"
-          echo "=============================================================================="
-          df -hT
-          echo "=============================================================================="
-          
+          path: ./artifacts/img/
+         
       - name: Unzip all artifact files
         run: |
           # 解压 ./artifacts/ 目录及其子目录中的所有 .zip 文件
           shopt -s globstar  # 开启 globstar 以支持 ** 递归匹配
-          for zip_file in ./artifacts/**/*.zip; do
+          for zip_file in ./artifacts/img/**/*.zip; do
             if [[ -f "$zip_file" ]]; then
               echo "Unzipping $zip_file..."
               unzip "$zip_file" -d ./artifacts/  # 解压到 ./artifacts/ 目录
               rm "$zip_file"  # 删除 .zip 文件
             fi
           done
-
           
       - name: List files in ./artifacts
         #if: false  # 跳过该步骤
@@ -329,48 +364,3 @@ jobs:
           body: "Release with multiple builds"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-             
-      - name: Delete old workflow runs
-        run: |
-          echo "Deleting old workflow runs..."
-          WORKFLOW_RUNS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/actions/runs")
-          RUN_IDS=$(echo $WORKFLOW_RUNS | jq '.workflow_runs | sort_by(.created_at) | reverse | .[3:] | .[].id')
-          for RUN_ID in $(echo $RUN_IDS); do
-            echo "Deleting workflow run: $RUN_ID"
-            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RUN_ID"
-          done
-
-      - name: Delete old releases
-        run: |
-          echo "Deleting old releases..."
-          RELEASES=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/releases")
-          RELEASE_IDS=$(echo $RELEASES | jq '. | sort_by(.created_at) | reverse | .[3:] | .[].id')
-          for RELEASE_ID in $(echo $RELEASE_IDS); do
-            RELEASE_NAME=$(echo $RELEASES | jq -r ".[] | select(.id == $RELEASE_ID) | .name")
-            echo "Deleting release: $RELEASE_NAME"
-            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID"
-          done
-
-      - name: Delete old tags
-        run: |
-          echo "Deleting old tags..."
-          TAGS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/tags")
-          TAG_NAMES=$(echo $TAGS | jq -r '.[] | {name: .name, date: (.name | match("[0-9]{4}.[0-9]{2}.[0-9]{2}-[0-9]{2}_[0-9]{2}") | .string)} | select(.date != null) | .name' | sort)
-          TAG_NAMES=$(echo "$TAG_NAMES" | head -n -3)
-          for TAG_NAME in $(echo "$TAG_NAMES"); do
-            echo "Deleting tag: $TAG_NAME"
-            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$TAG_NAME"
-          done
-
-      - name: Delete all files in ./artifacts
-        if: false  # 跳过该步骤
-        #if: true  # 该步骤会执行
-        run: |
-          echo "Deleting all files in ./artifacts..."
-          rm -rf ./artifacts/*
