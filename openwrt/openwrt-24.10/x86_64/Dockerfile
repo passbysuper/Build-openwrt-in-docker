@@ -20,7 +20,7 @@ RUN apt-get update -qq && apt-get install -qqy --no-install-recommends ack antlr
 RUN useradd -m user
 
 # 设置 /home/user 目录的权限为 755，确保 user 用户有权限访问
-RUN chmod 755 /home/user
+RUN chown -R user:user /home/user/
 
 # 为 user 用户设置免密码 sudo 权限
 RUN echo "user ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/user && \
