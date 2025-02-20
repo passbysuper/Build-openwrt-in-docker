@@ -130,6 +130,18 @@ jobs:
           #待完善/下载到 ./work 文件夹
           #如不选择，则在容器内开始 gitclone openwrt
 
+      - name: Download Docker image
+        run: |
+          # 获取最新的 release 的 tag
+          tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.tag_name')
+          echo "下载的 tag: $tag"
+
+          # 获取所有资产的下载链接，并筛选出文件名符合 lienol_24.10_x86_64* 的文件
+          curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest \
+            | jq -r '.assets[].browser_download_url' \
+            | grep -E '${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.*' \
+            | xargs -n 1 wget
+
       - name: 如不用现有openwrt文件夹，则下载最新的openwrt
         if: ${{ github.event.inputs.download_op_folder == 'false' }}  # 只有 download_op_folder 为 true 时执行
         run: |
