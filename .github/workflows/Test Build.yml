@@ -260,39 +260,51 @@ jobs:
             done
           done
           echo "文件复制完成！"   
-          ls ./target/img/
-
-      - name: Upload artifacts for img
-        uses: actions/upload-artifact@main
-        with:
-          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_img
-          path: |
-            ./target/img/*
-          compression-level: 0  # 禁用压缩
-          
-      - name: 7z openwrt folder
-        run: |          
-          # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
-          sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
-          ls ./target/env/
+          ls ./target/img/     
 
       - name: Create Git tag
         id: create_tag
         run: |
           # 设置标签名
-          TAG_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_TAG }}"
-          RELEASE_NAME_ENV="发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
+          TAG_NAME_ENV="ENV：${{ env.START_TIME_TAG }}"
+          RELEASE_NAME_ENV="ENV：${{ env.START_TIME_RELEASE }}"
+
+          TAG_NAME_FM="FM：${{ env.START_TIME_TAG }}"
+          RELEASE_NAME_FM="Firmware发布时间(UTC+8)：${{ env.START_TIME_RELEASE }}"
           
           # 输出标签名和发布名
           echo "TAG_NAME_ENV=$TAG_NAME_ENV" >> $GITHUB_ENV
           echo "RELEASE_NAME_ENV=$RELEASE_NAME_ENV" >> $GITHUB_ENV
-     
+          
+          echo "TAG_NAME_FM=$TAG_NAME_FM" >> $GITHUB_ENV
+          echo "RELEASE_NAME_FM=$RELEASE_NAME_FM" >> $GITHUB_ENV
+          
           # 将标签名和发布名传递给后续步骤
           echo "TAG_NAME_ENV=${TAG_NAME_ENV}" >> $GITHUB_ENV
-          echo "RELEASE_NAME_ENV=${RELEASE_NAME_ENV}" >> $GITHUB_ENV     
+          echo "RELEASE_NAME_ENV=${RELEASE_NAME_ENV}" >> $GITHUB_ENV   
+          
+          echo "TAG_NAME_FM=${TAG_NAME_FM}" >> $GITHUB_ENV
+          echo "RELEASE_NAME_FM=${RELEASE_NAME_FM}" >> $GITHUB_ENV 
+
+      - name: Set up GitHub Release For Firmware
+        id: create_release_for_firmware
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME_FM }}
+          name: ${{ env.RELEASE_NAME_FM }}
+          files: ./target/img/*  # 递归匹配所有文件
+          body: "固件发布"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+
+      - name: 7z openwrt folder
+        run: |          
+          # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
+          sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
+          ls ./target/env/
                   
       - name: Set up GitHub Release
-        id: create_release
+        id: create_release_for_env
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME_ENV }}
@@ -301,6 +313,14 @@ jobs:
           body: "编译目录"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}         
+
+      - name: Upload artifacts for img
+        uses: actions/upload-artifact@main
+        with:
+          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_img
+          path: |
+            ./target/img/*
+          compression-level: 0  # 禁用压缩
 
   Release:
     needs: Get_config_Building
