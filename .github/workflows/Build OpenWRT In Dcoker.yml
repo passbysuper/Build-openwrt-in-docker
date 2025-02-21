@@ -21,6 +21,6 @@ jobs:
           keep_latest: 3
           delete_tag_pattern: beta # defaults to ""
           delete_type: 'release'
-          target_branch: 'master'
+          target_branch: 'main'
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
