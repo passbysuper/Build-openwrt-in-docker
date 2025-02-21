@@ -132,15 +132,15 @@ jobs:
 
       - name: Run Docker container
         run: |
-          #sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v ./work:/home/user tail -f /dev/null
-          sudo docker run -d --name openwrt_build -v ./work:/home/user ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
+          #sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v /work:/home/user tail -f /dev/null
+          sudo docker run -d --name openwrt_build -v /work:/home/user ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
 
 
       - name: 下载上次完成编译的openwrt文件夹，解压并复制到 work 文件夹内
         if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
         run: |
           # 获取最新的 release 的 tag
-          #待完善/下载到 ./work 文件夹
+          #待完善/下载到 /work 文件夹
           #如不选择，则在容器内开始 gitclone openwrt
 
       - name: Download Docker image
@@ -163,10 +163,10 @@ jobs:
       - name: 7z
         if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
         run: |
-          sudo 7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o./work/openwrt
+          sudo 7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o/work/openwrt
           sudo rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.*
           echo "work目录文件："
-          ls ./work
+          ls /work
           echo "+++++++++++++++++++++++++++++++++++++++++++"
 
 
@@ -189,11 +189,11 @@ jobs:
 
       - name: Move Files
         run: |
-          # 将 files、diffconfig、diy. sh复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
-          sudo cp -r ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/* ./work/openwrt
+          # 将 files、diffconfig、diy. sh复制到 Docker 容器中的 /home/user/openwrt 即 /work/openwrt 下
+          sudo cp -r ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/* /work/openwrt
           
-          # 将 ./General_Settings 复制到 Docker 容器中的 /home/user/openwrt 即 ./work/openwrt 下
-          sudo cp ./General_Settings ./work/openwrt
+          # 将 ./General_Settings 复制到 Docker 容器中的 /home/user/openwrt 即 /work/openwrt 下
+          sudo cp ./General_Settings /work/openwrt
 
           # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
           sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
@@ -213,10 +213,10 @@ jobs:
         continue-on-error: true  # 设置即使该步骤失败，依然继续执行后续步骤
         run: |         
           echo "新diff文件与仓库文件差异："
-          sudo diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig ./work/openwrt/diffconfig || true
+          sudo diff -u ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig /work/openwrt/diffconfig || true
          
           # 复制 ssh 中新生成的diffconfig 到仓库的对应目录
-          sudo cp ./work/openwrt/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
+          sudo cp /work/openwrt/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
          
           # 配置 Git 用户
           git config user.name "GitHub Actions"
@@ -233,12 +233,6 @@ jobs:
           # 查看当前状态，确保只剩下 'diffconfig' 文件
           echo "git status"
           git status  # 查看当前状态，确保只剩下 'diffconfig' 文件在待提交状态
-
-          # 排除 work 文件夹的所有内容
-          git rm -r --cached work  # 确保 work 文件夹从 Git 的版本控制中移除
-
-          # 确保 work 文件夹不会再次被 Git 跟踪
-          echo "/work" >> .gitignore  # 将 work 文件夹添加到 .gitignore 文件中，防止它再次被 Git 跟踪
 
           # 拉取远程最新更改（避免冲突）
           git pull --rebase origin ${{ github.ref }}
@@ -349,8 +343,8 @@ jobs:
       - name: 7z openwrt folder
         run: |          
           # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
-          #sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z ./work/openwrt/* -v2000m
-          sudo zip -r -s 2000m ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.zip ./work/openwrt/
+          #sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z /work/openwrt/* -v2000m
+          sudo zip -r -s 2000m ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.zip /work/openwrt/
 
           ls ./target/env/
                   
