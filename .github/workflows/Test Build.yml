@@ -226,6 +226,9 @@ jobs:
           echo "git status"
           git status
 
+          # 添加 diffconfig 文件到暂存区
+          git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
+
           # 取消暂存 'mv' 文件的更改（如果不想提交该文件）
           echo "git restore mv"
           git restore mv
@@ -235,10 +238,7 @@ jobs:
           git status  # 查看当前状态，确保只剩下 'diffconfig' 文件在待提交状态
 
           # 拉取远程最新更改（避免冲突）
-          git pull --rebase origin ${{ github.ref }}
-
-          # 添加 diffconfig 文件到暂存区
-          git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
+          git pull --rebase origin ${{ github.ref }}         
 
           # 提交更改
           git commit -m "New diffconfig from ssh"
