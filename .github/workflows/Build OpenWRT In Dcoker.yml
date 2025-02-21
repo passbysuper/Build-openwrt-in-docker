@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Drop orphan tags
+      - name: delete-older-releases
         continue-on-error: true
         uses: jay2610/delete-older-releases@1.0.0
         with:
@@ -22,5 +22,11 @@ jobs:
           delete_tag_pattern: beta # defaults to ""
           delete_type: 'release'
           target_branch: 'main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+
+      - name: delete-older-releases
+        continue-on-error: true
+        uses: fabriziocacicia/delete-tags-without-release-action@v0.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
