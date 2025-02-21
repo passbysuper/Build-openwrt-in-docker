@@ -135,27 +135,49 @@ jobs:
           #sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v /work:/home/user tail -f /dev/null
           sudo docker run -d --name openwrt_build -v /work:/home/user ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
 
-
-      - name: 下载上次完成编译的openwrt文件夹，解压并复制到 work 文件夹内
+      - name: Download Openwrt Folder
         if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
         run: |
-          # 获取最新的 release 的 tag
-          #待完善/下载到 /work 文件夹
-          #如不选择，则在容器内开始 gitclone openwrt
+          # 获取所有 releases
+          echo "获取所有 release 信息..."
+          releases=$(curl -s "https://api.github.com/repos/${{ github.repository }}/releases")
 
-      - name: Download Docker image
-        if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
-        run: |
-          # 获取最新的 release 的 tag
-          tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.tag_name')
-          echo "下载的 tag: $tag"
+          # 显示所有 release 标签，帮助调试
+          echo "所有 release 标签："
+          echo "$releases" | jq -r '.[].name'
 
-          # 获取所有资产的下载链接，并筛选出文件名符合 lienol_24.10_x86_64* 的文件
-          curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest \
-            | jq -r '.assets[].browser_download_url' \
-            | grep -E '${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}.*' \
-            | xargs -n 1 wget
+          # 获取所有以 'ENV' 开头的 release 标签，并按发布时间排序获取最新的一个
+          release_tag=$(echo "$releases" | jq -r '.[] | select(.name | test("^ENV")) | .name' | sort -r | head -n 1)
 
+          if [ -z "$release_tag" ]; then
+            echo "未找到以 'ENV' 开头的 release 标签"
+            exit 1
+          fi
+
+          echo "找到的最新 ENV 标签 release: $release_tag"
+
+          # 获取该 release 下所有的文件下载链接
+          download_urls=$(echo "$releases" | jq -r --arg tag "$release_tag" '.[] | select(.name == $tag) | .assets[].browser_download_url')
+
+          if [ -z "$download_urls" ]; then
+            echo "未找到该 release 中的下载链接"
+            exit 1
+          fi
+
+          # 过滤出符合要求的文件（名称以 openwrt_openwrt-24.10_x86_64 开头）
+          echo "开始筛选符合条件的文件..."
+          filtered_urls=$(echo "$download_urls" | grep -oP "${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}[^ ]+")
+
+          if [ -z "$filtered_urls" ]; then
+            echo "未找到符合条件的文件"
+            exit 1
+          fi
+
+          # 下载所有筛选出的文件
+          echo "开始下载符合条件的文件..."
+          echo "$filtered_urls" | xargs -n 1 wget
+
+          echo "下载完成"
           echo "当前目录文件："
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
@@ -360,69 +382,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}         
 
-      - name: Upload artifacts for img
-        uses: actions/upload-artifact@main
-        with:
-          name: ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_img
-          path: |
-            ./target/img/*
-          compression-level: 0  # 禁用压缩
-
-  Release:
-    needs: Get_config_Building
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
- 
-      - name: Download artifacts
-        uses: actions/download-artifact@main
-        with:
-          path: ./artifacts/img/
-         
-      - name: Unzip all artifact files
-        run: |
-          # 解压 ./artifacts/ 目录及其子目录中的所有 .zip 文件
-          shopt -s globstar  # 开启 globstar 以支持 ** 递归匹配
-          for zip_file in ./artifacts/img/**/*.zip; do
-            if [[ -f "$zip_file" ]]; then
-              echo "Unzipping $zip_file..."
-              unzip "$zip_file" -d ./artifacts/  # 解压到 ./artifacts/ 目录
-              rm "$zip_file"  # 删除 .zip 文件
-            fi
-          done
-          
-      - name: List files in ./artifacts
-        #if: false  # 跳过该步骤
-        if: true  # 该步骤会执行
-        run: |
-          echo "Show disk space"
-          echo "=============================================================================="
-          df -hT
-          echo "=============================================================================="
-  
-      - name: Create Git tag
-        id: create_tag
-        run: |
-          # 设置标签名
-          TAG_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y.%m.%d-%H_%M')"
-          RELEASE_NAME="发布时间(UTC+8)：$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')"
-          
-          # 输出标签名和发布名
-          echo "TAG_NAME=${TAG_NAME}"
-          echo "RELEASE_NAME=${RELEASE_NAME}"
-
-          # 将标签名和发布名传递给后续步骤
-          echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
-          echo "RELEASE_NAME=${RELEASE_NAME}" >> $GITHUB_ENV
-                  
-      - name: Set up GitHub Release
-        id: create_release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ env.TAG_NAME }}
-          name: ${{ env.RELEASE_NAME }}
-          files: ./artifacts/**/*  # 递归匹配所有文件
-          body: "Release with multiple builds"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
