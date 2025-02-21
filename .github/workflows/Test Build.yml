@@ -225,18 +225,29 @@ jobs:
           # 进入仓库的根目录，并确保目标路径下的文件被添加到 Git
           echo "git status"
           git status
-          echo "git reset mv"
-          git reset mv
-          echo "git status"
-          git status
 
+          # 取消暂存 'mv' 文件的更改（如果不想提交该文件）
+          echo "git reset mv"
+          git reset mv  # 取消 'mv' 文件的更改，只保留 'diffconfig' 文件的更改
+
+          # 查看当前状态，确保只剩下 'diffconfig' 文件
+          echo "git status"
+          git status  # 查看当前状态，确保只剩下 'diffconfig' 文件在待提交状态
+
+          # 排除 work 文件夹的所有内容
+          git rm -r --cached work  # 确保 work 文件夹从 Git 的版本控制中移除
+
+          # 确保 work 文件夹不会再次被 Git 跟踪
+          echo "/work" >> .gitignore  # 将 work 文件夹添加到 .gitignore 文件中，防止它再次被 Git 跟踪
+
+          # 拉取远程最新更改（避免冲突）
           git pull --rebase origin ${{ github.ref }}
+
+          # 添加 diffconfig 文件到暂存区
           git add ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
 
           # 提交更改
           git commit -m "New diffconfig from ssh"
-
-          #git pull --rebase origin ${{ github.ref }}
 
           # 推送到远程仓库
           git push origin ${{ github.ref }}
