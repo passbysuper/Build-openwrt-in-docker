@@ -243,9 +243,6 @@ jobs:
           # 拉取远程最新更改（避免冲突）
           git pull --rebase origin ${{ github.ref }}         
 
-          # 提交更改
-          git commit -m "New diffconfig from ssh"
-
           # 推送到远程仓库
           git push origin ${{ github.ref }}
           
