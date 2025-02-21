@@ -383,3 +383,35 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}         
 
 
+  
+  Clear:
+    needs: Get_config_Building
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+      - name: Delete releases tags and workflows runs
+        uses: ophub/delete-releases-workflows@main
+        with:
+          #设置是否删除 releases 文件（选项：true/false），默认为 false。
+          delete_releases: true
+          #设置是否删除与 Releases 关联的 tags（选项：true/false），默认为 false。
+          delete_tags: true
+          #设置是否区分预发行版本（选项：all/true/false）。all表示全部类型，true/false代表仅删除标记为此类型的 releases 文件。默认为 all。
+          prerelease_option: all
+          #设置保留几个最新的 Releases 版本（整数。如：5），设置为 0 表示全部删除，默认保留 90 个。
+          releases_keep_latest: 6
+          #设置需要保留的 Releases 的 tags 关键字，多个关键字使用 / 分割（例如：book/tool），默认值 无。
+          #releases_keep_keyword: 
+          #设置是否删除 workflows 运行记录（选项：true/false），默认为 false。
+          delete_workflows: true
+          #设置保留几天以内的 workflows 记录（整数。如：30），设置为 0 表示全部删除。默认为 90 天。
+          workflows_keep_day: 7
+          #设置需要保留的 workflows 运行记录的名称关键字，多个关键字使用 / 分割（例如：book/tool），默认值 无。
+          #workflows_keep_keyword:
+          #设置是否输出详细的 json 日志（选项：true/false），默认值 false。
+          #out_log: 
+          #设置执行操作的 <owner>/<repo> ，默认为当前仓库。
+          #repo: 
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
