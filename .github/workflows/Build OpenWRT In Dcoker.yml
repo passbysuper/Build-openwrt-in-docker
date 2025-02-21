@@ -13,35 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         
-      - name: Delete old workflow runs
-        continue-on-error: true
-        run: |
-          echo "Deleting old workflow runs..."
-          WORKFLOW_RUNS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/actions/runs")
-          RUN_IDS=$(echo $WORKFLOW_RUNS | jq '.workflow_runs | sort_by(.created_at) | reverse | .[3:] | .[].id')
-          for RUN_ID in $(echo $RUN_IDS); do
-            echo "Deleting workflow run: $RUN_ID"
-            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/runs/$RUN_ID"
-          done
-
-      - name: Delete old releases
-        continue-on-error: true
-        run: |
-          echo "Deleting old releases..."
-          RELEASES=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-          "https://api.github.com/repos/${{ github.repository }}/releases")
-          RELEASE_IDS=$(echo $RELEASES | jq '. | sort_by(.created_at) | reverse | .[6:] | .[].id')
-          for RELEASE_ID in $(echo $RELEASE_IDS); do
-            RELEASE_NAME=$(echo $RELEASES | jq -r ".[] | select(.id == $RELEASE_ID) | .name")
-            echo "Deleting release: $RELEASE_NAME"
-            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID"
-          done
-
       - name: Drop orphan tags
         continue-on-error: true
-        uses: fabriziocacicia/delete-tags-without-release-action@v0.1.0
+        uses: jay2610/delete-older-releases@1.0.0
+        with:
+          keep_latest: 3
+          delete_tag_pattern: beta # defaults to ""
+          delete_type: 'release'
+          target_branch: 'master'
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
