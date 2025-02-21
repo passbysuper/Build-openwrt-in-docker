@@ -384,6 +384,7 @@ jobs:
 
 
       - name: Delete old workflow runs
+        continue-on-error: true
         run: |
           echo "Deleting old workflow runs..."
           WORKFLOW_RUNS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
@@ -396,6 +397,7 @@ jobs:
           done
 
       - name: Delete old releases
+        continue-on-error: true
         run: |
           echo "Deleting old releases..."
           RELEASES=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
@@ -408,43 +410,8 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/releases/$RELEASE_ID"
           done
 
-      - name: Delete old tags
-        run: |
-          echo "Deleting old tags..."
-          
-          # 获取所有 tags 信息
-          TAGS=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/tags")
-          
-          # 获取每个 tag 的 commit 信息和创建日期
-          TAGS_WITH_DATE=$(echo "$TAGS" | jq -r '.[] | {name: .name, sha: .commit.sha} | @base64' | while read tag; do
-            _jq() {
-              echo ${tag} | base64 --decode | jq -r ${1}
-            }
-            TAG_NAME=$(_jq '.name')
-            COMMIT_SHA=$(_jq '.sha')
-            
-            # 获取该 commit 的时间戳
-            COMMIT_DATE=$(curl -s -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-              "https://api.github.com/repos/${{ github.repository }}/commits/${COMMIT_SHA}" | jq -r '.commit.author.date')
-            
-            # 输出 tag 名称及其对应的日期
-            echo "{\"name\":\"$TAG_NAME\", \"date\":\"$COMMIT_DATE\"}"
-          done)
-
-          # 按时间戳排序 tags，保留最近的6个
-          TAGS_TO_DELETE=$(echo "$TAGS_WITH_DATE" | jq -r 'sort_by(.date) | .[:-6] | .[].name')
-
-          if [ -z "$TAGS_TO_DELETE" ]; then
-            echo "没有老的 tags 需要删除"
-            exit 0
-          fi
-
-          # 删除不需要的 tags
-          for TAG in $TAGS_TO_DELETE; do
-            echo "Deleting tag: $TAG"
-            curl -X DELETE -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
-              "https://api.github.com/repos/${{ github.repository }}/git/refs/tags/$TAG"
-          done
-
-
+      - name: Drop orphan tags
+        continue-on-error: true
+        uses: fabriziocacicia/delete-tags-without-release-action@v0.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
