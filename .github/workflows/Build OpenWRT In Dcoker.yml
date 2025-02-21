@@ -19,7 +19,7 @@ jobs:
         with:
           repo: ${{ github.repository }}     
           keep_latest: 3
-          delete_tag_pattern: beta # defaults to ""
+          #delete_tag_pattern: beta # defaults to ""
           delete_type: 'release'
           target_branch: 'master'
           delete_tags: 'false'
