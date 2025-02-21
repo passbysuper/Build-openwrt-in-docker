@@ -21,12 +21,9 @@ jobs:
           keep_latest: 3
           delete_tag_pattern: beta # defaults to ""
           delete_type: 'release'
-          target_branch: 'main'
+          target_branch: 'master'
+          delete_tags: 'false'
+          
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
 
-      - name: delete-older-releases
-        continue-on-error: true
-        uses: fabriziocacicia/delete-tags-without-release-action@v0.1.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
