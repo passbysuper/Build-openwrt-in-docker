@@ -1,4 +1,4 @@
-name: Test Build 
+name: Build 
 
 on:
   # 手动触发
