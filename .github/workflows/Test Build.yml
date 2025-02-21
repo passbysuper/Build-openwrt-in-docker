@@ -227,8 +227,8 @@ jobs:
           git status
 
           # 取消暂存 'mv' 文件的更改（如果不想提交该文件）
-          echo "git reset mv"
-          git reset mv  # 取消 'mv' 文件的更改，只保留 'diffconfig' 文件的更改
+          echo "git restore mv"
+          git restore mv
 
           # 查看当前状态，确保只剩下 'diffconfig' 文件
           echo "git status"
