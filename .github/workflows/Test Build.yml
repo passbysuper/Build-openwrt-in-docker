@@ -218,12 +218,6 @@ jobs:
           # 复制 ssh 中新生成的diffconfig 到仓库的对应目录
           sudo cp ./work/openwrt/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
          
-          # 初始化 Git 仓库
-          git init
-          git remote add origin $openwrt_source_url
-          git fetch
-          git pull --depth=1 origin ${{ env.branch }}
-
           # 配置 Git 用户
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
@@ -253,7 +247,12 @@ jobs:
             du -h --max-depth=1 /home/user/openwrt | sort -rh
           " || true        
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
-            git pull
+            # 初始化 Git 仓库
+            git init
+            git remote add origin $openwrt_source_url
+            git fetch
+            git pull --depth=1 origin ${{ env.branch }}         
+            #git pull
             chmod +x diy.sh && ./diy.sh                
             ./scripts/feeds update -a && ./scripts/feeds install -a     
             cp diffconfig .config
