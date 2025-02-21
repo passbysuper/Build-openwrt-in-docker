@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       run_ssh:
-        description: 'Whether to run SSH for make menuconfig'
+        description: '开启SSH'
         required: false
         default: 'false'  # 默认不执行
         type: choice
@@ -13,7 +13,7 @@ on:
           - 'false'
           - 'true'
       download_op_folder:
-        description: '是否利用缓存加速下载'
+        description: '开启缓存加速（首次编译需禁用）'
         required: false
         default: 'true'  # 默认不执行
         type: choice
@@ -32,9 +32,13 @@ jobs:
     strategy:
       matrix:
         version: [immortalwrt, openwrt, lede, lienol]
+        #version: [immortalwrt, openwrt, lede]
         #version: [immortalwrt, openwrt]
+        #version: [immortalwrt]
+        
         #branch: [openwrt-24.10, openwrt-23.10]  # 默认分支
         branch: [openwrt-24.10]
+        
         # 如果 version 为 lede，默认分支将是 main，稍后调整
         platform: [x86_64]
         
@@ -50,12 +54,10 @@ jobs:
           START_TIME_RELEASE=$(TZ="Asia/Shanghai" date +'%Y-%m-%d %H:%M')
           
           echo "Start time: $START_TIME_TAG"
-          
-         
+               
           # 将时间设置为环境变量，供后续步骤使用
           echo "START_TIME_TAG=$START_TIME_TAG" >> $GITHUB_ENV
-          echo "START_TIME_RELEASE=$START_TIME_RELEASE" >> $GITHUB_ENV
-          
+          echo "START_TIME_RELEASE=$START_TIME_RELEASE" >> $GITHUB_ENV          
         
       - name: Determine branch
         id: set_branch
@@ -129,10 +131,8 @@ jobs:
         run: |
           docker build -t ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -f ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/Dockerfile .
 
-
       - name: Run Docker container
         run: |
-          #sudo docker run -d --name openwrt_build ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} -v /work:/home/user tail -f /dev/null
           sudo docker run -d --name openwrt_build -v /work:/home/user ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }} tail -f /dev/null
 
       - name: Download Openwrt Folder
@@ -182,7 +182,7 @@ jobs:
           ls -lh 
           echo "+++++++++++++++++++++++++++++++++++++++++++"
 
-      - name: 7z
+      - name: 7z /work/openwrt
         if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
         run: |
           sudo 7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o/work/openwrt
@@ -192,7 +192,7 @@ jobs:
           echo "+++++++++++++++++++++++++++++++++++++++++++"
 
 
-      - name: 如不用现有openwrt文件夹，则下载最新的openwrt
+      - name: git openwrt source
         if: ${{ github.event.inputs.download_op_folder == 'false' }}  # 只有 download_op_folder 为 true 时执行
         run: |
             echo "Cloning OpenWrt repository from ${{ env.openwrt_source_url }}..."
@@ -226,7 +226,7 @@ jobs:
             make defconfig
           " || true
 
-      - name: SSH远程连接（点击 "Web shell:" 链接后键入"q"方才显示终端；进入终端后执行："./mv"，所有设置完成后，键入“exit”退出）
+      - name: SSH（INPUT"q" ➡️ RUN："./mv" ➡️ “exit”）
         if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
         uses: mxschmitt/action-tmate@v3
 
@@ -301,19 +301,22 @@ jobs:
           # 创建 target 目录
           mkdir -p ./target/img || true
           mkdir -p ./target/env || true
+          
           # 从 ./Firmware Selector 文件中提取没有注释的文件名
           files_to_copy=$(grep -v '^#' ./Firmware_Selector)
+         
           # 将文件名去除首尾空格
           files_to_copy=$(echo "$files_to_copy" | sed 's/^[ \t]*//;s/[ \t]*$//')
+        
           # 进入 Docker 容器，找到匹配的文件并复制到本机
           for file in $files_to_copy; do
-            # 输出当前要查找的文件名（调试信息）
-            echo "正在查找文件: $file"
+          # 输出当前要查找的文件名（调试信息）
+          echo "正在查找文件: $file"
 
-            # 使用 docker exec 查找文件，支持模糊匹配
-            found_files=$(sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
-              find /home/user/openwrt/bin/targets -type f -name '*$file*'
-            ")
+          # 使用 docker exec 查找文件，支持模糊匹配
+          found_files=$(sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
+            find /home/user/openwrt/bin/targets -type f -name '*$file*'
+          ")
 
             # 如果找到了匹配的文件，输出并进行复制
             for found_file in $found_files; do
@@ -365,10 +368,7 @@ jobs:
       - name: 7z openwrt folder
         run: |          
           # 分卷 压缩 /work/openwrt 文件夹到./target/env，并上传
-          #sudo 7z a ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z /work/openwrt/* -v2000m
           sudo 7z a -mx=3 ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.7z /work/openwrt/ -v2000m
-          #sudo zip -r -s 2000m ./target/env/${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}_openwrt_archive.zip /work/openwrt/
-
           ls ./target/env/
                   
       - name: Set up GitHub Release
