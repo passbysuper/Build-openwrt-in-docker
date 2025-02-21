@@ -236,6 +236,9 @@ jobs:
           # 查看当前状态，确保只剩下 'diffconfig' 文件
           echo "git status"
           git status  # 查看当前状态，确保只剩下 'diffconfig' 文件在待提交状态
+       
+          # 提交更改
+          git commit -m "New diffconfig from ssh"
 
           # 拉取远程最新更改（避免冲突）
           git pull --rebase origin ${{ github.ref }}         
