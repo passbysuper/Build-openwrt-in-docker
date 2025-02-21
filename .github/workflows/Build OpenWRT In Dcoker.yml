@@ -166,8 +166,11 @@ jobs:
 
           # 过滤出符合要求的文件（名称以 openwrt_openwrt-24.10_x86_64 开头）
           echo "开始筛选符合条件的文件..."
-          filtered_urls=$(echo "$download_urls" | grep -oP "${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}[^ ]+")
-
+          #filtered_urls=$(echo "$download_urls" | grep -oP "${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}[^ ]+")
+          filtered_urls=$(echo "$download_urls" | grep -oP "https?://[^ ]+${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}[^ ]+")
+          echo "筛选后的下载链接："
+          echo "$filtered_urls"
+          
           if [ -z "$filtered_urls" ]; then
             echo "未找到符合条件的文件"
             exit 1
