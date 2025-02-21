@@ -72,6 +72,19 @@ jobs:
             branch_name=$(echo "${{ matrix.branch }}" | sed 's/^openwrt-//')
             echo "branch=${branch_name}" >> $GITHUB_ENV
           fi
+            # 根据不同的版本选择源代码的 URL
+          if [ "${{ matrix.version }}" == "immortalwrt" ]; then
+            openwrt_source_url="https://github.com/immortalwrt/immortalwrt"
+          elif [ "${{ matrix.version }}" == "openwrt" ]; then
+            openwrt_source_url="https://github.com/openwrt/openwrt"
+          elif [ "${{ matrix.version }}" == "lede" ]; then
+            openwrt_source_url="https://github.com/coolsnowwolf/lede"
+          elif [ "${{ matrix.version }}" == "lienol" ]; then
+            openwrt_source_url="https://github.com/Lienol/openwrt"
+          else
+             echo "Unknown version: ${{ matrix.version }}" && exit 1
+          fi
+
         
       - name: 查看机器配置  
         run: |  
@@ -160,26 +173,10 @@ jobs:
       - name: 如不用现有openwrt文件夹，则下载最新的openwrt
         if: ${{ github.event.inputs.download_op_folder == 'false' }}  # 只有 download_op_folder 为 true 时执行
         run: |
-            branch="openwrt-24.10" && \
-            version="openwrt" && \
-
-            # 根据不同的版本选择源代码的 URL
-            if [ "$version" == "immortalwrt" ]; then
-                openwrt_source_url="https://github.com/immortalwrt/immortalwrt"
-            elif [ "$version" == "openwrt" ]; then
-                openwrt_source_url="https://github.com/openwrt/openwrt"
-            elif [ "$version" == "lede" ]; then
-                openwrt_source_url="https://github.com/coolsnowwolf/lede"
-            elif [ "$version" == "lienol" ]; then
-                openwrt_source_url="https://github.com/Lienol/openwrt"
-            else
-                echo "Unknown version: $version" && exit 1
-            fi
-
             echo "Cloning OpenWrt repository from $openwrt_source_url..."
             # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
             sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/
-            sudo docker exec -u user -w /home/user openwrt_build bash -c "git clone -b $branch --single-branch --filter=blob:none $openwrt_source_url openwrt"
+            sudo docker exec -u user -w /home/user openwrt_build bash -c "git clone -b ${{ env.branch }} --single-branch --filter=blob:none $openwrt_source_url openwrt"
 
       - name: mv rename
         run: |
@@ -220,6 +217,12 @@ jobs:
          
           # 复制 ssh 中新生成的diffconfig 到仓库的对应目录
           sudo cp ./work/openwrt/diffconfig ./${{ matrix.version }}/${{ env.branch }}/${{ matrix.platform }}/diffconfig
+         
+          # 初始化 Git 仓库
+          git init
+          git remote add origin $openwrt_source_url
+          git fetch
+          git pull --depth=1 origin ${{ env.branch }}
 
           # 配置 Git 用户
           git config user.name "GitHub Actions"
