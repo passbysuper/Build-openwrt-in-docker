@@ -4,27 +4,6 @@ name: DEL TAG
 on:
   # 手动触发
   workflow_dispatch:
-    inputs:
-      run_ssh:
-        description: 'Whether to run SSH for make menuconfig'
-        required: false
-        default: 'false'  # 默认不执行
-        type: choice
-        options:
-          - 'false'
-          - 'true'
-      download_op_folder:
-        description: '是否利用缓存加速下载'
-        required: false
-        default: 'true'  # 默认不执行
-        type: choice
-        options:
-          - 'true'
-          - 'false'
-
-  # 定时触发 (例如每天凌晨 1 点触发)
-#  schedule:
-#    - cron: '0 1 * * *'  # 每天凌晨 1 点 UTC，按需求调整时间
 
 jobs:
   Get_config_Building:
