@@ -26,7 +26,7 @@ on:
 #    - cron: '0 1 * * *'  # 每天凌晨 1 点 UTC，按需求调整时间
 
 jobs:
-  Get_config_Building:
+  Building:
     runs-on: ubuntu-22.04
 
     strategy:
@@ -385,7 +385,7 @@ jobs:
 
   
   Clear:
-    needs: Get_config_Building
+    needs: Building
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
