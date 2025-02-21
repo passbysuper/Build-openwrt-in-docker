@@ -22,7 +22,7 @@ jobs:
           #delete_tag_pattern: beta # defaults to ""
           delete_type: 'release'
           target_branch: 'main'
-          #delete_tags: 'true'
+          delete_tags: 'true'
           
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
