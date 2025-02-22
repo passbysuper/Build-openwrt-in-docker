@@ -188,7 +188,7 @@ jobs:
       - name: 7z /work/openwrt
         if: ${{ github.event.inputs.download_op_folder == 'true' }}  # 只有 download_op_folder 为 true 时执行
         run: |
-          sudo 7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o/work/openwrt
+          sudo 7z x ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.001 -o/work
           sudo rm ${{ matrix.version }}_${{ env.branch }}_${{ matrix.platform }}*.7z.*
           echo "work目录文件："
           ls /work
@@ -287,7 +287,8 @@ jobs:
             #git init
             #git remote add origin ${{ env.openwrt_source_url }}
             #git fetch
-            #git pull --depth=1 origin ${{ env.branch }}         
+            #git pull --depth=1 origin ${{ env.branch }} 
+            git pull
             chmod +x ./diy.sh && ./diy.sh
             chmod +x ./General_Settings && ./General_Settings
             ./scripts/feeds update -a || true
@@ -299,11 +300,7 @@ jobs:
           "
           # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
           # sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/  
-
-      - name: SSH（INPUT"q" ➡️ RUN："./mv" ➡️ “exit”）
-        #if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
-        uses: mxschmitt/action-tmate@v3
-               
+              
       - name: Compile the firmware inside Docker container
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
