@@ -283,16 +283,16 @@ jobs:
             git fetch
             git pull --depth=1 origin ${{ env.branch }}         
             #git pull
-            chmod +x diy.sh && ./diy.sh                
+            chmod +x ./diy.sh && ./diy.sh
+            chmod +x ./General_Settings && ./General_Settings
             ./scripts/feeds update -a && ./scripts/feeds install -a     
             cp diffconfig .config
             make defconfig
             make download -j8
           "
-   
-          # 执行General_Settings，修改自定义设置
-          sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "chmod +x ./General_Settings || true && ./General_Settings"
-     
+          # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
+          # sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/  
+               
       - name: Compile the firmware inside Docker container
         run: |
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "
