@@ -285,7 +285,9 @@ jobs:
             #git pull
             chmod +x ./diy.sh && ./diy.sh
             chmod +x ./General_Settings && ./General_Settings
-            ./scripts/feeds update -a && ./scripts/feeds install -a     
+            ./scripts/feeds update -a || true
+            ./scripts/feeds install -a || true
+            ./scripts/feeds install -a || true
             cp diffconfig .config
             make defconfig
             make download -j8
