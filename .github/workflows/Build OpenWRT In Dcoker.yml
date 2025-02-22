@@ -272,8 +272,14 @@ jobs:
           git push origin ${{ github.ref }}
           
       - name: Download package inside Docker container
+        continue-on-error: true  # 设置即使该步骤失败，依然继续执行后续步骤
         run: |
+          echo "本机内：ls /work/openwrt"
+          ls /work/openwrt/  || true  
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
+            echo "容器内：ls /home/user/openwrt"
+            ls /home/user/openwrt
+            echo "容器内：du -h --max-depth=1 /home/user/openwrt | sort -rh"
             du -h --max-depth=1 /home/user/openwrt | sort -rh
           " || true        
           sudo docker exec -u user -w /home/user/openwrt openwrt_build bash -c "    
@@ -293,6 +299,10 @@ jobs:
           "
           # 将 /home/user/ 目录下的所有内容的所有者和权限改为 user 用户
           # sudo docker exec -u root -w /root openwrt_build chown -R user:user /home/user/  
+
+      - name: SSH（INPUT"q" ➡️ RUN："./mv" ➡️ “exit”）
+        #if: ${{ github.event.inputs.run_ssh == 'true' }}  # 只有 run_ssh 为 true 时执行
+        uses: mxschmitt/action-tmate@v3
                
       - name: Compile the firmware inside Docker container
         run: |
